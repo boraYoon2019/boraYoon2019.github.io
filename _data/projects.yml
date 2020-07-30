@@ -42,7 +42,7 @@
   duration: 2019.08 &mdash; 2019.09 / 6 weeks
   # url: "#"
   git_url: "https://github.com/boraYoon2019/oh-happyPension"
-  youtube_url: "https://github.com/boraYoon2019"
+  youtube_url: "https://youtu.be/KayJHQ4l4yk"
   description: 펜션 예약 사이트를 모티브로 만든 작품으로, 사용자 사이트와 관리자 사이트를 각각 개발하였습니다. 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능을 개발하였고, 예약 결제, 예약 관리(수정/취소), 게시판, 통계 기능 등이 있습니다.
   server: <span class='skill'>Virtual Box + Linux(Ububtu)</span><span class='skill'>Apache</span><span class='skill'>MYSQL DB</span>
   language: <span class='skill'>PHP</span><span class='skill'>HTML/CSS/JS/JQuery</span>
@@ -53,7 +53,7 @@
   duration: 2019.06 &mdash; 2019.08 / 6 weeks
   # url: "#"
   # git_url: "https://github.com/boraYoon2019"
-  youtube_url: "https://github.com/boraYoon2019"
+  youtube_url: "https://youtu.be/h7jmYZg3Aow"
   description: 독서 서평 및 모임 등록·공유가 가능한 커뮤니티 겸 독서 관리 앱 입니다. 베스트 셀러 배너, 독서 시간 기록 및 ASMR 재생 기능, 나의 서재, 모임 게시판 등을 개발하였습니다.
   # server: 
   language: <span class='skill'>JAVA</span>
