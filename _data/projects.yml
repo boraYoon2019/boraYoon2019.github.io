@@ -1,15 +1,14 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
-- project: PAPER CRAWLER
-  role: 개인 프로젝트
-  duration: 2020.04 / 1 week
-  # url: "https://github.com/boraYoon2019"
-  git_url: "https://github.com/boraYoon2019"
-  description: "코인마켓캡 홈페이지에 등재된 모든 암호화폐의 이름과 BTC를 크롤링하는 크롤러입니다."
-  server: <span class='skill'>MYSQL DB</span>
-  language: <span class='skill'>Python</span>
-  skills: <span class='skill'>Scrapy</span>
-
+# - project: PAPER CRAWLER
+#   role: 개인 프로젝트
+#   duration: 2020.04 / 1 week
+#   # url: "https://github.com/boraYoon2019"
+#   git_url: "https://github.com/boraYoon2019"
+#   description: "코인마켓캡 홈페이지에 등재된 모든 암호화폐의 이름과 BTC를 크롤링하는 크롤러입니다."
+#   server: <span class='skill'>MYSQL DB</span>
+#   language: <span class='skill'>Python</span>
+#   skills: <span class='skill'>Scrapy</span>
 - project: 【APP】 NOVA TRIP
   role: 팀 프로젝트 (7명)
   duration: 2020.02 &mdash; 2020.03 / 3 weeks
@@ -51,7 +50,7 @@
   role: 개인 프로젝트
   duration: 2019.06 &mdash; 2019.08 / 6 weeks
   # url: "#"
-  # git_url: "https://github.com/boraYoon2019"
+  git_url: "https://github.com/boraYoon2019/AIRA-BOOK"
   youtube_url: "https://youtu.be/h7jmYZg3Aow"
   description: 독서 서평 및 모임 등록·공유가 가능한 커뮤니티 겸 독서 관리 앱 입니다. 베스트 셀러 배너, 독서 시간 기록 및 ASMR 재생 기능, 나의 서재, 모임 게시판 등을 개발하였습니다.
   # server: 
