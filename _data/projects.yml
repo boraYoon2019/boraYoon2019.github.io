@@ -5,10 +5,11 @@
 #   duration: 2020.04 / 1 week
 #   # url: "https://github.com/boraYoon2019"
 #   git_url: "https://github.com/boraYoon2019"
-#   description: "코인마켓캡 홈페이지에 등재된 모든 암호화폐의 이름과 BTC를 크롤링하는 크롤러입니다."
+#   description: "코인마켓캡 홈페이지에 등재된 모든 암호화폐의 이름과 Symbol을 크롤링하는 크롤러입니다."
 #   server: <span class='skill'>MYSQL DB</span>
 #   language: <span class='skill'>Python</span>
 #   skills: <span class='skill'>Scrapy</span>
+
 - project: 【APP】 NOVA TRIP
   role: 팀 프로젝트 (7명)
   duration: 2020.02 &mdash; 2020.03 / 3 weeks
@@ -28,8 +29,15 @@
   # url: "#"
   # git_url: "https://github.com/boraYoon2019"
   # youtube_url: "https://github.com/boraYoon2019"
-  description: "식단을 기록하여 개인의 영양 상태를 관리할 수 있는 앱 입니다. 메인 기능으로 식단 기록 및 영양 상태 확인, 상담 챗봇, 
-  영양제 섭취 알람 및 섭취 기록, 제품 이미지를 통해 제품명을 인식하여 검색해주는 기능 개발하였습니다. 제품명을 OCR을 통해 인식하며, 글자 인식률을 높이기 위해 OPEN CV를 이용하여 이미지 전처리를 진행하였습니다."
+  description: "식단을 기록하여 개인의 영양 상태를 관리할 수 있는 앱 입니다. 
+  메인 기능으로 식단 기록 및 영양 상태 확인, 상담 챗봇, 
+  영양제 섭취 알람 및 섭취 기록, 제품 이미지를 통해 제품명을 인식하여 검색해주는 기능 개발하였습니다. 
+  제품명을 OCR을 통해 인식하며, 글자 인식률을 높이기 위해 OPEN CV를 이용하여 이미지 전처리를 진행하였습니다.<br><br>
+  [주요 기능]<br>
+  날짜/끼니별 식단 기록<br>
+  영양제 섭취 알람 등록/수정/삭제<br>
+  영양제 이름/회사명,이미지로 검색<br>
+  상담 챗봇"
   server: <span class='skill'>AWS EC2</span><span class='skill'>Nginx</span><span class='skill'>Maria DB</span>
   language: <span class='skill'>JAVA</span><span class='skill'>PHP</span><span class='skill'>Python</span>
   skills: "<span class='skill'>Flask</span><span class='skill'>GOOGLE Vision API</span><span class='skill'>OPENCV</span><span class='skill'>GOOGLE DialogFlow API</span>
@@ -43,7 +51,22 @@
   git_url: "https://github.com/boraYoon2019/oh-happyPension"
   youtube_url: "https://youtu.be/KayJHQ4l4yk"
   preview: "https://github.com/boraYoon2019/oh-happyPension/blob/master/README.md"
-  description: 펜션 예약 사이트를 모티브로 만든 작품으로, 사용자 사이트와 관리자 사이트를 각각 개발하였습니다. 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능을 개발하였고, 예약 결제, 예약 관리(수정/취소), 게시판, 통계 기능 등이 있습니다.
+  description: 
+  "펜션 예약 사이트를 모티브로 만든 작품으로, 사용자 사이트와 관리자 사이트를 각각 개발하였습니다. 
+  메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 
+  게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다.<br><br>
+  [주요 기능]<br>
+  • 사용자 사이트<br>
+  예약 상태 확인 (달력 내 전체 상태 조회, 조건 검색 가능)<br>
+  예약 결제<br>
+  문의 게시글 등록/수정/삭제<br>
+  <br>
+  • 관리자 사이트<br>
+  로그인/로그아웃/자동로그인 - 세션<br>
+  예약 내용 수정/삭제/취소 처리<br>
+  연도별 월 매출 비교 차트<br>
+  룸 별 예약 비율/선호도 차트<br>
+  댓글(답변) 등록/삭제"
   server: <span class='skill'>Virtual Box + Linux(Ububtu)</span><span class='skill'>Apache</span><span class='skill'>MYSQL DB</span>
   language: <span class='skill'>PHP</span><span class='skill'>HTML/CSS/JS/JQuery</span>
   skills: <span class='skill'>Import 결제 API</span><span class='skill'>Ajax</span><span class='skill'>GOOGLE CHART</span>
@@ -55,7 +78,18 @@
   git_url: "https://github.com/boraYoon2019/AIRA-BOOK"
   youtube_url: "https://youtu.be/h7jmYZg3Aow"
   preview: "https://github.com/boraYoon2019/AIRA-BOOK/blob/master/README.md"
-  description: 독서 서평 및 모임 등록·공유가 가능한 커뮤니티 겸 독서 관리 앱 입니다. 베스트 셀러 배너, 독서 시간 기록 및 ASMR 재생 기능, 나의 서재, 모임 게시판 등을 개발하였습니다.
+  description: "독서 서평 및 독서 모임 공유가 가능한 커뮤니티 겸 독서 관리 앱 입니다. 
+  모임 공유를 위해 카카오 API를 사용하여 카카오톡으로 모임 내용 및 앱의 링크를 공유할 수 있게 구현하였습니다. 
+  메인 기능으로는 나의 서재(도서 및 서평 등록/수정/삭제), 독서 시간 기록 및 ASMR 재생 기능, 베스트 셀러 배너, 
+  모임 게시판(등록/수정/삭제) 등을 개발하였습니다.<br><br>
+  
+  [주요 기능]<br>
+  카카오 로그인/공유<br>
+  책 등록,수정,삭제 (갤러리 사진 업로드 가능)<br>
+  날짜 기록, 시간 기록 (스톱워치)<br>
+  모임 등록/수정/삭제 (지도 통한 장소 선택 가능)<br>
+  이번 주 베스트 셀러 배너"
+
   # server: 
   language: <span class='skill'>JAVA</span>
   skills: <span class='skill'>알라딘 API</span><span class='skill'>KaKao API</span><span class='skill'>GOOGLE MAP API</span> 
