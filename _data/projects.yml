@@ -16,7 +16,7 @@
   # url: "https://github.com/boraYoon2019"
   git_url: "https://github.com/boraYoon2019/NovaTrip"
   youtube_url: "https://youtu.be/BL-2bjUxtMo"
-  preview: "https://youtu.be/h7jmYZg3Aow"
+  preview: "https://github.com/boraYoon2019/NovaTrip/blob/master/README.md"
   add_url: "https://tagen.go.jp/report/report2019-poc.html"
   description: 일본 총무성이 주최한 '다국어 번역 대회' 본선 진출작으로, 통역ㆍ번역 기능과 사용자의 실시간 상황(날씨,위치 기반)을 고려한 AI 챗봇 및 위치 서비스를 제공하는 여행 어플입니다. 해당 프로젝트에서 AI챗봇 내 준비물 체크리스트, 상황별 표현, 지역 특산품 정보, 올림픽 경기 정보 및 등록된 여행 일정 싱세 보기 기능을 개발하였습니다. <br>
   server: <span class='skill'>AWS EC2</span><span class='skill'>Apache</span><span class='skill'>MYSQL DB</span>
