@@ -102,9 +102,9 @@
           
           <div class="skills-content">
             {% if project.git_url %}<a href="{{ project.git_url }}" target="_sub" class="a_btn no-print">Github</a>{% else %}{% endif %}
-            {% if project.youtube_url %}<a href="{{ project.youtube_url }}" target="_sub" class="a_btn no-print">작품영상</a>{% else %}{% endif %}
+            {% if project.youtube_url %}<a href="{{ project.youtube_url }}" target="_sub" class="a_btn no-print">영상보기</a>{% else %}{% endif %}
+            {% if project.preview %}<a href="{{ project.preview }}" target="_sub" class="a_btn no-print">사진보기</a>{% else %}{% endif %}
             {% if project.add_url %}<a href="{{ project.add_url }}" target="_sub" class="a_btn no-print">대회사이트</a>{% else %}{% endif %}
-            {% if project.preview %}<a href="{{ project.preview }}" target="_sub" class="a_btn no-print">사진 미리보기</a>{% else %}{% endif %}
           </div>
           
           <div class="content-box">
