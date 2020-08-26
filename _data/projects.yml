@@ -43,7 +43,7 @@
   git_url: "https://github.com/boraYoon2019/oh-happyPension"
   youtube_url: "https://youtu.be/KayJHQ4l4yk"
   preview: "https://github.com/boraYoon2019/oh-happyPension/blob/master/README.md"
-  description: "존의 타 펜션 예약 사이트는 달력을 통해서만 예약 가능한 방을 확인할 수 있는데, 사용자의 편의를 고려하여 숙박 날짜와 인원 등의 조건 지정을 통한 예약 가능 방 조회 기능을 추가 하여 개발하였습니다. 메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다.<br>"
+  description: "일반적인 펜션 예약 사이트는 달력을 통해서만 예약 가능한 방을 확인할 수 있는데, 사용자의 편의를 고려하여 숙박 날짜와 인원 등의 조건 지정을 통한 예약 가능 방 조회 기능을 추가 하여 개발하였습니다. 메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다.<br>"
   server: <span class='skill'>Virtual Box + Linux(Ububtu)</span><span class='skill'>Apache</span><span class='skill'>MYSQL DB</span>
   language: <span class='skill'>PHP</span><span class='skill'>HTML/CSS/JS/JQuery</span>
   skills: <span class='skill'>Import 결제 API</span><span class='skill'>Ajax</span><span class='skill'>GOOGLE CHART</span>
