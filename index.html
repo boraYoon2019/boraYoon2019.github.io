@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SW Engineer / Bora Youn</title>
-    
-</head>
-<body>
-    Hi! I'm Bora Youn.
-</body>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" /> -->
+
+		<!-- 모바일 :처음 로딩 되었을 때 이미지 사이즈 혹은 확대, 축소들이 가능하게 해준다. -->
+		<meta
+			name="viewport"
+			content="wclassth=device-wclassth, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0"
+		/>
+		<title>Front-End Engineer / Bora Yoon</title>
+		<link rel="stylesheet" href="index.css" />
+
+		<script defer src="index.js"></script>
+		<script
+			defer
+			src="https://kit.fontawesome.com/a0a4252627.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<!-- 사이드 바 : PC 화면이면서 768px보다 클 때만 보이는 사이드바-->
+		<aside class="sidebar">
+			<div class="sidebar_space"></div>
+
+			<ul class="sidebar_link">
+				<li class="sidebar_link_item"><i class="fab fa-youtube"></i></li>
+				<li class="sidebar_link_item"><i class="fab fa-github"></i></li>
+				<li class="sidebar_link_item"><i class="fas fa-envelope"></i></li>
+				<li class="sidebar_link_item"><i class="fas fa-hashtag"></i></li>
+			</ul>
+
+			<div class="sidebar_btn">
+				<button class="btn">React Version!</button>
+			</div>
+
+			<ul class="sidebar_menu">
+				<li class="sidebar_item">
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span class="sm-link__label">ABOUT</span>
+					</a>
+				</li>
+				<li class="sidebar_item">
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span class="sm-link__label">SKILLS</span>
+					</a>
+				</li>
+				<li class="sidebar_item">
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span class="sm-link__label">EXPERIENCE</span>
+					</a>
+				</li>
+				<li class="sidebar_item">
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span class="sm-link__label">PROJECTS</span>
+					</a>
+				</li>
+				<li class="sidebar_item">
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span class="sm-link__label">EDUCATION</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="sidebar_space"></div>
+		</aside>
+
+		<!-- 상단 헤더 -->
+		<nav class="navbar">
+			<div class="navbar_main">
+				<div class="navbar_toggle">
+					<i class="fas fa-bars"></i>
+				</div>
+
+				<div class="navbar_job">FRONT-END ENGINEER</div>
+
+				<div class="navbar_name">Yoon Bora</div>
+			</div>
+		</nav>
+
+		<!-- 나브, 어사이드 제외 메인화면 -->
+		<main class="main">
+			<div class="content">
+				<section class="content_welcoming">
+					<div class="tri"></div>
+					<div class="tri_inner">
+						<h1 class="introduction_job">FRONT-END ENGINEER</h1>
+						<h2 class="introduction_name">Bora Yoon</h2>
+						<button class="btn introduction_inner">contact me!</button>
+					</div>
+				</section>
+
+				<section class="content_main">
+					<article class="full-screen content_about">
+						<div>제목</div>
+						<div>내용</div>
+					</article>
+
+					<article class="full-screen content_skills">
+						<div>제목</div>
+						<div>내용</div>
+					</article>
+
+					<article class="full-screen content_experience">
+						<div>제목</div>
+						<div>내용</div>
+					</article>
+
+					<article class="full-screen content_projects">
+						<div>제목</div>
+						<div>내용</div>
+					</article>
+
+					<article class="full-screen content_education">
+						<div>제목</div>
+						<div>내용</div>
+					</article>
+				</section>
+			</div>
+			<!-- content end -->
+		</main>
+
+		<footer>
+			<!-- 링크들 다시 한 번 클릭 가능하게 + 연락처 넣기 + 라이센스 넣기 (윤보라) -->
+			<!-- 상단 헤더 -->
+			<div class="footer">
+				<div class="navbar_job">FRONT-END ENGINEER</div>
+
+				<div class="navbar_name">Youn Bora</div>
+			</div>
+		</footer>
+	</body>
 </html>

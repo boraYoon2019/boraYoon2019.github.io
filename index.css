@@ -1,0 +1,356 @@
+/* Global */
+:root {
+	--text-color: #212529;
+	--background-color: #fff;
+	--accent-color: #ededed;
+	--hover-color: #585b6d;
+	--sidebar-color: #f7f7f7;
+}
+
+.sm-link {
+	--uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+	--uismLinkTextColor: var(--smLinkTextColor);
+	--uismLinkTextColorHover: var(--smLinkTextColorHover);
+
+	display: var(--uismLinkDisplay);
+	color: var(--uismLinkTextColor);
+	position: relative;
+	overflow: hidden;
+}
+
+a.sm-link {
+	text-decoration: none;
+}
+
+.sm-link__label {
+	display: block;
+}
+
+.sm-link {
+	--uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+	--uismLinkTextColor: var(--smLinkTextColor);
+	--uismLinkTextColorHover: var(--smLinkTextColorHover);
+
+	display: var(--uismLinkDisplay);
+	color: var(--uismLinkTextColor);
+	position: relative;
+	overflow: hidden;
+}
+
+.sm-link__label {
+	display: block;
+}
+
+/* sm-link_padding-bottom */
+
+.sm-link_padding-bottom {
+	--uismLinkLineWeight: var(--smLinkLineWeight, 2px);
+	--uismLinkLineColor: var(--smLinkLineColor, #000);
+
+	padding-bottom: var(--uismLinkLineWeight);
+	position: relative;
+}
+
+.sm-link_padding-bottom::after {
+	content: '';
+	width: 100%;
+	height: var(--uismLinkLineWeight);
+	background-color: var(--uismLinkLineColor);
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.sm-link4::after {
+	opacity: 0;
+	transform: translate3d(0, 100%, 0);
+	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.sm-link4:hover::after {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+body {
+	margin: 0;
+	/* font-size: 1rem; */
+	font-weight: 400;
+	/* line-height: 1.5; */
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+.full-screen {
+	width: 100%;
+	height: 100vh;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+.content_item {
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.sidebar_link_item {
+	margin: 0 0.3rem;
+	font-size: 2em;
+}
+
+.sidebar_link_item:hover {
+	cursor: pointer;
+	color: var(--hover-color);
+}
+
+.sidebar {
+	position: fixed;
+	display: inline-flex;
+	/* flex-box 기준축 */
+	/* justify-content: ; */
+	/* flex-box 반대축 */
+	align-items: center;
+	/* 컨텐츠 크기 조정 : NOWRAP */
+	flex-flow: column nowrap;
+	background-color: var(--sidebar-color);
+	height: 100%;
+	width: 17%;
+}
+
+.sidebar_space {
+	flex-grow: 1;
+	height: 12vh;
+	width: 17%;
+}
+
+.sidebar_link {
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-content: center;
+	padding-left: 0;
+	list-style: none;
+}
+
+.sidebar_btn {
+	flex-grow: 1;
+}
+
+.btn {
+	padding: 0.5em 1.5em;
+	font: 1.2em sans-serif;
+	color: var(--background-color);
+	background-color: var(--text-color);
+	border: none;
+}
+.btn:hover {
+	color: var(--hover-color);
+	border: 1px dotted var(--hover-color);
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.sidebar_menu {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: center;
+	padding-left: 0;
+	list-style: none;
+	flex-grow: 8;
+}
+
+.sidebar_item {
+	padding: 1em 3em;
+}
+.sidebar_item:hover {
+}
+
+.main {
+	margin: 12vh 0 0 17%;
+	position: relative;
+	display: inline-flex;
+	/* flex-box 기준축 */
+	justify-content: flex-start;
+	/* flex-box 반대축 */
+	align-items: center;
+	/* 컨텐츠 크기 조정 : NOWRAP */
+	flex-flow: column nowrap;
+	width: 83%;
+	height: 100%;
+	/* background-color: aqua; */
+}
+
+.navbar {
+	position: absolute;
+	display: flex;
+	height: 12vh;
+	width: 100%;
+}
+
+.navbar_main {
+	display: flex;
+	/* 자동으로 컨텐츠 하위 조정 : WRAP */
+	flex-flow: row nowrap;
+	/* 열 기준으로 시작점부터 배치 */
+	justify-content: space-between; /* 기본값임. */
+	/* 열 기준으로 배열했으므로, 행에서 중앙 위치 */
+	align-items: center;
+	color: #0f151d;
+	height: 12vh;
+	width: 100%;
+	background-color: var(--accent-color);
+}
+.navbar_toggle {
+	padding: 8px 12px;
+	display: none;
+}
+
+.navbar_job {
+	display: inline-block;
+	font-size: 2rem;
+	margin: 0 1em;
+	font: bold;
+}
+
+.navbar_name {
+	display: inline-block;
+	font-size: 2rem;
+	margin: 0 1em 0.3em 1em;
+	font: bold;
+	margin-left: auto;
+}
+
+.content {
+	position: relative;
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-content: center;
+}
+section {
+	display: block;
+}
+
+.content_welcoming {
+	display: flex;
+	position: relative;
+	height: 80vh;
+	width: 100%;
+	background-color: #fff;
+}
+
+.tri {
+	border-top: 369px solid #dedede;
+	border-left: 231px solid transparent;
+	border-right: 214px solid transparent;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.tri_inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+h1.introduction_job {
+	font-size: 5rem;
+	text-shadow: 3px 3px var(--hover-color);
+}
+h2.introduction_name {
+	font-size: 3.5rem;
+	text-align: right;
+	text-shadow: 3px 3px var(--hover-color);
+}
+.introduction_inner {
+	position: absolute;
+	right: 0;
+}
+.content_main {
+	position: relative;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.footer {
+	display: flex;
+	position: sticky;
+	/* 자동으로 컨텐츠 하위 조정 : WRAP */
+	flex-flow: row nowrap;
+	/* 열 기준으로 시작점부터 배치 */
+	justify-content: space-between; /* 기본값임. */
+	/* 열 기준으로 배열했으므로, 행에서 중앙 위치 */
+	align-items: center;
+	color: #0f151d;
+	height: 12vh;
+	width: 100%;
+	background-color: var(--accent-color);
+	z-index: 0;
+}
+
+/* PC기준이므로 너비가 큰 순서부터 나열함. */
+/* 태블릿 */
+@media screen and (max-width: 768px) {
+	.btn {
+		padding: 0.3em 1em;
+		font-size: 1em;
+	}
+}
+
+/* 스마트폰 */
+@media screen and (max-width: 414px), (max-width: 540px) {
+	.sidebar {
+		/* display: none; */
+		height: 74%;
+		width: 100%;
+	}
+	.btn {
+		padding: 0.3em 1em;
+		font-size: 1em;
+	}
+	.sidebar:active {
+		height: 74%;
+		width: 100%;
+	}
+	.navbar_toggle {
+		padding: 8px 12px;
+		display: inline-block;
+	}
+	.navbar_job {
+		font-size: 1.5rem;
+	}
+	.navbar_name {
+		font-size: 1.5rem;
+	}
+	.main {
+		margin: 12vh 0 0 0;
+		width: 100%;
+	}
+
+	@media screen and (max-width: 320px) {
+		.sidebar {
+			height: 80%;
+			width: 100%;
+		}
+	}
+}
+
+/* 세로일 경우! */
+@media screen and (orientation: portrait) {
+}
+/* 가로일 경우! */
+@media screen and (orientation: landscape) {
+}
