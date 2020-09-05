@@ -2,13 +2,16 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<!-- <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" /> -->
-
-		<!-- 모바일 :처음 로딩 되었을 때 이미지 사이즈 혹은 확대, 축소들이 가능하게 해준다. -->
 		<meta
 			name="viewport"
-			content="wclassth=device-wclassth, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0"
+			content="wclassth=device-wclassth, initial-scale=1.0"
 		/>
+
+		<!-- 모바일 :처음 로딩 되었을 때 이미지 사이즈 혹은 확대, 축소들이 가능하게 해준다. -->
+		<!-- <meta
+			name="viewport"
+			content="wclassth=device-wclassth, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0"
+		/> -->
 		<title>Front-End Engineer / Bora Yoon</title>
 		<link rel="stylesheet" href="index.css" />
 
@@ -23,97 +26,105 @@
 	<body>
 		<!-- 사이드 바 : PC 화면이면서 768px보다 클 때만 보이는 사이드바-->
 		<aside class="sidebar">
-			<div class="sidebar_space"></div>
+			<div class="sidebar__space"></div>
 
-			<ul class="sidebar_link">
-				<li class="sidebar_link_item"><i class="fab fa-youtube"></i></li>
-				<li class="sidebar_link_item"><i class="fab fa-github"></i></li>
-				<li class="sidebar_link_item"><i class="fas fa-envelope"></i></li>
-				<li class="sidebar_link_item"><i class="fas fa-hashtag"></i></li>
+			<img
+				class="sidebar__img"
+				src="https://user-images.githubusercontent.com/68500631/92305020-362d8900-efbe-11ea-85e5-e85e01df0722.jpg"
+			/>
+
+			<ul class="sidebar__link">
+				<li class="sidebar__link__item"><i class="fab fa-youtube"></i></li>
+				<li class="sidebar__link__item"><i class="fab fa-github"></i></li>
+				<li class="sidebar__link__item"><i class="fas fa-envelope"></i></li>
+				<li class="sidebar__link__item"><i class="fas fa-hashtag"></i></li>
 			</ul>
 
-			<div class="sidebar_btn">
+			<div class="sidebar__btn">
 				<button class="btn">React Version!</button>
 			</div>
 
-			<ul class="sidebar_menu">
-				<li class="sidebar_item">
+			<div class="sidebar__snippet">
+				This was only made with HTML, CSS, Vanila Javascript (ES6)! If you want
+				to see react version of this Portfolio, click this!
+			</div>
+
+			<ul class="sidebar__menu">
+				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">ABOUT</span>
 					</a>
 				</li>
-				<li class="sidebar_item">
+				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">SKILLS</span>
 					</a>
 				</li>
-				<li class="sidebar_item">
+				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">EXPERIENCE</span>
 					</a>
 				</li>
-				<li class="sidebar_item">
+				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">PROJECTS</span>
 					</a>
 				</li>
-				<li class="sidebar_item">
+				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">EDUCATION</span>
 					</a>
 				</li>
 			</ul>
-
-			<div class="sidebar_space"></div>
 		</aside>
-
-		<!-- 상단 헤더 -->
-		<nav class="navbar">
-			<div class="navbar_main">
-				<div class="navbar_toggle">
-					<i class="fas fa-bars"></i>
-				</div>
-
-				<div class="navbar_job">FRONT-END ENGINEER</div>
-
-				<div class="navbar_name">Yoon Bora</div>
-			</div>
-		</nav>
 
 		<!-- 나브, 어사이드 제외 메인화면 -->
 		<main class="main">
+			<!-- 상단 헤더 -->
+			<nav class="navbar">
+				<div class="navbar__main">
+					<div class="navbar__toggle">
+						<i class="fas fa-bars"></i>
+					</div>
+
+					<div class="navbar__job">FRONT-END ENGINEER</div>
+					_
+					<div class="navbar__name">Bora Yoon</div>
+				</div>
+			</nav>
+
 			<div class="content">
-				<section class="content_welcoming">
+				<section class="content__welcoming">
 					<div class="tri"></div>
-					<div class="tri_inner">
-						<h1 class="introduction_job">FRONT-END ENGINEER</h1>
-						<h2 class="introduction_name">Bora Yoon</h2>
-						<button class="btn introduction_inner">contact me!</button>
+					<div class="tri__inner">
+						<h1 class="introduction__job">FRONT-END ENGINEER</h1>
+						<h2 class="introduction__name">Bora Yoon</h2>
+						<button class="btn introduction__inner">contact me!</button>
 					</div>
 				</section>
 
-				<section class="content_main">
-					<article class="full-screen content_about">
+				<section class="content__main">
+					<article class="full-screen content__about">
 						<div>제목</div>
 						<div>내용</div>
 					</article>
 
-					<article class="full-screen content_skills">
+					<article class="full-screen content__skills">
 						<div>제목</div>
 						<div>내용</div>
 					</article>
 
-					<article class="full-screen content_experience">
+					<article class="full-screen content__experience">
 						<div>제목</div>
 						<div>내용</div>
 					</article>
 
-					<article class="full-screen content_projects">
+					<article class="full-screen content__projects">
 						<div>제목</div>
 						<div>내용</div>
 					</article>
 
-					<article class="full-screen content_education">
+					<article class="full-screen content__education">
 						<div>제목</div>
 						<div>내용</div>
 					</article>
@@ -123,12 +134,15 @@
 		</main>
 
 		<footer>
-			<!-- 링크들 다시 한 번 클릭 가능하게 + 연락처 넣기 + 라이센스 넣기 (윤보라) -->
-			<!-- 상단 헤더 -->
 			<div class="footer">
-				<div class="navbar_job">FRONT-END ENGINEER</div>
+				<div class="footer__licenses">© Copyright Bora Yoon</div>
 
-				<div class="navbar_name">Youn Bora</div>
+				<ul class="footer__link">
+					<li class="footer__link__item"><i class="fab fa-youtube"></i></li>
+					<li class="footer__link__item"><i class="fab fa-github"></i></li>
+					<li class="footer__link__item"><i class="fas fa-envelope"></i></li>
+					<li class="footer__link__item"><i class="fas fa-hashtag"></i></li>
+				</ul>
 			</div>
 		</footer>
 	</body>
