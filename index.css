@@ -77,13 +77,21 @@ a.sm-link {
 	transform: translate3d(0, 0, 0);
 }
 
+body,
 html {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+}
+
+section {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 body {
-	margin: 0;
 	font-weight: 400;
 	color: var(--text-color);
 	background-color: var(--background-color);
@@ -92,9 +100,6 @@ body {
 .full-screen {
 	width: 100%;
 	height: 100vh;
-}
-
-.content__item {
 }
 
 a {
@@ -133,19 +138,29 @@ a {
 
 .sidebar__space {
 	flex-grow: 1;
-	height: 12vh;
+	height: 10vh;
 	width: 17%;
 }
 
+/* .sidebar__img {
+	flex: 1;
+	flex-grow: 1;
+}
+
+.sidebar__img--inner {
+	max-width: 80%;
+	max-height: 80%;
+	border-radius: 100px;
+} */
+
 .sidebar__img {
-	width: 150px;
-	height: 150px;
-	border-radius: 75px; /* 이미지 반크기만큼 반경을 잡기*/
+	max-width: 50%;
+	max-height: 50%;
+	border-radius: 50%;
 }
 
 .sidebar__link {
 	flex-grow: 1;
-
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -162,10 +177,11 @@ a {
 	padding: 0.5em 1.5em;
 	font: 1.2em sans-serif;
 	color: var(--background-color);
+	border: 1px solid var(--text-color);
 	background-color: var(--text-color);
-	border: none;
 }
 .btn:hover {
+	/* padding: 0.5em 1.5em; */
 	color: var(--hover-color);
 	border: 1px dashed var(--hover-color);
 	background-color: #fff;
@@ -210,7 +226,7 @@ a {
 .main {
 	margin: var(--main-margin);
 	position: relative;
-	display: inline-flex;
+	display: flex;
 	/* flex-box 기준축 */
 	justify-content: flex-start;
 	/* flex-box 반대축 */
@@ -269,10 +285,6 @@ a {
 	align-content: center;
 }
 
-section {
-	display: block;
-}
-
 .content__welcoming {
 	display: block;
 	position: relative;
@@ -315,6 +327,7 @@ h2.introduction__name {
 	right: 0;
 }
 .content__main {
+	background-color: aqua;
 	position: relative;
 	display: block;
 	height: auto;
@@ -333,7 +346,7 @@ h2.introduction__name {
 	color: #0f151d;
 	height: 100%;
 	width: var(--main-width);
-	margin: var(--main-margin);
+	margin: auto 0 0 17%;
 	background-color: #0f151d;
 	color: var(--background-color);
 	z-index: 0;
@@ -343,7 +356,7 @@ h2.introduction__name {
 }
 .footer__link {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-content: center;
 	padding-left: 0;
@@ -374,12 +387,6 @@ h2.introduction__name {
 		height: var(--navbar-height);
 		width: 100%;
 	}
-
-	.sidebar__img {
-		width: 100px;
-		height: 100px;
-		border-radius: 50px; /* 이미지 반크기만큼 반경을 잡기*/
-	}
 }
 
 /* 스마트폰 */
@@ -399,12 +406,6 @@ h2.introduction__name {
 		flex-grow: 2;
 		height: 15vh;
 		width: 17%;
-	}
-
-	.sidebar__img {
-		width: 50px;
-		height: 50px;
-		border-radius: 25px; /* 이미지 반크기만큼 반경을 잡기*/
 	}
 
 	.btn {
@@ -466,9 +467,5 @@ h2.introduction__name {
 	}
 }
 
-/* 세로일 경우! */
-@media screen and (orientation: portrait) {
-}
-/* 가로일 경우! */
-@media screen and (orientation: landscape) {
-}
+/* nowrap 시 마진 포함 값이 원래 화면 너비보다 넓으면 깨짐 현상 나타남
+플렉스 박스 사용 시 크기 조정하고 싶으면 max- 옵션넣어서 너비, 높이 정하기 */
