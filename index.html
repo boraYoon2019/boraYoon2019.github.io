@@ -7,11 +7,6 @@
 			content="wclassth=device-wclassth, initial-scale=1.0"
 		/>
 
-		<!-- 모바일 :처음 로딩 되었을 때 이미지 사이즈 혹은 확대, 축소들이 가능하게 해준다. -->
-		<!-- <meta
-			name="viewport"
-			content="wclassth=device-wclassth, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0"
-		/> -->
 		<title>Front-End Engineer / Bora Yoon</title>
 		<link rel="stylesheet" href="index.css" />
 
@@ -38,14 +33,9 @@
 				<li class="sidebar__link__item"><i class="fas fa-hashtag"></i></li>
 			</ul>
 
-			<div class="sidebar__btn">
-				<button class="btn">React Version!</button>
-			</div>
-
-			<div class="sidebar__snippet">
-				This was only made with HTML, CSS, Vanila Javascript (ES6)! If you want
-				to see react version of this Portfolio, click this!
-			</div>
+			<!-- <div class="sidebar__btn">
+				<button class="btn">Todolist</button>
+			</div> -->
 
 			<ul class="sidebar__menu">
 				<li class="sidebar__item">
@@ -53,21 +43,61 @@
 						<span class="sm-link__label">ABOUT</span>
 					</a>
 				</li>
+
 				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">SKILLS</span>
 					</a>
+					<br />
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span
+							class="sm-link__label inner"
+							data-key="skills"
+							data-value="WEB"
+							>WEB</span
+						>
+					</a>
+					<br />
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span
+							class="sm-link__label inner"
+							data-key="skills"
+							data-value="APP"
+							>APP</span
+						>
+					</a>
 				</li>
+
 				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">EXPERIENCE</span>
 					</a>
 				</li>
+
 				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">PROJECTS</span>
 					</a>
+					<br />
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span
+							class="sm-link__label inner"
+							data-key="PROJECTS"
+							data-value="WEB"
+							>WEB</span
+						>
+					</a>
+					<br />
+					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
+						<span
+							class="sm-link__label inner"
+							data-key="PROJECTS"
+							data-value="APP"
+							>APP</span
+						>
+					</a>
 				</li>
+
 				<li class="sidebar__item">
 					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
 						<span class="sm-link__label">EDUCATION</span>
@@ -90,40 +120,41 @@
 				</div>
 			</nav>
 
-			<div class="content">
-				<section class="content__welcoming">
-					<div class="tri"></div>
+			<div class="content link-container">
+				<section class="content__welcoming link-two">
+					<!-- <div class="tri"> -->
 					<div class="tri__inner">
 						<h1 class="introduction__job">FRONT-END ENGINEER</h1>
 						<h2 class="introduction__name">Bora Yoon</h2>
 						<button class="btn introduction__inner">contact me!</button>
 					</div>
+					<!-- </div> -->
 				</section>
 
 				<section class="content__main">
 					<article class="full-screen content__about">
-						<div>제목</div>
-						<div>내용</div>
+						<h1>ABOUT</h1>
+						<div class="content__about-description">내용</div>
 					</article>
 
 					<article class="full-screen content__skills">
-						<div>제목</div>
-						<div>내용</div>
+						<h1>SKILLS</h1>
+						<div class="content__skills-description">내용</div>
 					</article>
 
 					<article class="full-screen content__experience">
-						<div>제목</div>
-						<div>내용</div>
+						<h1>EXPERIENCE</h1>
+						<div class="content__skills-description">내용</div>
 					</article>
 
 					<article class="full-screen content__projects">
-						<div>제목</div>
-						<div>내용</div>
+						<h1>PROJECTS</h1>
+						<div class="content__skills-description">내용</div>
 					</article>
 
 					<article class="full-screen content__education">
-						<div>제목</div>
-						<div>내용</div>
+						<h1>EDUCATION</h1>
+						<div class="content__skills-description">내용</div>
 					</article>
 				</section>
 			</div>
