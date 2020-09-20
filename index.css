@@ -124,6 +124,8 @@ a {
 .sidebar__link__item:hover {
 	cursor: pointer;
 	color: var(--hover-color);
+	transform: scale(1.1);
+	transition: transform 300ms ease;
 }
 
 .sidebar {
@@ -180,7 +182,7 @@ a {
 	border: 1px dashed var(--hover-color);
 	background-color: #fff;
 	cursor: pointer;
-	transition: 0.3s ease-in;
+	transition: 300ms ease-in;
 }
 
 .sidebar__menu {
@@ -268,7 +270,7 @@ a {
 	/* font-family: 'Bungee'; */
 }
 
-.tri {
+/* .tri {
 	top: 33%;
 	left: 37%;
 	transform: translate(-30%, -20%);
@@ -291,7 +293,7 @@ a {
 		rgba(137, 233, 245, 0.6530987394957983) 25%,
 		rgba(72, 100, 255, 0.7539390756302521) 84%
 	);
-}
+} */
 
 .link-two {
 	color: #2c2b2b;
@@ -453,6 +455,8 @@ article h1 {
 .footer__link__item:hover {
 	cursor: pointer;
 	color: var(--hover-color);
+	transform: scale(1.1);
+	transition: transform 300ms ease;
 }
 
 /* 태블릿 */
