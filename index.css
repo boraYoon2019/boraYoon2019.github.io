@@ -263,7 +263,6 @@ a {
 .content__welcoming {
 	display: flex;
 	position: relative;
-	padding-top: var(--navbar-mobile-height);
 	height: 100vh;
 	width: 100%;
 	/* font-family: 'Bungee'; */
@@ -457,7 +456,28 @@ article h1 {
 }
 
 /* 태블릿 */
-@media screen and (max-width: 768px), (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+	.btn {
+		padding: 0.3em 1em;
+		font-size: 1em;
+	}
+
+	.navbar {
+		z-index: 2;
+		position: fixed;
+		display: none;
+		height: var(--navbar-height);
+		width: 100%;
+	}
+
+	.content {
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+/* 태블릿 2 */
+@media screen and (max-width: 768px) {
 	.btn {
 		padding: 0.3em 1em;
 		font-size: 1em;
@@ -476,9 +496,10 @@ article h1 {
 		width: 100%;
 	}
 
-	/* .tri {
-		display: none;
-	} */
+	.link-two::after {
+		width: 15ch;
+		height: 15ch;
+	}
 }
 
 /* 스마트폰 */
@@ -556,20 +577,15 @@ article h1 {
 		width: 12ch;
 		height: 12ch;
 	}
-}
-
-@media screen and (max-width: 768px) {
-	.sidebar {
-		height: 80%;
-		width: 100%;
-	}
-
-	.link-two::after {
-		width: 15ch;
-		height: 15ch;
+	.content__welcoming {
+		padding-top: var(--navbar-mobile-height);
 	}
 }
+
 @media screen and (max-width: 320px) {
+	.content__welcoming {
+		padding-top: var(--navbar-mobile-height);
+	}
 	.link-two::after {
 		width: 8ch;
 		height: 8ch;
