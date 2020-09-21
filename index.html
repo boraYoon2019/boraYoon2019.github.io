@@ -20,91 +20,48 @@
 
 	<body>
 		<!-- 사이드 바 : PC 화면이면서 768px보다 클 때만 보이는 사이드 바 -->
-		<aside class="sidebar">
+		<section class="sidebar">
 			<div class="sidebar__space"></div>
 			<img
 				class="sidebar__img"
-				src="https://user-images.githubusercontent.com/68500631/92305020-362d8900-efbe-11ea-85e5-e85e01df0722.jpg"
-			/>
+				src="https://user-images.githubusercontent.com/68500631/93736024-01563e80-fc1a-11ea-9334-c980ddd99431.jpg"
+      />
+      
 			<ul class="sidebar__link">
-				<li class="sidebar__link__item"><i class="fab fa-youtube"></i></li>
-				<li class="sidebar__link__item"><i class="fab fa-github"></i></li>
-				<li class="sidebar__link__item"><i class="fas fa-envelope"></i></li>
-				<li class="sidebar__link__item"><i class="fas fa-hashtag"></i></li>
-			</ul>
 
-			<!-- <div class="sidebar__btn">
-				<button class="btn">Todolist</button>
-			</div> -->
+				<li class="sidebar__link__item">
+          <i class="fab fa-youtube"></i>
+        </li>
+				<li class="sidebar__link__item">
+          <i class="fab fa-github"></i>
+        </li>
+				<li class="sidebar__link__item">
+          <i class="fas fa-envelope"></i>
+        </li>
+				<li class="sidebar__link__item">
+          <i class="fas fa-hashtag"></i>
+        </li>
+
+			</ul>
 
 			<ul class="sidebar__menu">
-				<li class="sidebar__item">
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span class="sm-link__label">ABOUT</span>
-					</a>
+				<li class="sidebar__item sm-link__label PROJECTS ABOUT" data-target="ABOUT">
+					ABOUT
 				</li>
-
-				<li class="sidebar__item">
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span class="sm-link__label">SKILLS</span>
-					</a>
-					<br />
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span
-							class="sm-link__label inner"
-							data-key="skills"
-							data-value="WEB"
-							>WEB</span
-						>
-					</a>
-					<br />
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span
-							class="sm-link__label inner"
-							data-key="skills"
-							data-value="APP"
-							>APP</span
-						>
-					</a>
-				</li>
-
-				<li class="sidebar__item">
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span class="sm-link__label">EXPERIENCE</span>
-					</a>
-				</li>
-
-				<li class="sidebar__item">
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span class="sm-link__label">PROJECTS</span>
-					</a>
-					<br />
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span
-							class="sm-link__label inner"
-							data-key="PROJECTS"
-							data-value="WEB"
-							>WEB</span
-						>
-					</a>
-					<br />
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span
-							class="sm-link__label inner"
-							data-key="PROJECTS"
-							data-value="APP"
-							>APP</span
-						>
-					</a>
-				</li>
-
-				<li class="sidebar__item">
-					<a href="#" class="sm-link sm-link_padding-bottom sm-link4">
-						<span class="sm-link__label">EDUCATION</span>
-					</a>
-				</li>
+				<li class="sidebar__item sm-link__label SKILLS" data-target="SKILLS">
+          SKILLS
+        </li>				
+        <li class="sidebar__item sm-link__label EXPERIENCE" data-target="EXPERIENCE">
+          EXPERIENCE
+        </li>				
+        <li class="sidebar__item sm-link__label PROJECTS" data-target="PROJECTS">
+          PROJECTS
+        </li>				
+        <li class="sidebar__item sm-link__label EDUCATION" data-target="EDUCATION">
+          EDUCATION
+        </li>
 			</ul>
-		</aside>
+		</section>
 
 		<!-- 나브, 어사이드 제외 메인화면 -->
 		<main class="main">
@@ -120,7 +77,7 @@
 				</div>
 			</nav>
 
-			<div class="content link-container">
+			<section class="content link-container">
 				<section class="content__welcoming link-two">
 					<!-- <div class="tri"> -->
 					<div class="tri__inner">
@@ -132,32 +89,59 @@
 				</section>
 
 				<section class="content__main">
-					<article class="full-screen content__about">
+					<article class="full-screen content__about" id='ABOUT'>
 						<h1>ABOUT</h1>
-						<div class="content__about-description">내용</div>
+						<div class="content__description">내용</div>
 					</article>
 
-					<article class="full-screen content__skills">
+					<article class="full-screen content__skills" id='SKILLS'>
 						<h1>SKILLS</h1>
-						<div class="content__skills-description">내용</div>
+						<div class="content__description">내용</div>
 					</article>
 
-					<article class="full-screen content__experience">
+					<article class="full-screen content__experience" id='EXPERIENCE'>
 						<h1>EXPERIENCE</h1>
-						<div class="content__skills-description">내용</div>
+						<div class="content__description">내용</div>
 					</article>
 
-					<article class="full-screen content__projects">
-						<h1>PROJECTS</h1>
-						<div class="content__skills-description">내용</div>
-					</article>
+					<article class="full-screen content__projects" id='PROJECTS'>
+            <h1>PROJECTS</h1>
+                      
+            <!-- Portfolio Grid Section -->
+            <section id="projects" class="content__description">
 
-					<article class="full-screen content__education">
+              <div class="text-center">
+                <h2 class="projects__head">Portfolio</h2>
+                <h3 class="projects__subhead">Lorem ipsum dolor sit amet consectetur.</h3>
+              </div>
+
+              <div class="projects__item">
+
+                <a href="#portfolioModal1" class="portfolio__link" data-toggle="modal">
+                  <div class="projects--hover">
+                    <div class="projects__content--hover">
+                      <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                  </div>
+
+                  <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                </a>
+                <div class="projects-caption">
+                  <h4>Round Icons</h4>
+                  <p>Graphic Design</p>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+					<article class="full-screen content__education" id='EDUCATION'>
 						<h1>EDUCATION</h1>
-						<div class="content__skills-description">내용</div>
+						<div class="content__description">내용</div>
 					</article>
 				</section>
-			</div>
+			</section>
 
 			<!-- content end -->
 		</main>

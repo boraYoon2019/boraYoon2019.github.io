@@ -1,0 +1,74 @@
+{
+  "SKILLS": {
+    "WEB": [
+      {
+        "name": "html5",
+        "which": "front"
+      },
+      {
+        "name": "CSS3",
+        "which": "front"
+      },
+      {
+        "name": "ES6",
+        "which": "front"
+      },
+      {
+        "name": "React",
+        "which": "front"
+      },
+      {
+        "name": "PHP",
+        "which": "server"
+      }
+    ],
+    "APP":[
+      {
+        "name": "JAVA",
+        "which": "front"
+      },
+      {
+        "name": "Python",
+        "which": "server"
+      },
+      {
+        "name": "PHP",
+        "which": "server"
+      }
+    ]
+  },
+  "PROJECTS": {
+    "WEB": [
+      {
+      "head": "yang",
+      "subhead":"",
+      "img": "",
+      "skills": "",
+      "description": ""      
+      },
+      {
+        "head": "yang",
+        "subhead":"",
+        "img": "",
+        "skills": "",
+        "description": ""
+      }
+    ],
+    "APP":[
+      {
+        "head": "yang",
+        "subhead":"",
+        "img": "",
+        "skills": "",
+        "description": ""
+      },
+      {
+        "head": "yang",
+        "subhead":"",
+        "img": "",
+        "skills": "",
+        "description": ""
+      }
+    ]
+  }
+}
