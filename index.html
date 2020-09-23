@@ -24,7 +24,7 @@
 			<div class="sidebar__space"></div>
 			<img
 				class="sidebar__img"
-				src="https://user-images.githubusercontent.com/68500631/93736024-01563e80-fc1a-11ea-9334-c980ddd99431.jpg"
+				src="https://user-images.githubusercontent.com/68500631/93898757-8763a980-fd2e-11ea-8724-f36cc62dcbe0.jpg"
       />
       
 			<ul class="sidebar__link">
@@ -45,7 +45,7 @@
 			</ul>
 
 			<ul class="sidebar__menu">
-				<li class="sidebar__item sm-link__label PROJECTS ABOUT" data-target="ABOUT">
+				<li class="sidebar__item sm-link__label ABOUT" data-target="ABOUT">
 					ABOUT
 				</li>
 				<li class="sidebar__item sm-link__label SKILLS" data-target="SKILLS">
@@ -63,21 +63,27 @@
 			</ul>
 		</section>
 
-		<!-- 나브, 어사이드 제외 메인화면 -->
+		<!-- 헤더, 어사이드 제외 메인화면 -->
 		<main class="main">
 			<!-- 상단 헤더 -->
-			<nav class="navbar">
+			<header class="navbar">
 				<div class="navbar__main">
 					<div class="navbar__toggle">
 						<i class="fas fa-bars"></i>
 					</div>
-
 					<div class="navbar__job">FRONT-END ENGINEER</div>
 					<div class="navbar__name">Bora Yoon</div>
-				</div>
-			</nav>
+        </div>
+        <ul class="navbar__list">
+          <li class="navbar__item">ABOUT</li>
+					<li class="navbar__item">SKILLS</li>
+					<li class="navbar__item">EXPERIENCE</li>
+					<li class="navbar__item">PROJECTS</li>
+					<li class="navbar__item">EDUCATION</li>
+        </ul>
+			</header>
 
-			<section class="content link-container">
+			<section class="content container">
 				<section class="content__welcoming link-two">
 					<!-- <div class="tri"> -->
 					<div class="tri__inner">
@@ -96,44 +102,90 @@
 
 					<article class="full-screen content__skills" id='SKILLS'>
 						<h1>SKILLS</h1>
-						<div class="content__description">내용</div>
+						<h3>* 각 기술을 클릭하면, 해당 기술이 사용된 프로젝트들만 볼 수 있습니다.</h3>
+						<ul class="content__description">
+							<li class="language">PHP</li>
+							<li class="language">Python</li>
+							<li class="language">JAVA</li>
+							<li class="language">React</li>
+							<li class="language">Javascript(ES6)</li>
+							<li class="language">HTML5</li>
+							<li class="language">CSS3</li>
+						</ul>
+						<ul class="content__description">
+							<li class="api-or-skills">flask</li>
+							<li class="api-or-skills">dialog flow</li>
+						</ul>
 					</article>
 
 					<article class="full-screen content__experience" id='EXPERIENCE'>
 						<h1>EXPERIENCE</h1>
-						<div class="content__description">내용</div>
+						<div class="content__description">
+							<ul>
+								<li>
+									<h2>팀노바</h2>
+									<a class="link" href="https://www.teamnovamember.co.kr/">https://www.teamnovamember.co.kr/</a>
+									<p>
+									</p>
+								</li>
+							</ul>
+						</div>
 					</article>
 
-					<article class="full-screen content__projects" id='PROJECTS'>
+					<article class="content__projects" id='PROJECTS'>
             <h1>PROJECTS</h1>
-                      
+            <button class="content__button">APP</button>
+            <button class="content__button">WEB</button>
             <!-- Portfolio Grid Section -->
             <section id="projects" class="content__description">
-
-              <div class="text-center">
-                <h2 class="projects__head">Portfolio</h2>
-                <h3 class="projects__subhead">Lorem ipsum dolor sit amet consectetur.</h3>
-              </div>
-
+              <!-- <h2 class="projects__head">Portfolio</h2>
+              <h3 class="projects__subhead">Lorem ipsum dolor sit amet consectetur.</h3> -->
               <div class="projects__item">
-
-                <a href="#portfolioModal1" class="portfolio__link" data-toggle="modal">
-                  <div class="projects--hover">
-                    <div class="projects__content--hover">
-                      <i class="fa fa-plus fa-3x"></i>
-                    </div>
-                  </div>
-
-                  <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                </a>
+                <div class="hover"></div>
+                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
                 <div class="projects-caption">
                   <h4>Round Icons</h4>
                   <p>Graphic Design</p>
                 </div>
-
+              </div>
+              <div class="projects__item">
+                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                <div class="projects-caption">
+                  <h4 class="projects-head">Round Icons</h4>
+                  <p class="projects-subhead">Graphic Design</p>
+                </div>
+              </div>
+              <div class="projects__item">
+                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                <div class="projects-caption">
+                  <h4>Round Icons</h4>
+                  <p>Graphic Design</p>
+                </div>
+              </div>
+              <div class="projects__item">
+                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                <div class="projects-caption">
+                  <h4>Round Icons</h4>
+                  <p>Graphic Design</p>
+                </div>
+              </div>
+              
+              <div class="projects__item">
+                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                <div class="projects-caption">
+                  <h4>Round Icons</h4>
+                  <p>Graphic Design</p>
+                </div>
+              </div>
+              
+              <div class="projects__item">
+                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
+                <div class="projects-caption">
+                  <h4>Round Icons</h4>
+                  <p>Graphic Design</p>
+                </div>
               </div>
             </section>
-
           </article>
 
 					<article class="full-screen content__education" id='EDUCATION'>
@@ -144,7 +196,19 @@
 			</section>
 
 			<!-- content end -->
-		</main>
+    </main>
+     
+    <!-- The Modal -->
+    <div id="project-modal" class="project-modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="close">&times;</div>                                                               
+        <p>Some text in the Modal..</p>
+      </div>
+ 
+    </div>
+
 
 		<footer>
 			<div class="footer">

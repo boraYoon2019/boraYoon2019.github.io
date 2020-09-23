@@ -31,3 +31,38 @@ function addScrollFunction (event) {
   const target_section = document.querySelector(`#${dataset.target}`);
   target_section.scrollIntoView({behavior: 'smooth'});
 }
+  const body = document.querySelector('body');
+ // Get the modal
+ const modal = document.getElementById('project-modal');
+ 
+ // 이벤트 위임
+ const projects__item = document.querySelector('#projects');
+
+ // Get the <span> element that closes the modal
+ const span = document.getElementsByClassName("close")[0];                                          
+
+ // When the user clicks on the button, open the modal 
+
+
+// 사이드바 > 이벤트 위임
+projects__item.addEventListener('click', onProjectItemClick);
+
+// When the user clicks on the projects__item, open the modal
+function onProjectItemClick (event) {
+  modal.style.display = "block";
+  body.classList.add('modal-active');
+}
+
+ // When the user clicks on <span> (x), close the modal
+ span.onclick = function() {
+     modal.style.display = "none";
+     body.classList.remove('modal-active');
+ }
+
+ // When the user clicks anywhere outside of the modal, close it
+ window.onclick = function(event) {
+     if (event.target == modal) {
+         modal.style.display = "none";
+         body.classList.remove('modal-active');
+     }
+ }
