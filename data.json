@@ -1,0 +1,150 @@
+{  
+  "about": {
+    
+  },
+  "skills": {
+    "web": [
+      {
+        "name": "html5",
+        "which": "front",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      },
+      {
+        "name": "CSS3",
+        "which": "front",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      },
+      {
+        "name": "ES6",
+        "which": "front",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      },
+      {
+        "name": "React",
+        "which": "front",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      },
+      {
+        "name": "PHP",
+        "which": "server",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      }
+    ],
+    "app":[
+      {
+        "name": "JAVA",
+        "which": "front",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      },
+      {
+        "name": "Python",
+        "which": "server",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      },
+      {
+        "name": "PHP",
+        "which": "server",
+        "data-target" : {
+          "web" : [
+            "ddd", "dasdsa", "asdsadasd"
+          ]
+        }
+      }
+    ]
+  },
+  "experience": {
+
+  },
+  "projects": {
+    "web": [
+      {
+        "head": "프로젝트 이름",
+        "subhead":"무슨 프로젝트인지 간단 설명",
+        "img_src": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "skills": {
+          "front": ["사용 기술","사용 기술"],
+          "server": ["사용 기술","사용 기술"],
+          "skills" : ["사용 기술","사용 기술"]
+        },
+        "description": ""
+      },
+      {
+      "head": "프로젝트 이름",
+      "subhead":"무슨 프로젝트인지 간단 설명",
+      "img_src": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+      "skills": {
+        "front": ["사용 기술","사용 기술"],
+        "server": ["사용 기술","사용 기술"],
+        "skills" : ["사용 기술","사용 기술"]
+      },
+      "description": ""
+      },
+      {
+      "head": "프로젝트 이름2",
+      "subhead":"무슨 프로젝트인지 간단 설명",
+      "img_src": "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg",
+      "skills": {
+        "front": ["사용 기술","사용 기술"],
+        "server": ["사용 기술","사용 기술"],
+        "skills" : ["사용 기술","사용 기술"]
+      },
+      "description": ""
+      }
+    ],
+    "app":[      
+      {
+        "head": "프로젝트 이름3",
+        "subhead":"무슨 프로젝트인지 간단 설명",
+        "img_src": "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg",
+        "skills": {
+          "front": ["사용 기술","사용 기술"],
+          "server": ["사용 기술","사용 기술"],
+          "skills" : ["사용 기술","사용 기술"]
+        },
+        "description": ""
+        },
+        {
+        "head": "프로젝트 이름4",
+        "subhead":"무슨 프로젝트인지 간단 설명",
+        "img_src": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "skills": {
+          "front": ["사용 기술","사용 기술"],
+          "server": ["사용 기술","사용 기술"],
+          "skills" : ["사용 기술","사용 기술"]
+        },
+        "description": ""
+        }
+    ]
+  },
+  "education": {
+
+  }
+}

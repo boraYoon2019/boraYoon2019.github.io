@@ -1,6 +1,77 @@
 'use strict';
 
-const highlightNavMenu = () => {  
+axios.get('./data.json')
+.then((response)=>{
+  const data = response.data;
+  const projects = data.projects;
+  // spread operator from ES6
+  // const projects = [...data.projects.web, ...data.projects.app];
+
+  const projectSection = document.querySelector('#projects');
+
+  const projectWeb = projects.web.map((project)=>createProjectItem(project, 'web')).join('');
+  const projectApp = projects.app.map((project)=>createProjectItem(project, 'app')).join('');
+  
+  // projects.map((project)=>console.log(project.img_src));
+  projectSection.innerHTML = projectWeb+projectApp;
+  
+  const contentButton = document.querySelector('.content__button');
+  contentButton.classList.add('content__button--active');
+
+  const contentButtons = document.querySelector('.content__btn-group');
+  
+  sortProject(false);
+  contentButtons.addEventListener('click', (event) => sortProject(event));
+})
+.catch((error) => {
+  console.log(error);
+});
+
+// 메인 화면 - scroll시 사이드바 스크롤파이 메뉴
+window.addEventListener('scroll', highlightNavMenu);
+
+// 사이드바 > 이벤트 위임
+const sidebar_anchor = document.querySelector('.sidebar__menu');
+sidebar_anchor.addEventListener('click', addScrollFunction);
+
+
+
+function sortProject(event) {
+  // default값 지정
+  let webOrApp = 'WEB';
+  event ? webOrApp = event.target.textContent : false;
+  const projects = document.querySelectorAll('.projects__item');
+
+  if (webOrApp==='WEB') {
+    projects.forEach((project)=> {
+    project.classList.contains('web') ? 
+    project.classList.remove('invisible') : project.classList.add('invisible');
+    });
+
+  } else if (webOrApp==='APP') {
+
+    projects.forEach((project)=> {
+      project.classList.contains('app') ?
+       project.classList.remove('invisible') : project.classList.add('invisible');
+     });
+
+  } else {
+      console.log(`Data doesn't match with WEB or APP`);
+  }
+}
+
+function createProjectItem(project, tagClass) {
+  return `
+  <div class="projects__item ${tagClass}" data-head="${project.head}">
+    <img src="${project.img_src}" class="img-responsive" alt="" data-head="${project.head}">
+    <div class="projects-caption" data-head="${project.head}">
+      <h4 class="projects-head" data-head="${project.head}">${project.head}</h4>
+      <p class="projects-subhead" data-head="${project.head}">${project.subhead}</p>
+    </div>
+  </div>`;
+}
+
+function highlightNavMenu() {  
   let scroll_pos = window.pageYOffset;
   const sidebar_items = document.querySelectorAll('.sidebar__item');
 
@@ -17,12 +88,6 @@ const highlightNavMenu = () => {
   });
 }
 
-window.addEventListener('scroll', highlightNavMenu);
-
-// 사이드바 > 이벤트 위임
-const sidebar_anchor = document.querySelector('.sidebar__menu');
-sidebar_anchor.addEventListener('click', addScrollFunction);
-
 function addScrollFunction (event) {  
   event.preventDefault();
   const target = event.target;
@@ -31,38 +96,3 @@ function addScrollFunction (event) {
   const target_section = document.querySelector(`#${dataset.target}`);
   target_section.scrollIntoView({behavior: 'smooth'});
 }
-  const body = document.querySelector('body');
- // Get the modal
- const modal = document.getElementById('project-modal');
- 
- // 이벤트 위임
- const projects__item = document.querySelector('#projects');
-
- // Get the <span> element that closes the modal
- const span = document.getElementsByClassName("close")[0];                                          
-
- // When the user clicks on the button, open the modal 
-
-
-// 사이드바 > 이벤트 위임
-projects__item.addEventListener('click', onProjectItemClick);
-
-// When the user clicks on the projects__item, open the modal
-function onProjectItemClick (event) {
-  modal.style.display = "block";
-  body.classList.add('modal-active');
-}
-
- // When the user clicks on <span> (x), close the modal
- span.onclick = function() {
-     modal.style.display = "none";
-     body.classList.remove('modal-active');
- }
-
- // When the user clicks anywhere outside of the modal, close it
- window.onclick = function(event) {
-     if (event.target == modal) {
-         modal.style.display = "none";
-         body.classList.remove('modal-active');
-     }
- }

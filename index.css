@@ -1,7 +1,8 @@
 /* Global */
 :root {
   /* size */
-  --main-width: 82%;
+	--main-width: 82%;
+	--sidebar-width: 18%;
 	--main-margin: 0 0 0 17%;
 	--navbar-height: 8vh;
   --navbar-mobile-height: 8vh;
@@ -22,6 +23,10 @@
   padding: 0;
 }
 
+.invisible {
+	display: none;
+}
+
 /* PC기준이므로 PC 기준부터 나열함. */
 .sm-link__label {
 	font-size: 1.2em;
@@ -37,6 +42,11 @@
 .sm-link4:hover::after {
 	opacity: 1;
 	transform: translate3d(0, 0, 0);
+}
+
+.base-spacing {
+	margin: var(--base-spacing);
+	padding: var(--base-spacing);
 }
 
 body {
@@ -73,6 +83,7 @@ p {
 
 ul, li {
 	list-style: none;
+	margin: 0;
 }
 
 h2, h3, p {
@@ -114,13 +125,13 @@ h2, h3, p {
 	flex-flow: column nowrap;
 	background-color: var(--sidebar-color);
 	height: 100%;
-	width: 18%;
+	width: var(--sidebar-width);
 }
 
 .sidebar__space {
 	flex-grow: 1;
 	height: 5vh;
-	width: 18%;
+	width: var(--sidebar-width);
 }
 
 .sidebar__img {
@@ -163,7 +174,8 @@ h2, h3, p {
 
 .language {
 	display: inline-block;
-	padding: 0.4rem 0.8rem;
+	margin: var(--base-spacing) 0.1em;
+	padding: var(--base-spacing) calc(var(--base-spacing)*2);
 	font: 1.2rem;
 	color: var(--hover-color);
 	border: 1px dashed var(--hover-color);
@@ -171,9 +183,10 @@ h2, h3, p {
   outline: 0;
 }
 
-.api-or-skills {
+.skills {
 	display: inline-block;
-	padding: 0.4rem 0.8rem;
+	margin: var(--base-spacing) 0.1em;
+	padding: var(--base-spacing) calc(var(--base-spacing)*2);
 	font: 1.2em;
 	color: var(--background-color);
   border: 1px solid var(--text-color);   
@@ -181,7 +194,7 @@ h2, h3, p {
 	background-color: var(--text-color);
 }
 
-.language:hover, .api-or-skills:hover {
+.language:hover, .skills:hover {
 	cursor:pointer;
 	background-color: var(--hover-color);
 	color: var(--background-color);
@@ -286,13 +299,25 @@ h2, h3, p {
 }
 
 .content {
-	display: inline-flex;
+	display: flex;
+	position: relative;
 	width: 80%;
 	height: 100%;
 	flex-flow: column nowrap;
 	justify-content: space-around;
-	align-content: center;
+	align-items: center;
+	z-index: 0;
 }
+
+/* .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	position: relative;
+	z-index: 0;
+} */
 
 .content__welcoming {
 	display: flex;
@@ -380,15 +405,6 @@ h2, h3, p {
 	padding-bottom: 2%;
 }
 
-.container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	position: relative;
-	z-index: 0;
-}
 
 h1.introduction__job {
 	margin: 0 0 0.5em 0;
@@ -447,10 +463,9 @@ article h1 {
 	color: #0f151d;
 	height: 100%;
 	width: var(--main-width);
-	margin: auto 0 0 17%;
+	margin: auto 0 0 var(--sidebar-width);
 	background-color: #0f151d;
 	color: var(--background-color);
-	z-index: 0;
 }
 .footer__licenses {
 	margin: 0 2em;
@@ -493,16 +508,27 @@ article h1 {
 
 .projects__item {
   width: 100%;
+	border: 3px dotted transparent;
 }
-.projects__item:hover, .projects__item:active {
+
+.projects__item:hover, .projects__item--active {
   cursor:pointer;
-  background-color: var(--accent-color);
+	background-color: var(--accent-color);
+	border: 3px dotted var(--hover-color);
 	transition: 300ms ease;
 }
 
-.img-responsive {
-  width: 100%
+.projects__item--active {
+	border: 3px dotted var(--hover-color);
 }
+
+.img-responsive {
+	width: 100%;
+	height: 70%;
+	max-width: 30em;
+	max-height: 16em;
+}
+
 .projects-caption {
   padding: 0.8em;
   font-size: 1.2rem;
@@ -518,8 +544,12 @@ article h1 {
   font-size: 1.2rem;
 }
 
-.content__button:hover, .content__button:active {
+.content__button:hover {
   cursor: pointer;
+  border-bottom: 2px solid #2c2b2b;  
+	transition: 400ms ease;
+}
+.content__button--active {	
   border-bottom: 2px solid #2c2b2b;  
 	transition: 400ms ease;
 }
@@ -540,23 +570,45 @@ article h1 {
 
 /* Modal Content/Box */
 .modal-content {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
   background-color: #fefefe;
-  margin: 5% 26%; /* 15% from the top and centered */
+  margin: 2% 26%; /* 2% from the top */
   padding: 20px;  
   border: 1px solid #888;
   border-radius: 10px;
-  width: 65%; /* Could be more or less, depending on screen size */ 
-  overflow-y: scroll;                         
+	width: 60%; /* Could be more or less, depending on screen size */
+	height: 90%;
+  overflow-y: scroll;
 }
+.slider {
+	width: 90%;
+	height: 100%;
+	position: relative;
+}
+.modal__slider-img {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:white;
+	position: absolute;
+	top:0;
+	z-index:1;
+}
+
 /* The Close Button */
-.close {
+.modal-close {
   color: #888;
   font-weight: bold;
   font-size: 1.7em;
-  text-align: right;
+	text-align: right;
+	align-self: flex-end;
 }
-.close:hover,
-.close:focus {
+.modal-close:hover,
+.modal-close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -564,7 +616,7 @@ article h1 {
 
 
 /* 태블릿 */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 767px) {
 	.btn {
 		padding: 0.3em 1em;
 		font-size: 1em;
@@ -584,11 +636,18 @@ article h1 {
     transition: none;
     border-bottom: none;
 	}
-	
+
+	/* Modal Content/Box */
+	.modal-content {
+		margin: 5% 25%; /* 15% from the top and centered */
+		padding: 10px;
+		width: 70%; /* Could be more or less, depending on screen size */
+		height: 90%
+	}
 }
 
 /* 태블릿 2 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 541px){
 	.btn {
 		padding: 0.3em 1em;
 		font-size: 1em;
@@ -617,11 +676,19 @@ article h1 {
 
   #projects {
     grid-template-columns: auto auto;  
-  }
+	}
+	
+	/* Modal Content/Box */
+	.modal-content {
+		margin: 5% 25%; /* 15% from the top and centered */
+		padding: 10px;
+		width: 70%; /* Could be more or less, depending on screen size */
+		height: 90%;
+	}
 }
 
 /* 스마트폰 */
-@media screen and (max-width: 414px), (max-width: 540px) {
+@media screen and (max-width: 540px) and (min-width: 321px) {
 	.sidebar {
 		display: none;
   }
@@ -633,6 +700,7 @@ article h1 {
 
 	.navbar {
 		display: block;
+		width: 100%;
 	}
 
 	.navbar__list {		
@@ -688,6 +756,9 @@ article h1 {
 		width: 12ch;
 		height: 12ch;
 	}
+	.content {
+		width: 100%;
+  }
 	.content__welcoming {
     padding-top: var(--navbar-mobile-height);
     margin-top: 0.8em;
@@ -714,26 +785,64 @@ article h1 {
   }
   .content__description {
     padding: calc(var(--base-spacing)*2);
-  }
+	}
+	
+	
+	/* Modal Content/Box */
+	.modal-content {
+		margin: 20% 5%; /* 15% from the top and centered */
+		padding: 10px;
+		width: 90%; /* Could be more or less, depending on screen size */
+		height: 80%;
+	}
 }
 
-@media screen and (max-width: 320px) {  
+@media screen and (max-width: 320px) {
+	.sidebar {
+		display: none;
+	}
 	.navbar {
 		display: block;
 		height: var(--navbar-mobile-height);
+		width: 100%;
 	}
 
 	.navbar__list {		
 		display: none;
 	}
-  
+
+	.navbar__main {
+		color: var(--background-color);
+		background-color: var(--text-color);
+	}
+	.navbar__toggle {
+		padding: 8px 12px;
+		display: inline-block;
+	}
+	.navbar__job {
+		display: none;
+	}
+	.navbar__name {
+		font-size: 1.5rem;
+	}
+	.tri {
+		background: none;
+	}
+
+	.content {
+		width: 100%;
+  }
 	.content__welcoming {
 		padding-top: calc(var(--navbar-mobile-height)*2);
+    margin-top: 0.8em;
+    background-image: linear-gradient(rgba(46, 46, 46, 0.5), rgba(235, 235, 166, 0.425));
 	}
+	
 	.link-two::after {
 		width: 8ch;
 		height: 8ch;
 	}
+	
 	h1.introduction__job {
 		font-size: 2em;
 	}
@@ -763,6 +872,50 @@ article h1 {
   }
   .content__description {
     padding: calc(var(--base-spacing)*2);
+	}
+
+	
+	/* Modal Content/Box */
+	.modal-content {
+		margin: 20% 5%; /* 15% from the top and centered */
+		padding: 10px;
+		width: 70%; /* Could be more or less, depending on screen size */
+	}
+
+	.btn {
+		padding: 0.3em 1em;
+    font-size: 1em;
+	}
+
+	h1.introduction__job {
+		font-size: 2em;
+		text-shadow: 3px 3px var(--accent-color);
+	}
+	h2.introduction__name {
+		font-size: 1.2em;
+		text-align: right;
+		text-shadow: 1.5px 1.5px var(--accent-color);
+	}
+
+	.main {
+		margin: 0;
+		width: 100%;
+	}
+	.footer {
+		margin: 0;
+		width: 100%;
+  }
+
+	.footer__link__item {
+    padding: var(--base-spacing);
+		font-size: 1.2em;
+	}
+  
+  article h1 {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.5em;
   }
 }
 

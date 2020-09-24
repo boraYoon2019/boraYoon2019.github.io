@@ -4,13 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
-			content="wclassth=device-wclassth, initial-scale=1.0"
+			content="width=device-width, initial-scale=1.0"
 		/>
 
 		<title>Front-End Engineer / Bora Yoon</title>
 		<link rel="stylesheet" href="index.css" />
 
+		<script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script defer src="index.js"></script>
+		<script defer src="modal.js"></script>
 		<script
 			defer
 			src="https://kit.fontawesome.com/a0a4252627.js"
@@ -102,7 +104,7 @@
 
 					<article class="full-screen content__skills" id='SKILLS'>
 						<h1>SKILLS</h1>
-						<h3>* 각 기술을 클릭하면, 해당 기술이 사용된 프로젝트들만 볼 수 있습니다.</h3>
+						<h3>* 각 기술을 클릭하면, 해당 기술이 사용된 프로젝트를 볼 수 있습니다.</h3>
 						<ul class="content__description">
 							<li class="language">PHP</li>
 							<li class="language">Python</li>
@@ -111,10 +113,9 @@
 							<li class="language">Javascript(ES6)</li>
 							<li class="language">HTML5</li>
 							<li class="language">CSS3</li>
-						</ul>
-						<ul class="content__description">
-							<li class="api-or-skills">flask</li>
-							<li class="api-or-skills">dialog flow</li>
+							<br>
+							<li class="skills">flask</li>
+							<li class="skills">dialog flow</li>
 						</ul>
 					</article>
 
@@ -124,7 +125,7 @@
 							<ul>
 								<li>
 									<h2>팀노바</h2>
-									<a class="link" href="https://www.teamnovamember.co.kr/">https://www.teamnovamember.co.kr/</a>
+									<!-- <a class="link" href="https://www.teamnovamember.co.kr/">https://www.teamnovamember.co.kr/</a> -->
 									<p>
 									</p>
 								</li>
@@ -133,58 +134,16 @@
 					</article>
 
 					<article class="content__projects" id='PROJECTS'>
-            <h1>PROJECTS</h1>
-            <button class="content__button">APP</button>
-            <button class="content__button">WEB</button>
-            <!-- Portfolio Grid Section -->
+						<h1>PROJECTS</h1>
+						<div class="content__btn-group">
+							<button class="content__button">WEB</button>						
+							<button class="content__button">APP</button>
+						</div>
+						<!-- Portfolio Grid Section -->
             <section id="projects" class="content__description">
               <!-- <h2 class="projects__head">Portfolio</h2>
               <h3 class="projects__subhead">Lorem ipsum dolor sit amet consectetur.</h3> -->
-              <div class="projects__item">
-                <div class="hover"></div>
-                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                <div class="projects-caption">
-                  <h4>Round Icons</h4>
-                  <p>Graphic Design</p>
-                </div>
-              </div>
-              <div class="projects__item">
-                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                <div class="projects-caption">
-                  <h4 class="projects-head">Round Icons</h4>
-                  <p class="projects-subhead">Graphic Design</p>
-                </div>
-              </div>
-              <div class="projects__item">
-                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                <div class="projects-caption">
-                  <h4>Round Icons</h4>
-                  <p>Graphic Design</p>
-                </div>
-              </div>
-              <div class="projects__item">
-                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                <div class="projects-caption">
-                  <h4>Round Icons</h4>
-                  <p>Graphic Design</p>
-                </div>
-              </div>
               
-              <div class="projects__item">
-                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                <div class="projects-caption">
-                  <h4>Round Icons</h4>
-                  <p>Graphic Design</p>
-                </div>
-              </div>
-              
-              <div class="projects__item">
-                <img src="https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502" class="img-responsive" alt="">
-                <div class="projects-caption">
-                  <h4>Round Icons</h4>
-                  <p>Graphic Design</p>
-                </div>
-              </div>
             </section>
           </article>
 
@@ -203,8 +162,14 @@
  
       <!-- Modal content -->
       <div class="modal-content">
-        <div class="close">&times;</div>                                                               
-        <p>Some text in the Modal..</p>
+				<div class="modal-close">&times;</div>
+				<h2 class="modal-head base-spacing">AIRABOOK</h2>
+				<div class="slider">
+				</div>								
+				<h3 class="modal-subhead">subhead</h3> 
+				<span class="modal__skills-list base-spacing">
+				</span>                    
+        <p class="modal__description base-spacing">Some text in the Modal..</p>
       </div>
  
     </div>
