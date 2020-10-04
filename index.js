@@ -18,10 +18,11 @@ axios.get('./data.json')
   const contentButton = document.querySelector('.content__button');
   contentButton.classList.add('content__button--active');
 
-  const contentButtons = document.querySelector('.content__btn-group');
   
+  // 프로젝트 탭 > 이벤트 위임
+  const tab_Buttons = document.querySelector('.content__btn-group');
   sortProject(false);
-  contentButtons.addEventListener('click', (event) => sortProject(event));
+  tab_Buttons.addEventListener('click', (event) => sortProject(event));
 })
 .catch((error) => {
   console.log(error);
@@ -35,18 +36,24 @@ const sidebar_anchor = document.querySelector('.sidebar__menu');
 sidebar_anchor.addEventListener('click', addScrollFunction);
 
 
-
 function sortProject(event) {
   // default값 지정
   let webOrApp = 'WEB';
+  // 이후 선택된 탭에 따라 값 변경
   event ? webOrApp = event.target.textContent : false;
   const projects = document.querySelectorAll('.projects__item');
 
   if (webOrApp==='WEB') {
     projects.forEach((project)=> {
-    project.classList.contains('web') ? 
-    project.classList.remove('invisible') : project.classList.add('invisible');
+      project.classList.contains('web') ? 
+      project.classList.remove('invisible') : project.classList.add('invisible');
     });
+
+    const app_tab = document.querySelector('#app_tab');
+    app_tab.classList.remove('content__button--active');
+
+    const web_tab = document.querySelector('#web_tab');
+    web_tab.classList.add('content__button--active');
 
   } else if (webOrApp==='APP') {
 
@@ -54,6 +61,12 @@ function sortProject(event) {
       project.classList.contains('app') ?
        project.classList.remove('invisible') : project.classList.add('invisible');
      });
+    
+    const web_tab = document.querySelector('#web_tab');
+    web_tab.classList.remove('content__button--active');
+
+    const app_tab = document.querySelector('#app_tab');
+    app_tab.classList.add('content__button--active');
 
   } else {
       console.log(`Data doesn't match with WEB or APP`);
@@ -61,9 +74,22 @@ function sortProject(event) {
 }
 
 function createProjectItem(project, tagClass) {
+
+  // console.log(Object.entries(project.skills).splice(1, 1));
+  // const skill_array=Object.entries(project.skills)
+  // .filter((value)=>value[1].length>0).map((value)=>value.splice(1, 1));
+  // console.log(skill_array);
+  const skill_array=Object.entries(project.skills)
+  .filter((value)=>value[1].length>0)
+  .reduce((pre, value)=> {
+      const array = pre.concat(value[1]);
+      return array;
+  }, []).join(' ');
+  console.log(skill_array);
+
   return `
   <div class="projects__item ${tagClass}" data-head="${project.head}">
-    <img src="${project.img_src}" class="img-responsive" alt="" data-head="${project.head}">
+    <img src="${project.thumbnail}" class="img-responsive" alt="프로젝트 이미지" data-head="${project.head}">
     <div class="projects-caption" data-head="${project.head}">
       <h4 class="projects-head" data-head="${project.head}">${project.head}</h4>
       <p class="projects-subhead" data-head="${project.head}">${project.subhead}</p>

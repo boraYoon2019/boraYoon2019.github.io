@@ -16,11 +16,21 @@
 
 // When the user clicks on the projects__items, open the modal
 function onProjectItemClick (event) {
+  console.log(event.target);
   const projectName= event.target.dataset.head;
 
   axios.get('./projects.json')
   .then((response)=>{
-    const clickedProject = response.data.project.find((project)=>project.head === projectName);
+    // console.log(response.data.projects);
+    const projects_array=Object.entries(response.data.projects);
+    const clickedProject = 
+    projects_array
+    .reduce((pre, value)=> {
+      const array = pre.concat(value[1]);
+      return array;
+    }, [])
+    .find((project)=>project.head === projectName);
+
     modalSetting(clickedProject);
     modal.style.display = "block";
     body.classList.add('modal-active');
@@ -31,7 +41,6 @@ function onProjectItemClick (event) {
 }
 
 function modalSetting(clickedProject) {
-
   const head = document.querySelector('.modal-head');
   const subhead = document.querySelector('.modal-subhead');
   const imgSlider = document.querySelector('.slider');
@@ -51,17 +60,24 @@ function modalSetting(clickedProject) {
     imgSlider.appendChild(imgTag);
   }
 
-  clickedProject.skills.front.forEach((name)=>{
-    makeSkillDiv('front', name, skillsList);
-  });
+  const language_array=Object.entries(clickedProject.skills)
+  .filter((value)=> value[0] !== 'skills' && value[1].length>0)
+  .reduce((pre, value)=> {
+      const array = pre.concat(value[1]);
+      return array;
+  }, []);
 
-  clickedProject.skills.server.forEach((name)=>{
-    makeSkillDiv('server', name, skillsList);
-  });
-  
-  clickedProject.skills.skills.forEach((name)=>{
-    makeSkillDiv('skills', name, skillsList);
-  });
+  if(language_array.length !==0) {
+    language_array.forEach((name)=>{
+      makeSkillDiv('language', name, skillsList);
+    });
+  }
+
+  if(clickedProject.skills.skills.length !==0) {
+    clickedProject.skills.skills.forEach((name)=>{
+      makeSkillDiv('skills', name, skillsList);
+    });
+  }
   
   // innerText vs textContent
   description.textContent=clickedProject.description;
