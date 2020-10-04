@@ -22,13 +22,19 @@ function onProjectItemClick (event) {
   axios.get('./projects.json')
   .then((response)=>{
     // console.log(response.data.projects);
+    
+    // json 객체를 이중 배열로 변경
     const projects_array=Object.entries(response.data.projects);
+    
+    console.log(projects_array);
     const clickedProject = 
     projects_array
+    // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat) 
     .reduce((pre, value)=> {
       const array = pre.concat(value[1]);
       return array;
     }, [])
+    // 그 후, project head가 일치하는 것만 찾아냄.
     .find((project)=>project.head === projectName);
 
     modalSetting(clickedProject);

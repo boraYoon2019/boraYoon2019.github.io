@@ -74,18 +74,24 @@ function sortProject(event) {
 }
 
 function createProjectItem(project, tagClass) {
-
+  // 뻘짓 로그
   // console.log(Object.entries(project.skills).splice(1, 1));
   // const skill_array=Object.entries(project.skills)
-  // .filter((value)=>value[1].length>0).map((value)=>value.splice(1, 1));
+  // .filter((value)=>value[1].length>0)  
+  // 필터 length 안먹었음!
+  // .map((value)=>value.splice(1, 1));
   // console.log(skill_array);
+  
+  // skills에 해당하는 json 객체를 이중 배열로 변경
   const skill_array=Object.entries(project.skills)
-  .filter((value)=>value[1].length>0)
+  // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat). 
   .reduce((pre, value)=> {
       const array = pre.concat(value[1]);
       return array;
-  }, []).join(' ');
-  console.log(skill_array);
+  }, [])
+  // 해당 배열의 각 값을 ' '로 연결해서 이은 string 으로 변경.
+  .join(' ');
+  // console.log(skill_array);
 
   return `
   <div class="projects__item ${tagClass}" data-head="${project.head}">
