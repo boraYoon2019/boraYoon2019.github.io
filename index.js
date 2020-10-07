@@ -17,7 +17,6 @@ axios.get('./data.json')
   
   const contentButton = document.querySelector('.content__button');
   contentButton.classList.add('content__button--active');
-
   
   // 프로젝트 탭 > 이벤트 위임
   const tab_Buttons = document.querySelector('.content__btn-group');
@@ -28,6 +27,20 @@ axios.get('./data.json')
   console.log(error);
 });
 
+window.addEventListener('resize', () => {
+  if(window.screen.width>540) {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('close');
+    sidebar.classList.add('show');
+  } else if (window.screen.width<=540) {    
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('show');
+    sidebar.classList.add('close');
+  } else {
+    return;
+  }
+});
+
 // 메인 화면 - scroll시 사이드바 스크롤파이 메뉴
 window.addEventListener('scroll', highlightNavMenu);
 
@@ -35,6 +48,9 @@ window.addEventListener('scroll', highlightNavMenu);
 const sidebar_anchor = document.querySelector('.sidebar__menu');
 sidebar_anchor.addEventListener('click', addScrollFunction);
 
+// 모바일 헤더 햄버거 메뉴 이벤트
+const hamberger_menu = document.querySelector('.navbar__toggle');
+showOrCloseSidebar(hamberger_menu);
 
 function sortProject(event) {
   // default값 지정
@@ -127,6 +143,19 @@ function addScrollFunction (event) {
 
   const target_section = document.querySelector(`#${dataset.target}`);
   target_section.scrollIntoView({behavior: 'smooth'});
-  
-  target.classList.add('sidebar__item--active');
+}
+
+function showOrCloseSidebar (hamberger_menu) { 
+  const sidebar = document.querySelector('.sidebar');
+
+  hamberger_menu.addEventListener('click', () => {
+    hamberger_menu.classList.toggle('active');
+    if (sidebar.classList[1] =='show') {      
+      sidebar.classList.remove('show');  
+      sidebar.classList.add('close');
+    } else if ( !sidebar.classList[1] || sidebar.classList[1] =='close') {
+      sidebar.classList.add('show');
+      sidebar.classList.remove('close');
+    }
+  });
 }
