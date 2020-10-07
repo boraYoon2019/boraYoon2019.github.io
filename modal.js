@@ -47,15 +47,40 @@ function onProjectItemClick (event) {
 }
 
 function modalSetting(clickedProject) {
-  const head = document.querySelector('.modal-head');
-  const subhead = document.querySelector('.modal-subhead');
-  const imgSlider = document.querySelector('.slider');
-  const skillsList = document.querySelector('.modal__skills-list');
-  const description = document.querySelector('.modal__description');
+  const modal__content__layout = document.querySelector('.modal__content__layout');
   
-  head.textContent=clickedProject.head;
-  subhead.textContent=clickedProject.subhead;
+  // 모달 만들기 
+  const modal__content = document.createElement('div');
+  modal__content.classList.add('modal__content');
+  modal__content__layout.appendChild(modal__content);
 
+  const head = document.createElement('h2');
+  head.classList.add('modal-head');
+  head.classList.add('base-spacing');  
+  head.textContent=clickedProject.head;
+  modal__content.appendChild(head);
+  
+  const slider = document.createElement('div');
+  slider.classList.add('slider');
+  modal__content.appendChild(slider);
+
+  const subhead = document.createElement('h3');
+  subhead.classList.add('modal-subhead'); 
+  subhead.textContent=clickedProject.subhead;
+  modal__content.appendChild(subhead);
+
+  const skillsList = document.createElement('span');
+  skillsList.classList.add('modal__skills-list');
+  skillsList.classList.add('base-spacing');  
+  modal__content.appendChild(skillsList);
+
+  const description = document.createElement('p');
+  description.classList.add('modal__description');
+  description.classList.add('base-spacing');
+  modal__content.appendChild(description);
+
+
+  // 내용 채우기
   const imgs = clickedProject.img_src;
 
   for (img of imgs) {
@@ -63,7 +88,7 @@ function modalSetting(clickedProject) {
     const imgTag = document.createElement('img');
     imgTag.classList.add('modal__slider-img');
     imgTag.setAttribute('src', img);
-    imgSlider.appendChild(imgTag);
+    slider.appendChild(imgTag);
   }
 
   const language_array=Object.entries(clickedProject.skills)
@@ -84,9 +109,9 @@ function modalSetting(clickedProject) {
       makeSkillDiv('skills', name, skillsList);
     });
   }
-  
   // innerText vs textContent
   description.textContent=clickedProject.description;
+
 }
 
 function makeSkillDiv(category, name, skillsList){
@@ -99,8 +124,11 @@ function makeSkillDiv(category, name, skillsList){
 
  // When the user clicks on <span> (x), close the modal
  close_btn.onclick = function() {
-     modal.style.display = "none";
-     body.classList.remove('modal-active');
+    modal.style.display = "none";
+    body.classList.remove('modal-active');     
+    const modal__content__layout = document.querySelector('.modal__content__layout');
+    const modal__content = document.querySelector('.modal__content');
+    modal__content__layout.removeChild(modal__content);
  }
 
  // When the user clicks anywhere outside of the modal, close it
@@ -108,5 +136,8 @@ function makeSkillDiv(category, name, skillsList){
      if (event.target == modal) {
          modal.style.display = "none";
          body.classList.remove('modal-active');
+         const modal__content__layout = document.querySelector('.modal__content__layout');
+         const modal__content = document.querySelector('.modal__content');
+         modal__content__layout.removeChild(modal__content);
      }
  }
