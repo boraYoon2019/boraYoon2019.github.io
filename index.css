@@ -94,15 +94,9 @@ h2, h3, p {
   padding: var(--base-spacing);
 }
 
-/* .sidebar__link__list{
-	display: flex;
-	flex-flow: row nowrap;
-	margin: 0.8em 0;
-} */
-
 .sidebar__link__item {
 	margin: 0 0.4rem;
-	font-size: 2em;
+	font-size: 1.8em;
 }
 .sidebar__link__item>a {
 	color: var(--text-color);
@@ -136,24 +130,20 @@ h2, h3, p {
 }
 
 .sidebar__img {
+	margin: 1em;
 	max-width: 45%;
-  border-radius: 50%;  
+  border-radius: 50%; 
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .sidebar__link__list{
-	flex-grow: 1;
 	display: flex;
 	flex-flow: row nowrap;
-	margin: 0.8em 0;
+	margin: 1em 0 2.8em 0;
 	justify-content: space-around;
 	align-content: center;
 	padding-left: 0;
   list-style: none;
-}
-
-.sidebar__btn {
-	flex-grow: 1;
 }
 
 .btn {
@@ -212,7 +202,7 @@ h2, h3, p {
 	align-items: left;
 	padding-left: 0;
 	list-style: none;
-	flex-grow: 2;
+	flex-grow: 4;
 }
 
 .sidebar__item {
@@ -635,6 +625,11 @@ article h1 {
 
 /* 태블릿 */
 @media screen and (max-width: 1024px) and (min-width: 767px) {
+	.sidebar__item--active {
+		transition: 100ms ease;
+		border-bottom: #000 solid 2px;
+	}
+	
 	.btn {
 		padding: 0.3em 1em;
 		font-size: 1em;
@@ -684,7 +679,10 @@ article h1 {
 
 /* 태블릿 2 */
 @media screen and (max-width: 768px) and (min-width: 541px){
-
+	.sidebar__item--active {
+		transition: 100ms ease;
+		border-bottom: #000 solid 2px;
+	}
 	.btn {
 		padding: 0.3em 1em;
 		font-size: 1em;
@@ -742,6 +740,10 @@ article h1 {
 
 /* 스마트폰 */
 @media screen and (max-width: 540px) and (min-width: 321px) {
+	.sidebar__item--active {
+		transition: 100ms ease;
+		border-bottom: #000 solid 2px;
+	}
 	.sidebar {
 		z-index: 1;
 		position: fixed;
@@ -751,6 +753,10 @@ article h1 {
 		width: 70%;
 		padding-top: 2em;
 	}	
+	.sidebar__link__list {
+		margin: 1em 0 1em 0;
+	}
+
 	.sidebar__item {
 		font-size:1.2em;
 	}
@@ -759,6 +765,7 @@ article h1 {
 	}
 	.sidebar__img {
 		width: 50%;
+		margin: 0;
 	}
 	.sidebar__item:hover {
 		cursor: none;
@@ -879,6 +886,10 @@ article h1 {
 }
 
 @media screen and (max-width: 375px) {
+	.sidebar__item--active {
+		transition: 100ms ease;
+		border-bottom: #000 solid 2px;
+	}
 	.sidebar {
 		z-index: 1;
 		position: fixed;
@@ -891,13 +902,18 @@ article h1 {
 	.sidebar__item {
 		font-size:1em;
 	}
+	.sidebar__link__list {
+		margin: 1em 0 1em 0;
+	}
 	.sidebar__link__item {
 		font-size: 1.7em;
 		padding: .1em;
 	}
 	.sidebar__img {
-		width: 30%;
+		width: 40%;
+		margin: 0;
 	}
+
 	.sidebar__item:hover {
 		cursor: none;
 		transition: none;
@@ -957,7 +973,20 @@ article h1 {
 	h2.introduction__name {
 		font-size: 1em;
   }
-  
+
+	.sidebar__img {
+		width: 35%;
+		margin: 0;
+	}
+	.sidebar__link__list {
+		margin: .8em 0 1em 0;
+	}
+  .sidebar__link__item {
+		font-size: 1.4em;
+  }
+  .sidebar__item {
+		font-size: .9em;
+  }
   .sidebar__item:hover {
     cursor: none;
     transition: none;

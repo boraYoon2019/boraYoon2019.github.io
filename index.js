@@ -112,7 +112,7 @@ function highlightNavMenu() {
     const activeSection = sections[index];
 
     const compare = activeSection.offsetTop+100 <= scroll_pos && 
-    (activeSection.offsetTop+50 + activeSection.offsetHeight+50 > scroll_pos);
+    ((activeSection.offsetTop+50) + (activeSection.offsetHeight+50) > scroll_pos);
         
     if(scroll_pos > 100) {
       compare ? item.classList.add('sidebar__item--active') : item.classList.remove('sidebar__item--active')  
@@ -127,4 +127,6 @@ function addScrollFunction (event) {
 
   const target_section = document.querySelector(`#${dataset.target}`);
   target_section.scrollIntoView({behavior: 'smooth'});
+  
+  target.classList.add('sidebar__item--active');
 }
