@@ -150,8 +150,8 @@ function highlightNavMenu() {
     if(navigator.platform){    
       if(0 > filter.indexOf(navigator.platform.toLowerCase())){    
         // 모바일일 경우
-        position = 50;
-        positionHalf = 25;
+        position = 80;
+        positionHalf = 40;
       }   
     }
     
