@@ -3,7 +3,16 @@
 axios.get('./data.json')
 .then((response)=>{
   const data = response.data;
+
+  const about = data.about;
   const projects = data.projects;
+  
+  const aboutSubhead = document.querySelector('.content__subhead');
+  const aboutContent = document.querySelector('.content__paragraph');
+
+  aboutSubhead.textContent = about.title;
+  aboutContent.textContent = about.content;
+
   // spread operator from ES6
   // const projects = [...data.projects.web, ...data.projects.app];
 
@@ -98,23 +107,30 @@ function createProjectItem(project, tagClass) {
   // .map((value)=>value.splice(1, 1));
   // console.log(skill_array);
   
-  // skills에 해당하는 json 객체를 이중 배열로 변경
-  const skill_array=Object.entries(project.skills)
+  // entries 함수 통해 skills에 해당하는 json 객체를 이중 배열로 변경
+  const skills_string=Object.entries(project.skills)
   // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat). 
   .reduce((pre, value)=> {
-      const array = pre.concat(value[1]);
+      const array = value[1] !=='' ? pre.concat(value[1]) : pre;
+      console.log(array);
       return array;
   }, [])
   // 해당 배열의 각 값을 ' '로 연결해서 이은 string 으로 변경.
-  .join(' ');
+  .join(', ');
   // console.log(skill_array);
-
+  // const skill=Object.entries(project.skills);
+  // console.log(skill);
+// project.skills.front
+// project.skills.server
+// project.skills.skills
   return `
   <div class="projects__item ${tagClass}" data-head="${project.head}">
     <img src="${project.thumbnail}" class="img-responsive" alt="프로젝트 이미지" data-head="${project.head}">
     <div class="projects-caption" data-head="${project.head}">
       <h4 class="projects-head" data-head="${project.head}">${project.head}</h4>
+      <p class="projects-feature" data-head="${project.head}">${project.feature}</p>
       <p class="projects-subhead" data-head="${project.head}">${project.subhead}</p>
+      <p class="projects-skills" data-head="${project.head}">${skills_string}</p>
     </div>
   </div>`;
 }
@@ -127,10 +143,23 @@ function highlightNavMenu() {
     const sections = document.querySelectorAll('.content__main > article')
     const activeSection = sections[index];
 
-    const compare = activeSection.offsetTop+100 <= scroll_pos && 
-    ((activeSection.offsetTop+50) + (activeSection.offsetHeight+50) > scroll_pos);
+    const filter = "win16|win32|win64|mac";
+    let position = 100;
+    let positionHalf =50;
+
+    if(navigator.platform){    
+      if(0 > filter.indexOf(navigator.platform.toLowerCase())){    
+        // 모바일일 경우
+        position = 150;
+        positionHalf = 75;
+      }   
+    }
+    
+
+    const compare = activeSection.offsetTop+position <= scroll_pos && 
+    ((activeSection.offsetTop+positionHalf) + (activeSection.offsetHeight+positionHalf) > scroll_pos);
         
-    if(scroll_pos > 100) {
+    if(scroll_pos > position) {
       compare ? item.classList.add('sidebar__item--active') : item.classList.remove('sidebar__item--active')  
     }
   });
