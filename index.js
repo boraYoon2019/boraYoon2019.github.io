@@ -1,5 +1,17 @@
 'use strict';
 
+const filter = "win16|win32|win64|mac";
+let position = 100;
+let positionHalf =50;
+
+if(navigator.platform){    
+  if(0 > filter.indexOf(navigator.platform.toLowerCase())){    
+    // 모바일일 경우
+    position = 60;
+    positionHalf = 30;
+  }   
+}
+
 axios.get('./data.json')
 .then((response)=>{
   const data = response.data;
@@ -142,20 +154,7 @@ function highlightNavMenu() {
   sidebar_items.forEach((item, index) => {
     const sections = document.querySelectorAll('.content__main > article')
     const activeSection = sections[index];
-
-    const filter = "win16|win32|win64|mac";
-    let position = 100;
-    let positionHalf =50;
-
-    if(navigator.platform){    
-      if(0 > filter.indexOf(navigator.platform.toLowerCase())){    
-        // 모바일일 경우
-        position = 80;
-        positionHalf = 40;
-      }   
-    }
     
-
     const compare = activeSection.offsetTop+position <= scroll_pos && 
     ((activeSection.offsetTop+positionHalf) + (activeSection.offsetHeight+positionHalf) > scroll_pos);
         
