@@ -1,15 +1,11 @@
 'use strict';
 
-const filter = "win16|win32|win64|mac";
 let position = 100;
 let positionHalf =50;
 
-if(navigator.platform){    
-  if(0 > filter.indexOf(navigator.platform.toLowerCase())){    
-    // 모바일일 경우
-    position = 60;
-    positionHalf = 30;
-  }   
+if(window.outerWidth < 540){
+  position = 80;
+  positionHalf = 40;
 }
 
 axios.get('./data.json')
@@ -171,6 +167,11 @@ function addScrollFunction (event) {
 
   const target_section = document.querySelector(`#${dataset.target}`);
   target_section.scrollIntoView({behavior: 'smooth'});
+  if(window.outerWidth < 540){
+    const sidebarMobile = document.querySelector('.sidebar');
+    sidebarMobile.classList.remove('show');  
+    sidebarMobile.classList.add('close');
+  }
 }
 
 function showOrCloseSidebar (hamberger_menu) { 
