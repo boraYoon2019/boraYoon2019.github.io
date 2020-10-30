@@ -1,23 +1,16 @@
 'use strict';
 
-let position = 100;
-let positionHalf =50;
-
-if(window.outerWidth < 540){
-  position = 80;
-  positionHalf = 40;
-}
-
-window.addEventListener("load", function(event) {
-  alert("안녕하세요. 포트폴리오 겸 개인 프로젝트 작품입니다. :)");
+window.addEventListener("load", function() {
+  alert("반갑습니다. 이 페이지는 포트폴리오 겸 개인 프로젝트입니다. :)");
+  console.log("");
 });
 
-axios.get('./data.json')
+axios.get('../data/data.json')
 .then((response)=>{
   const data = response.data;
 
+  // about 섹션
   const about = data.about;
-  const projects = data.projects;
   
   const aboutSubhead = document.querySelector('.content__subhead');
   const aboutContent = document.querySelector('.content__paragraph');
@@ -25,15 +18,13 @@ axios.get('./data.json')
   aboutSubhead.textContent = about.title;
   aboutContent.textContent = about.content;
 
-  // spread operator from ES6
-  // const projects = [...data.projects.web, ...data.projects.app];
-
+  // project 섹션  
+  const projects = data.projects;
   const projectSection = document.querySelector('#projects');
 
   const projectWeb = projects.web.map((project)=>createProjectItem(project, 'web')).join('');
   const projectApp = projects.app.map((project)=>createProjectItem(project, 'app')).join('');
   
-  // projects.map((project)=>console.log(project.img_src));
   projectSection.innerHTML = projectWeb+projectApp;
   
   const contentButton = document.querySelector('.content__button');
@@ -43,6 +34,55 @@ axios.get('./data.json')
   const tab_Buttons = document.querySelector('.content__btn-group');
   sortProject(false);
   tab_Buttons.addEventListener('click', (event) => sortProject(event));
+  
+
+  // 경력 섹션
+  const experience = data.experience;
+  const experienceList = document.querySelector('.content__experience ul');
+
+  for (const exp of experience) {
+    const experienceItem = document.createElement('li');
+    experienceItem.classList.add('double-spacing');
+
+    const experienceTitle = document.createElement('h3');
+    experienceTitle.textContent=exp.company;    
+    experienceTitle.classList.add('inline');
+
+    experienceItem.appendChild(experienceTitle);
+
+    if(exp.link !== "") {
+      const experienceLink = document.createElement('a');
+      experienceLink.setAttribute('href', exp.link);
+      experienceLink.textContent='('+exp.link+')';
+      experienceItem.appendChild(experienceLink);
+    }
+    
+    const experiencePosition = document.createElement('h4');
+    experiencePosition.textContent=exp.position;
+    experiencePosition.classList.add('align-right');
+    experiencePosition.style.color='#4f27da';
+    experienceItem.appendChild(experiencePosition);
+  
+
+    const experienceDuration = document.createElement('p');
+    experienceDuration.textContent=exp.duration;
+    experienceDuration.classList.add('align-right');
+    experienceDuration.classList.add('text-bolder');
+    experienceItem.appendChild(experienceDuration);
+
+    const experienceContent = document.createElement('p');
+    experienceContent.textContent=exp.summary;
+    experienceContent.classList.add('updown-double-spacing');
+    experienceItem.appendChild(experienceContent);
+
+    // const experienceSkills = document.createElement('p');
+    // experienceSkills.textContent=exp.summary;
+    // experienceSkills.classList.add('double-spacing');
+    // experienceItem.appendChild(experienceSkills);
+  
+    experienceList.appendChild(experienceItem);
+  }
+
 })
 .catch((error) => {
   console.log(error);
@@ -122,10 +162,10 @@ function createProjectItem(project, tagClass) {
   // entries 함수 통해 skills에 해당하는 json 객체를 이중 배열로 변경
   const skills_string=Object.entries(project.skills)
   // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat). 
-  .reduce((pre, value)=> {
-      const array = value[1] !=='' ? pre.concat(value[1]) : pre;
-      console.log(array);
-      return array;
+  .reduce((preSpecArr, spec)=> {
+    // spec[0] 은 front, server, skill > 제목 부분임
+      const specArray = spec[1] !=='' ? preSpecArr.concat(spec[1]) : preSpecArr;
+      return specArray;
   }, [])
   // 해당 배열의 각 값을 ' '로 연결해서 이은 string 으로 변경.
   .join(', ');
@@ -141,7 +181,7 @@ function createProjectItem(project, tagClass) {
     <div class="projects-caption" data-head="${project.head}">
       <h4 class="projects-head" data-head="${project.head}">${project.head}</h4>
       <p class="projects-feature" data-head="${project.head}">${project.feature}</p>
-      <p class="projects-subhead" data-head="${project.head}">${project.subhead}</p>
+      <p class="projects-subhead base-spacing" data-head="${project.head}">${project.subhead}</p>
       <p class="projects-skills" data-head="${project.head}">${skills_string}</p>
     </div>
   </div>`;
@@ -154,6 +194,9 @@ function highlightNavMenu() {
   sidebar_items.forEach((item, index) => {
     const sections = document.querySelectorAll('.content__main > article')
     const activeSection = sections[index];
+      
+    const position = 100;
+    const positionHalf =50;
     
     const compare = activeSection.offsetTop+position <= scroll_pos && 
     ((activeSection.offsetTop+positionHalf) + (activeSection.offsetHeight+positionHalf) > scroll_pos);

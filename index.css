@@ -15,6 +15,16 @@
 	--accent-color2: #dedede;
 	--hover-color: #585b6d;
 	--sidebar-color: #e6e6e6;
+
+	/* slide */
+	--left: 0;
+  --aspectRatio: .5625;
+  --slide: 0;
+  --slideWidth: 100%;
+  --slideHeight: calc(var(--slideWidth) * var(--aspectRatio));
+	--slidesVisible: 1;
+	--img-height: 60vh;
+	--img-mobile-height: 35vh;
 }
 
 * {
@@ -47,6 +57,24 @@
 	margin: var(--base-spacing);
 	padding: var(--base-spacing);
 }
+.updown-double-spacing {	
+	margin: calc(var(--base-spacing)*2) 0;
+	padding: calc(var(--base-spacing)*2) 0;
+}
+.double-spacing {	
+	margin: calc(var(--base-spacing)*2) var(--base-spacing);
+	padding: calc(var(--base-spacing)*2) var(--base-spacing);
+}
+
+.inline {
+	display: inline-block;
+}
+
+iframe {
+	width: 100%;
+	height: var(--img-height);
+	margin: 1.5em;
+}
 
 body {
 	width: 100%;
@@ -63,6 +91,15 @@ body {
   padding-right: 0.9%;
 }
 
+.align-right {
+	display: block;
+  text-align: right;
+}
+.text-bolder {
+	display: block;
+	font-weight: bolder;
+}
+
 section {
 	display: block;
 	width: 100%;
@@ -71,10 +108,10 @@ section {
 a {
 	width: 100%;
 	text-decoration: none;
+	word-break: break-all;
 }
 
 p {
-	font-size: 1.2rem;
 	margin: 0.4em;
 }
 
@@ -211,8 +248,8 @@ li.language:hover, li.skills:hover {
 .sidebar__item {
   width: fit-content;
   height: auto;
-  max-width: 90%;
-  padding: 0.2em 0.1em;
+	max-width: 90%;
+  padding: 0.3em 0.1em;
   margin: calc(var(--base-spacing)*1.5);
   border-bottom: transparent solid 2px;
 }
@@ -544,57 +581,66 @@ article h5 {
 
 .img-responsive {
 	width: 100%;
-	height: 10em;
+	height: 15em;
 	max-width: 30em;
-	max-height: 10em;
+	max-height: 12em;
 }
 
 .projects-caption {
   padding: 0.8em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.projects-head {
+	text-align: center;
 }
 
 .projects-feature {
 	height: 1.2rem;
-	font-size: 1.1rem;
+	font-size: 1rem;
+	text-align: center;
 }
 
 .projects-subhead {
 	display: inline-block;
 	width:95%;
-	height: 5.5rem;
-	line-height: 1.33em;
-	font-size: 1.1rem;
+	height: 4rem;
+	line-height: 1.1rem;
+	font-size: 1rem;
 	overflow: hidden;
-	line-clamp: 5;
+	line-clamp: 4;
 	text-overflow: ellipsis;
+	color: #585b6d;
 }
 
 .projects-skills {
-	font-size: 0.9rem;
+	font-size: 1.1rem;
 	display: inline-block;
 	width:95%;
 	height: auto;
+	font-weight: bolder;
+	color:#4f27da;
 }
 
 .content__button {
-  margin: 0.8em 0 0 0.8em;
+  margin: 0.5rem 0 0 0.8rem;
   padding: 0.8em;
   border: 0;
   border-bottom: 2px solid transparent;
   outline: 0;
   background-color: transparent;
-  font-size: 1.2rem;
+  font-size: 1.2rem;  
+	transition: 400ms ease;
 }
 
 .content__button:hover {
   cursor: pointer;
   border-bottom: 2px solid #2c2b2b;  
-	transition: 400ms ease;
+	transition: 400ms ease-in;
 }
 .content__button--active {	
   border-bottom: 2px solid #2c2b2b;  
-	transition: 400ms ease;
+	transition: 400ms ease-in;
 }
 
 /* The Modal (background) */
@@ -622,30 +668,70 @@ article h5 {
 	flex-flow: column nowrap;
 	align-items: center;
   background-color: #fefefe;
-  margin: 2% 26%; /* 2% from the top */
-  padding: 20px;  
+  margin: 2% 25%;
+  padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;
-	width: 60%; /* Could be more or less, depending on screen size */
-	height: 90%;
+	width: 70%; /* Could be more or less, depending on screen size */
+	height: 95%;
   overflow-y: scroll;
 }
-.slider {
-	width: 90%;
+
+.slides__container {
+  background: #2a2a2a;
+  border: 2px solid #fff;
+  height: var(--slideHeight);
+  line-height: var(--slideHeight);
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+  width: calc(var(--slideWidth) * var(--slidesVisible));
+}
+
+.slides {
+  font-size: 0;
 	height: 100%;
+  transform: translate3d(calc(var(--slide)*1* var(--slideWidth) * -1), 0, 0);
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.slide {
 	position: relative;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  font-size: 60px;
+	height: var(--img-height);
+  text-align: center;
+  transition: all 0.5s;
+	width: var(--slideWidth);
 }
-.modal__slider-img {
-	width: 80%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color:white;
-	position: absolute;
-	top:0;
-	z-index:1;
+
+.slides__controls {
+  margin: 0 0 20px 0;
+  text-align: center;
+	width: 100%;
 }
+
+.slides__controls label {
+	background-position: center;
+	background-size: cover;
+	border: 2px solid #fff;
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;	
+	width: 50px;
+	margin: 0 10px 10px;
+	/* overflow: hidden; */
+}
+
+.slides__controls input {
+	width:0px;
+	height:0px;
+}
+
 
 /* The Close Button */
 .modal-close {
@@ -713,15 +799,25 @@ article h5 {
 
 	/* Modal Content/Box */
 	.modal__layout {
-		margin: 5% 25%; /* 15% from the top and centered */
+		margin: 3% 8%;
 		padding: 10px;
-		width: 70%; /* Could be more or less, depending on screen size */
-		height: 90%
+		width: 84%; /* Could be more or less, depending on screen size */
 	}
 
 	#projects {
 		grid-template-columns: 50% 50%;
 	}
+
+	iframe {
+		width: 100%;
+		height: var(--img-mobile-height);
+		margin: 1em;
+	}
+
+	.slide {
+		height: var(--img-mobile-height);
+	}
+	
 }
 
 /* 태블릿 2 */
@@ -774,22 +870,37 @@ article h5 {
   #projects {
     grid-template-columns: 50% 50%;  
 	}
-	
+
 	/* Modal Content/Box */
 	.modal__layout {
-		margin: 5% 25%; /* 15% from the top and centered */
+		margin: 3% 8%;
 		padding: 10px;
-		width: 70%; /* Could be more or less, depending on screen size */
-		height: 90%;
+		width: 84%; /* Could be more or less, depending on screen size */
 	}
 	
+
+	.slide {
+		height: var(--img-mobile-height);
+	}
 }
 
 /* 스마트폰 */
 @media screen and (max-width: 540px) and (min-width: 321px) {
+	.double-spacing {
+    margin: var(--base-spacing) var(--base-spacing);
+    padding: var(--base-spacing) var(--base-spacing);
+	}
+	.projects-caption {
+		padding: 0;
+	}
+
+	.base-spacing {
+		margin: .8rem 0 0 0;
+    padding: 0 var(--base-spacing);
+	}
+
 	h2 {
-		margin-top: 1em;
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 	}
 	.sidebar>h3 {
 		display: none;
@@ -798,9 +909,6 @@ article h5 {
 		display: none;
 	}
 
-	.base-spacing {
-		margin: 1.2rem 0 0 0;
-	}
 	.sidebar__item--active {
 		transition: 100ms ease;
 		border-bottom: #000 solid 2px !important;
@@ -876,7 +984,7 @@ article h5 {
 		text-align: right;
 		text-shadow: 1.5px 1.5px var(--accent-color);
 	}
-	
+
 	.main {
 		margin: 0;
 		width: 100%;
@@ -934,10 +1042,10 @@ article h5 {
 	
 	/* Modal Content/Box */
 	.modal__layout {
-		margin: 20% 5%; /* 15% from the top and centered */
-		padding: 10px;
-		width: 90%; /* Could be more or less, depending on screen size */
-		height: 85%;
+		margin: 16% 2%; /* 15% from the top and centered */
+		padding: 12px;
+		width: 96%; /* Could be more or less, depending on screen size */
+		height: 90%;
 	}
 
 	.content__welcoming {
@@ -949,10 +1057,19 @@ article h5 {
 		background-size: cover;	
 	}
 
-	
 	.content__subhead {
 		margin: 1em;
 		text-align: center;
+	}
+	
+	iframe {
+		width: 100%;
+		height: var(--img-mobile-height);
+		margin: 1em;
+	}
+	
+	.slide {
+		height: var(--img-mobile-height);
 	}
 }
 
@@ -961,14 +1078,12 @@ article h5 {
 		transition: 100ms ease;
 		border-bottom: #000 solid 2px !important;
 	}
+
 	.base-spacing {
-		margin: 1.2rem 0 0 0;
+		margin: .8rem 0 0 0;
+    padding: 0 var(--base-spacing);
 	}
 
-	h2 {
-		margin-top: 1em;
-		font-size: 1.8rem;
-	}
 	.sidebar>h3 {
 		display: none;
 	}
@@ -1095,15 +1210,15 @@ article h5 {
     grid-row-gap: var(--base-spacing);
   }
   .content__description {
-    padding:  calc(var(--base-spacing)/2) calc(var(--base-spacing)*2) calc(var(--base-spacing)*2) calc(var(--base-spacing)*2);
+    padding: calc(var(--base-spacing)/2) calc(var(--base-spacing)*2) calc(var(--base-spacing)/2) calc(var(--base-spacing)*2);
 	}
 
-	
 	/* Modal Content/Box */
 	.modal__layout {
-		margin: 18% 5%; /* 15% from the top and centered */
+		margin: 19% 2%; /* 15% from the top and centered */
 		padding: 10px;
-		width: 90%; /* Could be more or less, depending on screen size */
+		width: 96%; /* Could be more or less, depending on screen size */
+		height: 90%;
 	}
 
 	.btn {
@@ -1141,7 +1256,21 @@ article h5 {
     padding: 0.5em;
     margin: 0.5em;
 	}
-		
+
+	iframe {
+		width: 100%;
+		height: calc(var(--img-mobile-height)*0.5);
+		margin: .8em;
+	}
+	
+	.slide {
+		height: calc(var(--img-mobile-height)*0.5);
+	}
+
+	.double-spacing {
+    margin: var(--base-spacing) calc(var(--base-spacing)/2);
+    padding: var(--base-spacing) calc(var(--base-spacing)/2);
+	}
 }
 
 /* nowrap 시 마진 포함 값이 원래 화면 너비보다 넓으면 깨짐 현상 나타남

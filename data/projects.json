@@ -1,0 +1,96 @@
+{
+  "projects": {
+    "web": [
+      {
+        "head": "Calendar-TodoList",
+        "feature":"【팀 프로젝트 - 2명】",
+        "subhead":"반응형 Todolist 웹사이트",
+        "link": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
+        "duration": "2020.09 &mdash; 2020.10 / 2 months",
+        "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "img_src": [
+          "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502", 
+          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+        ],
+        "skills": {
+          "front": ["React", "Javascript(ES6)"],
+          "server": "",
+          "skills" : ["Redux","Redux-Saga"]
+        },
+        "description": "　프론트 전담. Python Django REST Framework를 이용한 서버 개발자와 작업하였습니다. 아토믹 디자인 패턴을 적용한 프로젝트입니다.",
+        "video": ""
+      },
+      {
+        "head": "Oh! happy PENSION",
+        "feature":"【개인 프로젝트】",
+        "subhead":"펜션 예약 웹사이트",
+        "link": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
+        "duration": "2019.08 &mdash; 2019.09 / 6 weeks",
+        "thumbnail": "https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg",
+        "img_src": [
+        "https://user-images.githubusercontent.com/68500631/89120791-fd4c5100-d4f3-11ea-9156-583da50237e2.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120793-00dfd800-d4f4-11ea-81f8-99f9a73d1210.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120794-01786e80-d4f4-11ea-94a3-28765ee5329c.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120797-02110500-d4f4-11ea-9402-2f51a6b6a3c5.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120798-02110500-d4f4-11ea-8e84-d3ec3dd83261.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120800-02a99b80-d4f4-11ea-9681-12409bb82125.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120801-03423200-d4f4-11ea-9f11-006d171dcd72.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120802-03dac880-d4f4-11ea-9fa8-6457743dd73d.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120803-04735f00-d4f4-11ea-9b3a-bf0823af66d4.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120804-05a48c00-d4f4-11ea-9753-66f4c8f17ad7.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120805-05a48c00-d4f4-11ea-9320-f92ed94e328c.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120806-063d2280-d4f4-11ea-9554-86df2c6405b8.jpg"
+        ,"https://user-images.githubusercontent.com/68500631/89120807-063d2280-d4f4-11ea-89aa-ef86d4142498.jpg"
+        ],
+        "skills": {
+          "front": ["HTML/CSS/JS"],
+          "server": ["PHP", "Linux(Ubuntu)","Apache/MYSQL"],
+          "skills" : ["Ajax","JQuery","BootStrap"]
+        },
+        "description": "　GoogleChart, ImportAPI 등을 사용하여 숙박 날짜와 인원 등의 조건 지정을 통한 예약 가능 방 조회 기능이 있는 개인 펜션 웹사이트입니다. 메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다."
+        ,"video": "https://www.youtube.com/embed/KayJHQ4l4yk"
+      }
+    ],
+    "app":[
+      {
+        "head": "NOVATRIP",
+        "feature":"【팀 프로젝트 - 7명】",
+        "subhead":" 일본 '다국어 번역 대회' 본선 진출작 - 여행 관련 앱",
+        "link": "https://github.com/boraYoon2019/project_summary/tree/main/novartrip",
+        "duration": "2019.02 — 2019.03 / 3 주",
+        "thumbnail": "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg",
+        "img_src": [
+          "https://user-images.githubusercontent.com/68500631/89737478-37958f80-daac-11ea-9a16-6517df98a18d.png", 
+          "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg"
+        ],
+        "skills": {
+          "front": ["ANDROID-JAVA"],
+          "server": ["AWS EC2", "Apache/MYSQL"],
+          "skills" : ""
+        },
+        "description": "　일본 총무성이 주최한 '다국어 번역 대회' 본선 진출작으로, 통역ㆍ번역 기능과 사용자의 실시간 상황(날씨,위치 기반)을 고려한 AI 챗봇 및 위치 서비스를 제공하는 여행 어플입니다. 해당 프로젝트에서 Google Dialog Flow API를 이용하여 챗봇 내 준비물 체크리스트, 상황별 표현, 지역 특산품 정보, 올림픽 경기 정보 및 등록한 여행 일정 보기 기능을 개발하였습니다."
+        ,"video": "https://www.youtube.com/embed/BL-2bjUxtMo"  
+      },
+           
+      {
+        "head": "AIRA BOOK",
+        "feature":"【개인 프로젝트】",
+        "subhead":"독서 서평 및 모임 등록·공유가 가능한 독서 관리 앱",
+        "link": "https://github.com/boraYoon2019/project_summary/tree/main/airabook",
+        "duration": "2019.06 — 2019.08 / 6 weeks",
+        "img_src": [
+          "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502", 
+          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+        ],
+        "skills": {
+          "front": ["ANDROID-JAVA"],
+          "server": "",
+          "skills" : ["Kakao API","Google MAP API", "Aladin API"]
+        },
+        "description": "　카카오 API(로그인, 링크 공유), Google MAP API(지도), 알라딘 API(베스트 셀러) 를 사용하여 베스트 셀러 배너, 독서 시간 기록 및 ASMR 재생 기능, 나의 서재, 한 줄 서평·모임 게시판 등을 개발하였습니다."
+        ,"video": "https://www.youtube.com/embed/h7jmYZg3Aow"  
+      }
+    ]
+  }
+}
