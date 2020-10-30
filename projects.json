@@ -16,7 +16,7 @@
           "server": "",
           "skills" : ["Redux"]
         },
-        "description": "프론트 전담. Python Django REST 를 이용한 서버 연동하여 작업, 컴포넌트 중심으로 아토믹 디자인"
+        "description": "프론트 전담. Python Django REST Framework를 이용한 서버 개발자와 작업하였습니다. 아토믹 디자인 패턴을 적용한 프로젝트입니다."
       },
       {
       "head": "Oh! happy PENSION",

@@ -8,6 +8,10 @@ if(window.outerWidth < 540){
   positionHalf = 40;
 }
 
+window.addEventListener("load", function(event) {
+  alert("안녕하세요. 포트폴리오 겸 개인 프로젝트 작품입니다. :)");
+});
+
 axios.get('./data.json')
 .then((response)=>{
   const data = response.data;

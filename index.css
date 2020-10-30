@@ -50,7 +50,6 @@
 
 body {
 	width: 100%;
-	font-size: 1.2em;
 	font-weight: 400;
 	color: var(--text-color);
   background-color: var(--background-color);
@@ -407,6 +406,7 @@ article h1 {
 	font-weight: bold;
 	font-size: 1.9rem;
 	padding: 0.35em;
+	margin: var(--base-spacing) 0 var(--base-spacing) 0;
 	background: rgb(241, 241, 241);
 	background: linear-gradient(
 		90deg,
@@ -417,6 +417,11 @@ article h1 {
 	border-radius: 10px;
   /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
 }
+
+article h5 {
+	margin: 0 0 0 1em;
+}
+
 .introduction__inner {
 	float: right;
 }
@@ -433,7 +438,7 @@ article h1 {
 .content__description {
   display: block;
   width: 100%;
-  padding: calc(var(--base-spacing)*3);
+	padding: calc(var(--base-spacing)/2) calc(var(--base-spacing)*2.5) calc(var(--base-spacing)*2.5) calc(var(--base-spacing)*2.5);
 }
 
 .content__paragraph {
@@ -500,6 +505,11 @@ article h1 {
 	transition: transform 0.6s ease-in-out;
 }
 
+.content__subhead {
+	margin: 2em;
+	text-align: center;
+}
+
 /* 모달 관련 */
 .content__projects {
   padding: var(--base-spacing);
@@ -559,6 +569,7 @@ article h1 {
 	line-clamp: 5;
 	text-overflow: ellipsis;
 }
+
 .projects-skills {
 	font-size: 0.9rem;
 	display: inline-block;
@@ -865,10 +876,12 @@ article h1 {
 		text-align: right;
 		text-shadow: 1.5px 1.5px var(--accent-color);
 	}
+	
 	.main {
 		margin: 0;
 		width: 100%;
 	}
+
 	.footer {
 		margin: 0;
 		width: 100%;
@@ -913,9 +926,10 @@ article h1 {
     grid-template-columns: auto;
     grid-column-gap: var(--base-spacing);
     grid-row-gap: var(--base-spacing);
-  }
+	}
+	
   .content__description {
-    padding: calc(var(--base-spacing)*2);
+    padding: calc(var(--base-spacing)/2) calc(var(--base-spacing)*2) calc(var(--base-spacing)*2) calc(var(--base-spacing)*2);
 	}
 	
 	/* Modal Content/Box */
@@ -933,6 +947,12 @@ article h1 {
 		background-repeat:no-repeat;
 		background-position: center right;
 		background-size: cover;	
+	}
+
+	
+	.content__subhead {
+		margin: 1em;
+		text-align: center;
 	}
 }
 
@@ -1075,7 +1095,7 @@ article h1 {
     grid-row-gap: var(--base-spacing);
   }
   .content__description {
-    padding: calc(var(--base-spacing)*2);
+    padding:  calc(var(--base-spacing)/2) calc(var(--base-spacing)*2) calc(var(--base-spacing)*2) calc(var(--base-spacing)*2);
 	}
 
 	
