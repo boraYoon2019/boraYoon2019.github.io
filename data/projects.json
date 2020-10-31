@@ -13,9 +13,9 @@
           "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
         ],
         "skills": {
-          "front": ["React", "Javascript(ES6)"],
+          "front": ["JSX", "ES2015(ES6)"],
           "server": "",
-          "skills" : ["Redux","Redux-Saga"]
+          "skills" : ["React","Redux","Redux-Saga"]
         },
         "description": "　프론트 전담. Python Django REST Framework를 이용한 서버 개발자와 작업하였습니다. 아토믹 디자인 패턴을 적용한 프로젝트입니다.",
         "video": ""
@@ -45,7 +45,7 @@
         ],
         "skills": {
           "front": ["HTML/CSS/JS"],
-          "server": ["PHP", "Linux(Ubuntu)","Apache","MYSQL"],
+          "server": ["PHP", "Linux","Ubuntu","Apache","MYSQL"],
           "skills" : ["Ajax","JQuery","BootStrap"]
         },
         "description": "　GoogleChart, ImportAPI 등을 사용하여 숙박 날짜와 인원 등의 조건 지정을 통한 예약 가능 방 조회 기능이 있는 개인 펜션 웹사이트입니다. 메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다."
@@ -65,8 +65,8 @@
           "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg"
         ],
         "skills": {
-          "front": ["ANDROID-JAVA"],
-          "server": ["AWS EC2", "Apache","MYSQL"],
+          "front": ["ANDROID_JAVA"],
+          "server": ["AWS_EC2", "Apache","MYSQL"],
           "skills" : ""
         },
         "description": "　일본 총무성이 주최한 '다국어 번역 대회' 본선 진출작으로, 통역ㆍ번역 기능과 사용자의 실시간 상황(날씨,위치 기반)을 고려한 AI 챗봇 및 위치 서비스를 제공하는 여행 어플입니다. 해당 프로젝트에서 Google Dialog Flow API를 이용하여 챗봇 내 준비물 체크리스트, 상황별 표현, 지역 특산품 정보, 올림픽 경기 정보 및 등록한 여행 일정 보기 기능을 개발하였습니다."
@@ -84,7 +84,7 @@
           "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
         ],
         "skills": {
-          "front": ["ANDROID-JAVA"],
+          "front": ["ANDROID_JAVA"],
           "server": "",
           "skills" : ["Kakao API","Google MAP API", "Aladin API"]
         },

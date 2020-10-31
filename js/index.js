@@ -143,8 +143,11 @@ function createSkillItems(skillList, skillArray, type) {
       });
       
       sortProject(false, targetProjectItems[0].classList[1]);
-      document.querySelector('#projects').scrollIntoView({behavior: 'smooth'});
-
+      if(window.matchMedia("(max-width: 540px)").matches) {
+        targetProjectItems[0].scrollIntoView({behavior: 'smooth'});
+      } else {
+        document.querySelector('#projects').scrollIntoView({behavior: 'smooth'});
+      }
     });
     
     finalList.appendChild(skillItem);

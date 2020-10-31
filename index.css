@@ -735,7 +735,8 @@ article h5 {
 /* The Close Button */
 .modal-close {
 	position: fixed;
-  color: #888;
+	z-index: 2;
+  color: rgb(75, 75, 75);
   font-weight: bold;
   font-size: 1.7em;
 	text-align: right;
@@ -1253,7 +1254,7 @@ article h5 {
     font-weight: bold;
     font-size: 1em;
     padding: 0.5em;
-		margin: calc(var(--base-spacing)*8) 0.5em 0.5em 0.5em;
+		margin: calc(var(--base-spacing)*4) 0.5em 0.5em 0.5em;
 	}
 
 	iframe {
