@@ -38,7 +38,7 @@ axios.get('../data/data.json')
   const skills = data.skills;
   // skill Article 내부 내용 채움
   const skillArticle = document.querySelector('.content__skills');
-  skillArticle.appendChild(createSkillArticleLists(skills));
+  skillArticle.appendChild(createSkillContent(skills, true));
 
   // 경력 섹션
   const experience = data.experience;
@@ -46,9 +46,10 @@ axios.get('../data/data.json')
 
   for (const exp of experience) {
     const experienceItem = document.createElement('li');
-    experienceItem.classList.add('double-spacing');
+    experienceItem.classList.add('base-spacing');
+    experienceItem.classList.add('bottom-spacing');
 
-    const experienceTitle = document.createElement('h3');
+    const experienceTitle = document.createElement('h2');
     experienceTitle.textContent=exp.company;    
     experienceTitle.classList.add('inline');
 
@@ -79,11 +80,9 @@ axios.get('../data/data.json')
     experienceItem.appendChild(experienceContent);
 
     if(exp.skills !== "") {
-      // const experienceSkills = document.createElement('p');
-      // experienceSkills.textContent=exp.summary;
-      // experienceSkills.classList.add('double-spacing');
-      // experienceItem.appendChild(experienceSkills);
+      experienceItem.appendChild(createSkillContent(exp.skills, false));
     }
+
     experienceList.appendChild(experienceItem);
   }
 
@@ -123,7 +122,34 @@ sidebar_anchor.addEventListener('click', addScrollFunction);
 const hamberger_menu = document.querySelector('.navbar__toggle');
 showOrCloseSidebar(hamberger_menu);
 
-function createSkillItems(skillList, skillArray, type) {
+function skillItemsOnClick(event){
+  try {        
+    const preProjectItem = document.querySelectorAll('.projects__item--active');
+    preProjectItem.forEach((targetItem)=>{
+      targetItem.classList.remove('projects__item--active');
+    });        
+  } catch {
+  }
+
+  const targetProjectItems = document.querySelectorAll(`.${event.target.textContent}`);
+
+  targetProjectItems.forEach((targetItem)=>{
+    targetItem.classList.add('projects__item--active');
+  });
+  
+  // project itme은 두번째 class가 web 혹은 app 구분 기준임으로 첫번째 대상 프로젝트로 sortProject 기준으로 사용함.
+  sortProject(false, targetProjectItems[0].classList[1]);
+
+  if(window.matchMedia("(max-width: 540px)").matches) {
+    // 첫번째 대상 프로젝트로 스크롤!
+    targetProjectItems[0].scrollIntoView({behavior: 'smooth'});
+  } else {
+    console.log('bigger than max-width: 540px');
+    document.querySelector('#PROJECTS').scrollIntoView({behavior: 'smooth'});
+  }  
+}
+
+function createSkillItemsInSection(skillList, skillArray, type) {
   let finalList = skillList;
 
   for(const skill of skillArray) {
@@ -131,34 +157,8 @@ function createSkillItems(skillList, skillArray, type) {
     const skillItem = document.createElement('li');
     skillItem.classList.add(type === 'skill'? 'skills' : 'language');
     skillItem.textContent=skill;
-
-    skillItem.addEventListener('click',(event)=>{
-
-      try {        
-        const preProjectItem = document.querySelectorAll('.projects__item--active');
-        preProjectItem.forEach((targetItem)=>{
-          targetItem.classList.remove('projects__item--active');
-        });        
-      } catch {
-      }
-
-      const targetProjectItems = document.querySelectorAll(`.${event.target.textContent}`);
-
-      targetProjectItems.forEach((targetItem)=>{
-        targetItem.classList.add('projects__item--active');
-      });
-      
-      // project itme은 두번째 class가 web 혹은 app 구분 기준임으로 첫번째 대상 프로젝트로 sortProject 기준으로 사용함.
-      sortProject(false, targetProjectItems[0].classList[1]);
-
-      if(window.matchMedia("(max-width: 540px)").matches) {
-        // 첫번째 대상 프로젝트로 스크롤!
-        targetProjectItems[0].scrollIntoView({behavior: 'smooth'});
-      } else {
-        console.log('bigger than max-width: 540px');
-        document.querySelector('#PROJECTS').scrollIntoView({behavior: 'smooth'});
-      }
-    });
+    
+    skillItem.addEventListener('click',skillItemsOnClick);
     
     finalList.appendChild(skillItem);
   }
@@ -166,9 +166,23 @@ function createSkillItems(skillList, skillArray, type) {
   return finalList;
 }
 
-function createSkillList (skillContainer, skilLArray, type) {
-  let finalSkillContainer = skillContainer;
+function createSkillItems(skillList, skillArray, type) {
+  let finalList = skillList;
 
+  for(const skill of skillArray) {
+
+    const skillItem = document.createElement('li');
+    skillItem.classList.add(type === 'skill'? 'skills--general' : 'language--general');
+    skillItem.textContent=skill;
+    
+    finalList.appendChild(skillItem);
+  }
+
+  return finalList;
+}
+function createSkillListInSection (skillContainer, skilLArray, type) {
+  let finalSkillContainer = skillContainer;
+  
   const skillTitle = document.createElement('h5');
   skillTitle.textContent=type+':';  
   finalSkillContainer.appendChild(skillTitle);
@@ -177,21 +191,47 @@ function createSkillList (skillContainer, skilLArray, type) {
   skillList.classList.add('content__description');
   skillList.classList.add(type);
 
-  finalSkillContainer.appendChild(createSkillItems(skillList, skilLArray, type));
+  finalSkillContainer.appendChild(createSkillItemsInSection(skillList, skilLArray, type));
 
   return finalSkillContainer;
 }
 
-function createSkillArticleLists(skills) {
+function createSkillList (skillContainer, skilLArray, type) {
+  let finalSkillContainer = skillContainer;
+  let flexContainer = document.createElement('div');
+  flexContainer.classList.add('row-flex');
+
+  const skillTitle = document.createElement('h5');
+  skillTitle.textContent=type+':　';
+  flexContainer.appendChild(skillTitle);
+
+  const skillList = document.createElement('ul');
+
+  flexContainer.appendChild(createSkillItems(skillList, skilLArray, type));
+  
+  finalSkillContainer.appendChild(flexContainer);
+
+  return finalSkillContainer;
+}
+
+function createSkillContent(skills, isInSkillSection) {
 
   let skillContainer = document.createElement('div');
-  skillContainer.classList.add('skill-list__container');
-  
-  skillContainer = createSkillList(skillContainer, skills.front, 'front');
-  skillContainer = createSkillList(skillContainer, skills.server, 'server');
-  skillContainer = createSkillList(skillContainer, skills.skill, 'skill');
-  
-  return skillContainer;
+
+  if(isInSkillSection) {
+    skillContainer.classList.add('skill-list__container');
+    
+    skillContainer = createSkillListInSection(skillContainer, skills.front, 'front');
+    skillContainer = createSkillListInSection(skillContainer, skills.server, 'server');
+    skillContainer = createSkillListInSection(skillContainer, skills.skill, 'skill');
+
+  } else {
+    skillContainer = createSkillList(skillContainer, skills.front, 'front');
+    skillContainer = createSkillList(skillContainer, skills.server, 'server');
+    skillContainer = createSkillList(skillContainer, skills.skill, 'skill');    
+  }
+
+  return skillContainer; 
 }
 
 function sortProject(eventOrFalse, option) {

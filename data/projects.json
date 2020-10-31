@@ -13,7 +13,7 @@
           "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
         ],
         "skills": {
-          "front": ["JSX", "ES2015(ES6)"],
+          "front": ["JavascriptX", "ES2015(ES6)"],
           "server": "",
           "skills" : ["React","Redux","Redux-Saga"]
         },
@@ -44,7 +44,7 @@
         ,"https://user-images.githubusercontent.com/68500631/89120807-063d2280-d4f4-11ea-89aa-ef86d4142498.jpg"
         ],
         "skills": {
-          "front": ["HTML/CSS/JS"],
+          "front": ["HTML/CSS/Javascript"],
           "server": ["PHP", "Linux","Ubuntu","Apache","MYSQL"],
           "skills" : ["Ajax","JQuery","BootStrap"]
         },
