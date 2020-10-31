@@ -24,7 +24,7 @@
   --slideWidth: 100%;
   --slideHeight: calc(var(--slideWidth) * var(--aspectRatio));
 	--slidesVisible: 1;
-	--img-height: 60vh;
+	--img-height: 70vh;
 	--img-mobile-height: 35vh;
 }
 
@@ -667,7 +667,7 @@ article h5 {
 	flex-flow: column nowrap;
 	align-items: center;
   background-color: #fefefe;
-  margin: 2% 25%;
+  margin: 1% 25%;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;

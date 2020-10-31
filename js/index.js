@@ -106,6 +106,12 @@ window.addEventListener('resize', () => {
   }
 });
 
+// contact me 버튼
+const mailAnchor = document.querySelector('.contactMe');
+mailAnchor.addEventListener('click', (event)=>{
+  location.href='mailto:yunbora504@gmail.com';
+});
+
 // 메인 화면 - scroll시 사이드바 스크롤파이 메뉴
 window.addEventListener('scroll', highlightNavMenu);
 
@@ -142,11 +148,15 @@ function createSkillItems(skillList, skillArray, type) {
         targetItem.classList.add('projects__item--active');
       });
       
+      // project itme은 두번째 class가 web 혹은 app 구분 기준임으로 첫번째 대상 프로젝트로 sortProject 기준으로 사용함.
       sortProject(false, targetProjectItems[0].classList[1]);
+
       if(window.matchMedia("(max-width: 540px)").matches) {
+        // 첫번째 대상 프로젝트로 스크롤!
         targetProjectItems[0].scrollIntoView({behavior: 'smooth'});
       } else {
-        document.querySelector('#projects').scrollIntoView({behavior: 'smooth'});
+        console.log('bigger than max-width: 540px');
+        document.querySelector('#PROJECTS').scrollIntoView({behavior: 'smooth'});
       }
     });
     
