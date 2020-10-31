@@ -4,91 +4,9 @@
     "content" : "　의사소통, 책임감, 성장ㆍ발전을 중요하게 여깁니다. 팀 프로젝트를 통해 의사소통과 각 개인이 맡은 바를 끝까지 해내는 것이 중요하다는 것을 느꼈습니다. 팀원들과의 정확하고 원활한 의사소통을 위해 노력하며, 실제 서비스를 개발함에 있어서 책임감을 가지고 임합니다. 또한 개발자로서 발전하기 위해 꾸준히 공부하고 노력하며, 사회 구성원으로서 주변 사람들의 피드백 내용을 적극적으로 수용할 뿐만 아니라, 개인과 구성원 모두 함께 발전하기 위한 피드백에도 적극적입니다."
   },
   "skills": {
-    "web": [
-      {
-        "name": "html5",
-        "which": "front",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "CSS3",
-        "which": "front",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "ES6",
-        "which": "front",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "React",
-        "which": "front",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "redux",
-        "which": "front",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "PHP",
-        "which": "server",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      }
-    ],
-    "app":[
-      {
-        "name": "ANDROID-JAVA",
-        "which": "front",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "Python",
-        "which": "server",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      },
-      {
-        "name": "PHP",
-        "which": "server",
-        "data-target" : {
-          "web" : [
-            "ddd", "dasdsa", "asdsadasd"
-          ]
-        }
-      }
-    ]
+    "front": ["HTML","CSS","Javascript", "ES6","ANDROID_JAVA"],
+    "server": ["PHP","Linux","Ubuntu","Apache","MYSQL","AWS_EC2"],
+    "skill": ["React", "Redux","Redux-Saga","Ajax","JQuery", "BootStrap"]
   },
   "experience": [
     {
@@ -100,7 +18,7 @@
       "skills": { 
         "front": ["PHP","HTML","CSS","JS"],
         "server": ["Nginx","Maria DB"],
-        "skills": ["JQuery","BootStrap","GOOGLE CHART"]      
+        "skills": ["JQuery","BootStrap","GOOGLE_CHART"]      
       }
     },
     {
@@ -109,11 +27,7 @@
       "position": "제품 교육 강사 및 사무직",
       "duration": "2016.02 — 2018.05 / 2 years",
       "summary": "　",
-      "skills": { 
-        "front": "",
-        "server": "",
-        "skills": ""
-      }
+      "skills": ""
     }
   ],
   "projects": {
@@ -125,7 +39,7 @@
         "duration": "2020.09 — 2020.10 / 2 months",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "skills": {
-          "front": ["React", "Javascript(ES6)"],
+          "front": ["React", "ES6"],
           "server": "",
           "skills" : ["Redux","Redux-Saga"]
         }
@@ -137,8 +51,8 @@
         "duration": "2019.08 — 2019.09 / 6 weeks",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg",
         "skills": {
-          "front": ["HTML/CSS/JS"],
-          "server": ["PHP", "Linux(Ubuntu)","Apache/MYSQL"],
+          "front": ["HTML","CSS","Javascript"],
+          "server": ["PHP", "Linux","Ubuntu","Apache","MYSQL"],
           "skills" : ["Ajax","JQuery","BootStrap"]
         }
       }
@@ -151,8 +65,8 @@
         "duration": "2019.02 — 2019.03 / 3 주",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg",
         "skills": {
-          "front": ["ANDROID-JAVA"],
-          "server": ["AWS EC2", "Apache/MYSQL"],
+          "front": ["ANDROID_JAVA"],
+          "server": ["AWS_EC2", "Apache","MYSQL"],
           "skills" : ""
         }
       },
@@ -164,9 +78,9 @@
         "duration": "2019.06 — 2019.08 / 6 weeks",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg",
         "skills": {
-          "front": ["ANDROID-JAVA"],
+          "front": ["ANDROID_JAVA"],
           "server": "",
-          "skills" : ["Kakao API","Google MAP API", "Aladin API"]
+          "skills" : ""
         }
       }
     ]

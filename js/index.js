@@ -18,13 +18,12 @@ axios.get('../data/data.json')
   aboutSubhead.textContent = about.title;
   aboutContent.textContent = about.content;
 
-  // project 섹션  
+  // project 섹션
   const projects = data.projects;
   const projectSection = document.querySelector('#projects');
 
   const projectWeb = projects.web.map((project)=>createProjectItem(project, 'web')).join('');
   const projectApp = projects.app.map((project)=>createProjectItem(project, 'app')).join('');
-  
   projectSection.innerHTML = projectWeb+projectApp;
   
   const contentButton = document.querySelector('.content__button');
@@ -34,7 +33,12 @@ axios.get('../data/data.json')
   const tab_Buttons = document.querySelector('.content__btn-group');
   sortProject(false);
   tab_Buttons.addEventListener('click', (event) => sortProject(event));
-  
+
+  // skills 섹션
+  const skills = data.skills;
+  // skill Article 내부 내용 채움
+  const skillArticle = document.querySelector('.content__skills');
+  skillArticle.appendChild(createSkillArticleLists(skills));
 
   // 경력 섹션
   const experience = data.experience;
@@ -60,9 +64,8 @@ axios.get('../data/data.json')
     const experiencePosition = document.createElement('h4');
     experiencePosition.textContent=exp.position;
     experiencePosition.classList.add('align-right');
-    experiencePosition.style.color='#4f27da';
+    experiencePosition.style.color='#3f1fb0';
     experienceItem.appendChild(experiencePosition);
-  
 
     const experienceDuration = document.createElement('p');
     experienceDuration.textContent=exp.duration;
@@ -75,11 +78,12 @@ axios.get('../data/data.json')
     experienceContent.classList.add('updown-double-spacing');
     experienceItem.appendChild(experienceContent);
 
-    // const experienceSkills = document.createElement('p');
-    // experienceSkills.textContent=exp.summary;
-    // experienceSkills.classList.add('double-spacing');
-    // experienceItem.appendChild(experienceSkills);
-  
+    if(exp.skills !== "") {
+      // const experienceSkills = document.createElement('p');
+      // experienceSkills.textContent=exp.summary;
+      // experienceSkills.classList.add('double-spacing');
+      // experienceItem.appendChild(experienceSkills);
+    }
     experienceList.appendChild(experienceItem);
   }
 
@@ -113,14 +117,84 @@ sidebar_anchor.addEventListener('click', addScrollFunction);
 const hamberger_menu = document.querySelector('.navbar__toggle');
 showOrCloseSidebar(hamberger_menu);
 
-function sortProject(event) {
+function createSkillItems(skillList, skillArray, type) {
+  let finalList = skillList;
+
+  for(const skill of skillArray) {
+
+    const skillItem = document.createElement('li');
+    skillItem.classList.add(type === 'skill'? 'skills' : 'language');
+    skillItem.textContent=skill;
+
+    skillItem.addEventListener('click',(event)=>{
+
+      try {        
+        const preProjectItem = document.querySelectorAll('.projects__item--active');
+        preProjectItem.forEach((targetItem)=>{
+          targetItem.classList.remove('projects__item--active');
+        });        
+      } catch {
+      }
+
+      const targetProjectItems = document.querySelectorAll(`.${event.target.textContent}`);
+
+      targetProjectItems.forEach((targetItem)=>{
+        targetItem.classList.add('projects__item--active');
+      });
+      
+      sortProject(false, targetProjectItems[0].classList[1]);
+      document.querySelector('#projects').scrollIntoView({behavior: 'smooth'});
+
+    });
+    
+    finalList.appendChild(skillItem);
+  }
+
+  return finalList;
+}
+
+function createSkillList (skillContainer, skilLArray, type) {
+  let finalSkillContainer = skillContainer;
+
+  const skillTitle = document.createElement('h5');
+  skillTitle.textContent=type+':';  
+  finalSkillContainer.appendChild(skillTitle);
+
+  const skillList = document.createElement('ul');
+  skillList.classList.add('content__description');
+  skillList.classList.add(type);
+
+  finalSkillContainer.appendChild(createSkillItems(skillList, skilLArray, type));
+
+  return finalSkillContainer;
+}
+
+function createSkillArticleLists(skills) {
+
+  let skillContainer = document.createElement('div');
+  skillContainer.classList.add('skill-list__container');
+  
+  skillContainer = createSkillList(skillContainer, skills.front, 'front');
+  skillContainer = createSkillList(skillContainer, skills.server, 'server');
+  skillContainer = createSkillList(skillContainer, skills.skill, 'skill');
+  
+  return skillContainer;
+}
+
+function sortProject(eventOrFalse, option) {
+
   // default값 지정
-  let webOrApp = 'WEB';
-  // 이후 선택된 탭에 따라 값 변경
-  event ? webOrApp = event.target.textContent : false;
+  let webOrApp = option;
+  if(eventOrFalse === false && webOrApp===undefined) {
+    webOrApp = 'web';
+  } else if (eventOrFalse === false && webOrApp !== undefined) {
+  } else {
+    webOrApp = eventOrFalse.target.textContent;
+  }
+
   const projects = document.querySelectorAll('.projects__item');
 
-  if (webOrApp==='WEB') {
+  if (webOrApp==='web') {
     projects.forEach((project)=> {
       project.classList.contains('web') ? 
       project.classList.remove('invisible') : project.classList.add('invisible');
@@ -132,7 +206,7 @@ function sortProject(event) {
     const web_tab = document.querySelector('#web_tab');
     web_tab.classList.add('content__button--active');
 
-  } else if (webOrApp==='APP') {
+  } else if (webOrApp==='app') {
 
     projects.forEach((project)=> {
       project.classList.contains('app') ?
@@ -146,7 +220,7 @@ function sortProject(event) {
     app_tab.classList.add('content__button--active');
 
   } else {
-      console.log(`Data doesn't match with WEB or APP`);
+    console.log(`Data doesn't match with WEB or APP`);
   }
 }
 
@@ -160,29 +234,28 @@ function createProjectItem(project, tagClass) {
   // console.log(skill_array);
   
   // entries 함수 통해 skills에 해당하는 json 객체를 이중 배열로 변경
-  const skills_string=Object.entries(project.skills)
+  let skills_string=Object.entries(project.skills)
   // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat). 
   .reduce((preSpecArr, spec)=> {
     // spec[0] 은 front, server, skill > 제목 부분임
       const specArray = spec[1] !=='' ? preSpecArr.concat(spec[1]) : preSpecArr;
       return specArray;
-  }, [])
+  }, []);
   // 해당 배열의 각 값을 ' '로 연결해서 이은 string 으로 변경.
-  .join(', ');
-  // console.log(skill_array);
-  // const skill=Object.entries(project.skills);
-  // console.log(skill);
-// project.skills.front
-// project.skills.server
-// project.skills.skills
+
+  // text용
+  const skills_text=skills_string.join(', ');
+  // 클래스용
+  const skills_class=skills_string.join(' ');
+
   return `
-  <div class="projects__item ${tagClass}" data-head="${project.head}">
+  <div class="projects__item ${tagClass} ${skills_class}" data-head="${project.head}">
     <img src="${project.thumbnail}" class="img-responsive" alt="프로젝트 이미지" data-head="${project.head}">
     <div class="projects-caption" data-head="${project.head}">
       <h4 class="projects-head" data-head="${project.head}">${project.head}</h4>
       <p class="projects-feature" data-head="${project.head}">${project.feature}</p>
       <p class="projects-subhead base-spacing" data-head="${project.head}">${project.subhead}</p>
-      <p class="projects-skills" data-head="${project.head}">${skills_string}</p>
+      <p class="projects-skills" data-head="${project.head}">${skills_text}</p>
     </div>
   </div>`;
 }
@@ -192,7 +265,7 @@ function highlightNavMenu() {
   const sidebar_items = document.querySelectorAll('.sidebar__item');
 
   sidebar_items.forEach((item, index) => {
-    const sections = document.querySelectorAll('.content__main > article')
+    const sections = document.querySelectorAll('.content__main > article');
     const activeSection = sections[index];
       
     const position = 100;
@@ -207,13 +280,14 @@ function highlightNavMenu() {
   });
 }
 
-function addScrollFunction (event) {  
+function addScrollFunction (event) {
   event.preventDefault();
   const target = event.target;
   const dataset = target.dataset;
 
-  const target_section = document.querySelector(`#${dataset.target}`);
-  target_section.scrollIntoView({behavior: 'smooth'});
+  const targetSection = document.querySelector(`#${dataset.target}`);
+  targetSection.scrollIntoView({behavior: 'smooth'});
+  
   if(window.outerWidth < 540){
     const sidebarMobile = document.querySelector('.sidebar');
     sidebarMobile.classList.remove('show');  
