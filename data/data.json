@@ -1,10 +1,10 @@
 {  
   "about": {
     "title" : "안녕하세요! 😊",
-    "content" : "　저는 의사소통, 책임감, 성장ㆍ발전을 중요하게 여기는 프론트엔드 신입개발자 윤보라입니다. 여러번의 팀 프로젝트와 실서비스 협업을 통해 의사소통과 각 개인이 맡은 바를 끝까지 해내는 것이 중요하다고 느꼈습니다. 팀원들과의 정확하고 원활한 의사소통을 위해 노력하며, 실제 서비스를 개발함에 있어 책임감을 가지고 임합니다. 또한 개발자로서 발전하기 위해 꾸준히 공부하고 노력하며, 주변 사람들의 피드백 내용을 적극적으로 수용합니다."
+    "content" : "　저는 주인의식과, 의사소통, 그리고 발전을 중요시 여기는 프론트엔드 신입개발자 윤보라입니다. 여러 번의 팀 프로젝트를 통해 정확한 의사소통과 주인의식을 가지고 각 개인이 맡은 바를 해내는 것이 중요하다고 느꼈습니다. 실제 서비스를 개발함에 있어 필요한 것이 무엇인지 끊임없이 고민하는 등 주도적으로 진행함은 물론, 협업에 있어 책임감을 가지고 일을 진행하며, 팀원들과의 정확하고 원활한 의사소통을 위해 노력합니다."
   },
   "skills": {
-    "front": ["HTML","CSS","Javascript","ES2015_ES6","JSX","ANDROID_JAVA"],
+    "front": ["HTML","CSS","Javascript","ES2015_ES6＋","JSX","ANDROID_JAVA"],
     "server": ["PHP","Linux","Ubuntu","Apache","MYSQL","AWS_EC2"],
     "skill": ["React", "Redux","Redux-Saga","Ajax","JQuery", "BootStrap"]
   },
@@ -39,7 +39,7 @@
         "duration": "2020.09 — 2020.10 / 2 months",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "skills": {
-          "front": ["ES2015_ES6", "JSX"],
+          "front": ["ES2015_ES6＋", "JSX"],
           "server": "",
           "skill" : ["React","Redux","Redux-Saga"]
         }
@@ -70,7 +70,6 @@
           "skill" : ""
         }
       },
-           
       {
         "head": "AIRA BOOK",
         "feature":"【개인 프로젝트】",

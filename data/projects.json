@@ -13,7 +13,7 @@
           "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
         ],
         "skills": {
-          "front": ["JavascriptX", "ES2015(ES6)"],
+          "front": ["JavascriptX", "ES2015(ES6)↑"],
           "server": "",
           "skill" : ["React","Redux","Redux-Saga"]
         },

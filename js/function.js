@@ -43,9 +43,11 @@ function append_skillList (skillContainer, skillArray, type) {
   let flexContainer = document.createElement('div');
   flexContainer.classList.add('row-flex');
 
-  const skillTitle = document.createElement('h5');
-  skillTitle.textContent=type+':　';
-  flexContainer.appendChild(skillTitle);
+  if(skillArray !== '') {
+    const skillTitle = document.createElement('h5');
+    skillTitle.textContent=type+':　';
+    flexContainer.appendChild(skillTitle);  
+  }
 
   const skillList = document.createElement('ul');
   if(skillArray !=='') {
@@ -125,10 +127,6 @@ function skillItems_onClick(event){
   }
 
   const targetProjectItems = document.querySelectorAll(`.${event.target.textContent}`);
-
-  targetProjectItems.forEach((targetItem)=>{
-    targetItem.classList.add('projects__item--active');
-  });
   
   // project itme은 두번째 class가 web 혹은 app 구분 기준임으로 첫번째 대상 프로젝트로 sortProject 기준으로 사용함.
   sortProject(false, targetProjectItems[0].classList[1]);
@@ -137,9 +135,15 @@ function skillItems_onClick(event){
     // 첫번째 대상 프로젝트로 스크롤!
     targetProjectItems[0].scrollIntoView({behavior: 'smooth'});
   } else {
-    console.log('bigger than max-width: 540px');
     document.querySelector('#PROJECTS').scrollIntoView({behavior: 'smooth'});
-  }  
+  }
+
+  window.setTimeout(()=>{
+    targetProjectItems.forEach((targetItem)=>{
+     targetItem.classList.add('projects__item--active')
+    })
+  }, 650);
+
 }
 
 function sortProject(eventOrFalse, option) {
