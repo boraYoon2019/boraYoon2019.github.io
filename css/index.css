@@ -150,6 +150,20 @@ h2, h3, h4, p {
 	transition: transform 300ms ease;
 }
 
+.link__item {
+	align-self: flex-end;
+	font-size: 5vh;
+	padding: .1em;
+	color: #111;
+}
+
+.link__item>a:hover {
+	cursor: pointer;
+	color: var(--hover-color);
+	transform: scale(1.1);
+	transition: transform 300ms ease;
+}
+
 .sidebar {
 	z-index: 1;
 	position: fixed;
@@ -470,6 +484,9 @@ h2.introduction__name {
 	text-align: right;
 	text-shadow: 2px 2px var(--hover-color);
 }
+a {
+	color: 	rgba(147, 147, 147, 1);
+}
 
 article h1 {
 	font-weight: bold;
@@ -656,7 +673,7 @@ article h5 {
 }
 
 .projects-subhead {
-	display: inline-block;
+	display: inline;
 	width:95%;
 	height: 4rem;
 	line-height: 1.1rem;
@@ -732,6 +749,9 @@ article h5 {
   overflow-y: scroll;
 }
 
+.modal__description {
+	font-size: 1.2rem;
+}
 .slides__container {
   background: #2a2a2a;
   height: var(--slideHeight);

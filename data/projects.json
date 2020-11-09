@@ -5,7 +5,8 @@
         "head": "Calendar-TodoList",
         "feature":"【팀 프로젝트 - 2명】",
         "subhead":"반응형 Todolist 웹사이트",
-        "link": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
+        "github": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
+        "link": "http://13.209.7.185/",
         "duration": "2020.09 &mdash; 2020.10 / 2 months",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "img_src": [
@@ -15,20 +16,41 @@
         "skills": {
           "front": ["JavascriptX", "ES2015(ES6)↑"],
           "server": "",
-          "skill" : ["React","Redux","Redux-Saga"]
+          "skill" : ["React","React-Redux","Redux-Saga","Styled-Components"]
         },
         "description": "　프론트 전담. Python Django REST Framework를 이용한 서버 개발자와 작업하였습니다. 아토믹 디자인 패턴을 적용한 프로젝트입니다.",
+        "video": ""
+      },
+      {
+        "head": "Resume Template",
+        "feature":"【개인 프로젝트】",
+        "subhead":"반응형 이력서 웹사이트",
+        "github": "https://github.com/boraYoon2019/boraYoon2019.github.io",
+        "duration": "2020.10 &mdash; 2020.10 / 1 months",
+        "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "img_src": [
+          "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502", 
+          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+        ],
+        "skills": {
+          "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
+          "server": "",
+          "skill" : ""
+        },
+        "description": "　현재 보시는 이력서 웹사이트 입니다. 개인 프로젝트입니다. :) 서버와 연동되어 있지는 않지만 axios를 통해 서버에서 데이터를 받아오는 것과 유사하게 구현하였습니다. 실제로는 json파일에서 데이터를 받아와 화면에 적용시키는 로직입니다.",
         "video": ""
       },
       {
         "head": "Oh! happy PENSION",
         "feature":"【개인 프로젝트】",
         "subhead":"펜션 예약 웹사이트",
-        "link": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
+        "github": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
+        "link": "",
         "duration": "2019.08 &mdash; 2019.09 / 6 weeks",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg",
         "img_src": [
-        "https://user-images.githubusercontent.com/68500631/89120791-fd4c5100-d4f3-11ea-9156-583da50237e2.jpg"
+        "https://j.gifs.com/YWg9Gn.gif"
+        ,"https://user-images.githubusercontent.com/68500631/89120791-fd4c5100-d4f3-11ea-9156-583da50237e2.jpg"
         ,"https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg"
         ,"https://user-images.githubusercontent.com/68500631/89120793-00dfd800-d4f4-11ea-81f8-99f9a73d1210.jpg"
         ,"https://user-images.githubusercontent.com/68500631/89120794-01786e80-d4f4-11ea-94a3-28765ee5329c.jpg"
@@ -57,11 +79,13 @@
         "head": "NOVATRIP",
         "feature":"【팀 프로젝트 - 7명】",
         "subhead":" 일본 '다국어 번역 대회' 본선 진출작 - 여행 관련 앱",
-        "link": "https://github.com/boraYoon2019/project_summary/tree/main/novartrip",
+        "github": "https://github.com/boraYoon2019/project_summary/tree/main/novartrip",
+        "link": "",
         "duration": "2019.02 — 2019.03 / 3 주",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg",
         "img_src": [
-          "https://user-images.githubusercontent.com/68500631/89737478-37958f80-daac-11ea-9a16-6517df98a18d.png", 
+          "https://j.gifs.com/K14VnY.gif",
+          "https://user-images.githubusercontent.com/68500631/98469291-ee2b1c80-2221-11eb-8f57-9df97d424f88.jpg", 
           "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg"
         ],
         "skills": {
@@ -77,11 +101,18 @@
         "head": "AIRA BOOK",
         "feature":"【개인 프로젝트】",
         "subhead":"독서 서평 및 모임 등록·공유가 가능한 독서 관리 앱",
-        "link": "https://github.com/boraYoon2019/project_summary/tree/main/airabook",
+        "github": "https://github.com/boraYoon2019/project_summary/tree/main/airabook",
+        "link": "",
         "duration": "2019.06 — 2019.08 / 6 weeks",
         "img_src": [
-          "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502", 
-          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+          "https://j.gifs.com/3QWxAx.gif"
+          ,"https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+          ,"https://user-images.githubusercontent.com/68500631/89119275-00414480-d4e8-11ea-9ad0-d885995c01be.jpg"
+          ,"https://user-images.githubusercontent.com/68500631/89119276-01727180-d4e8-11ea-9719-584b1664c6ec.jpg"
+          ,"https://user-images.githubusercontent.com/68500631/89119277-01727180-d4e8-11ea-98ac-6a4cfef2e96b.jpg"
+          ,"https://user-images.githubusercontent.com/68500631/89119278-020b0800-d4e8-11ea-867c-da3a90396783.jpg"
+          ,"https://user-images.githubusercontent.com/68500631/89119279-020b0800-d4e8-11ea-865b-1c1fab2ace78.jpg"
+          ,"https://user-images.githubusercontent.com/68500631/89119280-02a39e80-d4e8-11ea-8a5b-c05f8009a36e.jpg"
         ],
         "skills": {
           "front": ["ANDROID_JAVA"],

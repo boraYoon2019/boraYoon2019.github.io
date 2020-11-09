@@ -6,7 +6,7 @@
   "skills": {
     "front": ["HTML","CSS","Javascript","ES2015_ES6＋","JSX","ANDROID_JAVA"],
     "server": ["PHP","Linux","Ubuntu","Apache","MYSQL","AWS_EC2"],
-    "skill": ["React", "Redux","Redux-Saga","Ajax","JQuery", "BootStrap"]
+    "skill": ["React", "React-Redux","Redux-Saga","Styled-Components","Ajax","JQuery", "BootStrap"]
   },
   "experience": [
     {
@@ -41,7 +41,19 @@
         "skills": {
           "front": ["ES2015_ES6＋", "JSX"],
           "server": "",
-          "skill" : ["React","Redux","Redux-Saga"]
+          "skill" : ["React","React-Redux","Redux-Saga","Styled-Components"]
+        }
+      },
+      {
+        "head": "Resume Template",
+        "feature":"【개인 프로젝트】",
+        "subhead": "반응형 이력서 웹사이트",
+        "duration": "2020.10 — 2020.10 / 1 month",
+        "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "skills": {
+          "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
+          "server": "",
+          "skill" : ""
         }
       },
       {

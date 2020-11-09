@@ -23,13 +23,10 @@ function create_skillContent(skills, isInSkillSection) {
   for (key of skillKeyArray) {
     (()=> {
       if(skills[key] !=='' || skills[key] !==undefined) {
-        console.log("if(skills[key] !=='')",skills[key]);
         isInSkillSection === true?
         skillContainer = append_skillList_inSection(skillContainer, skills[key], key)
         :
         skillContainer = append_skillList(skillContainer, skills[key], key)
-      } else {
-        console.log("else",skills[key]);
       }
     })();
     
@@ -78,7 +75,6 @@ function append_skillItems(skillList, skillArray, type) {
 // 메인 페이지 관련
 
 function append_skillList_inSection (skillContainer, skillArray, type) {
-  console.log('append_skillList_inSection');
   let finalSkillContainer = skillContainer;
   
   const skillTitle = document.createElement('h5');
@@ -90,7 +86,6 @@ function append_skillList_inSection (skillContainer, skillArray, type) {
   skillList.classList.add(type);
 
   if(skillArray !=='') {
-    console.log('skillArray',skillArray);
     finalSkillContainer.appendChild(append_skillItems_InSection(skillList, skillArray, type));
   }
   
@@ -100,7 +95,6 @@ function append_skillList_inSection (skillContainer, skillArray, type) {
 function append_skillItems_InSection(skillList, skillArray, type) {
   let finalList = skillList;
 
-  console.log('append_skillItems_InSection skillArray', skillArray);
   if (skillArray !== '') {
     for(const skill of skillArray) {
 
@@ -201,6 +195,7 @@ function create_projectItem(project, tagClass) {
   }, []);
   // 해당 배열의 각 값을 ' '로 연결해서 이은 string 으로 변경.
 
+
   // text용
   const skills_text=skills_string.join(', ');
   // 클래스용
@@ -298,7 +293,6 @@ function onProjectItemClick (event) {
   .catch((error) => {
     // 실제 서버 통신은 아니므로, 에러날 일이 없어 따로 구현하지 않음.
     console.log(error);
-
   });
 }
 
@@ -319,6 +313,43 @@ function modalSetting(clickedProject) {
   head.classList.add('base-spacing');  
   head.textContent=clickedProject.head;
   modal__content.appendChild(head);
+
+  // 깃헙, 사이트 링크 anchor
+  const moreBox= document.createElement('div');
+  moreBox.classList.add('link__item');
+  moreBox.classList.add('row-flex');
+
+  if (clickedProject.link !== '') {
+    const pageAnchor = document.createElement('a');
+    pageAnchor.setAttribute('target', '_blank');
+    pageAnchor.classList.add('link__item');
+    pageAnchor.setAttribute('href', clickedProject.link);
+
+    const pageIcon = document.createElement('i');
+    pageIcon.style.padding = '.2rem';
+    pageIcon.style.margin = '.3rem';
+    pageIcon.classList.add('fas');
+    pageIcon.classList.add('fa-hashtag');    
+    pageAnchor.appendChild(pageIcon);
+    moreBox.appendChild(pageAnchor);
+  }
+
+  if (clickedProject.github !== '') {
+    const githubAnchor = document.createElement('a');
+    githubAnchor.setAttribute('target', '_blank');
+    githubAnchor.classList.add('link__item');
+    githubAnchor.setAttribute('href', clickedProject.github);
+
+    const githubIcon = document.createElement('i');
+    githubIcon.style.padding = '.2rem';
+    githubIcon.style.margin = '.3rem';
+    githubIcon.classList.add('fab');
+    githubIcon.classList.add('fa-github');
+    githubAnchor.appendChild(githubIcon);
+
+    moreBox.appendChild(githubAnchor);
+  }
+  modal__content.appendChild(moreBox);
 
   // 메인 슬라이드 컨테이너 태그 생성
   const slidesContainer = document.createElement('div');
@@ -372,19 +403,18 @@ function modalSetting(clickedProject) {
   modal__content.appendChild(slideThumbnails);
 
 
-  const box = document.createElement('div');
-  box.classList.add('modal-subhead');
+  const modalSubheadBox = document.createElement('div');
+  modalSubheadBox.classList.add('modal-subhead');
 
   const feature = document.createElement('h3');
   feature.classList.add('inline');
   feature.textContent=clickedProject.feature;
-  box.appendChild(feature);
+  modalSubheadBox.appendChild(feature);
 
   const subhead = document.createElement('h2');
   subhead.classList.add('inline');
   subhead.textContent=clickedProject.subhead;
-  box.appendChild(subhead);
-  modal__content.appendChild(box);
+  modalSubheadBox.appendChild(subhead);
 
   // skillList
   const skillsList = document.createElement('div');

@@ -33,7 +33,6 @@ axios.get('../data/data.json')
   const skills = data.skills;
   // skill Article 내부 내용 채움
   const skillArticle = document.querySelector('.content__skills');
-  console.log(skillArticle);
   skillArticle.appendChild(create_skillContent(skills, true));
 
   // 경력 섹션
