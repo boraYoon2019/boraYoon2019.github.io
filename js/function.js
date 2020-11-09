@@ -36,8 +36,8 @@ function create_skillContent(skills, isInSkillSection) {
 }
 
 function append_skillList (skillContainer, skillArray, type) {
-  let finalSkillContainer = skillContainer;
-  let flexContainer = document.createElement('div');
+  const finalSkillContainer = skillContainer;
+  const flexContainer = document.createElement('div');
   flexContainer.classList.add('row-flex');
 
   if(skillArray !== '') {
@@ -57,7 +57,7 @@ function append_skillList (skillContainer, skillArray, type) {
 }
 
 function append_skillItems(skillList, skillArray, type) {
-  let finalList = skillList;
+  const finalList = skillList;
 
   for(const skill of skillArray) {
 
@@ -75,7 +75,7 @@ function append_skillItems(skillList, skillArray, type) {
 // 메인 페이지 관련
 
 function append_skillList_inSection (skillContainer, skillArray, type) {
-  let finalSkillContainer = skillContainer;
+  const finalSkillContainer = skillContainer;
   
   const skillTitle = document.createElement('h5');
   skillTitle.textContent=type+':';  
@@ -93,7 +93,7 @@ function append_skillList_inSection (skillContainer, skillArray, type) {
 }
 
 function append_skillItems_InSection(skillList, skillArray, type) {
-  let finalList = skillList;
+  const finalList = skillList;
 
   if (skillArray !== '') {
     for(const skill of skillArray) {
@@ -185,36 +185,37 @@ function sortProject(eventOrFalse, option) {
 
 function create_projectItem(project, tagClass) {
   
-  // entries 함수 통해 skills에 해당하는 json 객체를 이중 배열로 변경
-  let skills_string=Object.entries(project.skills)
-  // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat). 
-  .reduce((preSpecArr, spec)=> {
-    // spec[0] 은 front, server, skill > 제목 부분임
-      const specArray = spec[1] !=='' ? preSpecArr.concat(spec[1]) : preSpecArr;
-      return specArray;
-  }, []);
-  // 해당 배열의 각 값을 ' '로 연결해서 이은 string 으로 변경.
+  let skills = [];
 
+  if (project.skills.front !== "") {
+    skills = [ ...project.skills.front];
+  }
+  if (project.skills.server !== "") {
+    skills = [ ...project.skills.server];
+  }
+  if (project.skills.skill !== "") {
+    skills = [ ...project.skills.skill];
+  }
 
   // text용
-  const skills_text=skills_string.join(', ');
+  const skills_text=skills.join(', ');
   // 클래스용
-  const skills_class=skills_string.join(' ');
+  const skills_class=skills.join(' ');
 
   return `
-  <div class="projects__item ${tagClass} ${skills_class}" data-head="${project.head}">
-    <img src="${project.thumbnail}" class="img-responsive" alt="프로젝트 이미지" data-head="${project.head}">
-    <div class="projects-caption" data-head="${project.head}">
-      <h4 class="projects-head" data-head="${project.head}">${project.head}</h4>
-      <p class="projects-feature" data-head="${project.head}">${project.feature}</p>
-      <p class="projects-subhead base-spacing" data-head="${project.head}">${project.subhead}</p>
-      <p class="projects-skills" data-head="${project.head}">${skills_text}</p>
+  <div class="projects__item ${tagClass} ${skills_class}" data-head="${project.head}" data-kind="${tagClass}">
+    <img src="${project.thumbnail}" class="img-responsive" alt="프로젝트 이미지" data-head="${project.head}" data-kind="${tagClass}">
+    <div class="projects-caption" data-head="${project.head}" data-kind="${tagClass}">
+      <h4 class="projects-head" data-head="${project.head}" data-kind="${tagClass}">${project.head}</h4>
+      <p class="projects-feature" data-head="${project.head}" data-kind="${tagClass}">${project.feature}</p>
+      <p class="projects-subhead base-spacing" data-head="${project.head}" data-kind="${tagClass}">${project.subhead}</p>
+      <p class="projects-skills" data-head="${project.head}" data-kind="${tagClass}">${skills_text}</p>
     </div>
   </div>`;
 }
 
 function highlight_navMenu() {  
-  let scroll_pos = window.pageYOffset;
+  const scroll_pos = window.pageYOffset;
   const sidebar_items = document.querySelectorAll('.sidebar__item');
 
   sidebar_items.forEach((item, index) => {
@@ -263,37 +264,18 @@ function showOrClose_Sidebar (hamberger_menu) {
 
 
 // 프로젝트 모달 관련
-function onProjectItemClick (event) {
+function onProjectItemClick (event, projects_array) {
 
   const projectName= event.target.dataset.head;
-
-  // 모달이 클릭됨과 동시에 서버 통신을 통해 json 데이터를 받아온다는 가정하에 코드 작성 및 구현 
-  axios.get('../data/projects.json')
-  .then((response)=>{
-    
-    // json 객체를 이중 배열로 변경
-    const projects_array=Object.entries(response.data.projects);
-    
-    const clickedProject = 
-    projects_array
-    // 이중 배열에서 실제 객체 배열을 가진(데이터가 있는) 2번째 인덱스의 값(project 배열임)만 추출해 하나의 배열로 만듬=합침(concat) 
-    .reduce((preData, projectData)=> {
-      // projectData[0] 은 웹인지 앱인지 나누는 부분임.
-      const projectInfo = preData.concat(projectData[1]);
-      return projectInfo;
-    }, [])
-    // 그 후, project head가 일치하는 것만 찾아냄.
+  const projectClass= event.target.dataset.kind;
+  const clickedProject = 
+    projects_array[projectClass]
     .find((project)=>project.head === projectName);
 
     modalSetting(clickedProject);
+
     modal.style.display = "block";
     body.classList.add('modal-active');
-
-  })
-  .catch((error) => {
-    // 실제 서버 통신은 아니므로, 에러날 일이 없어 따로 구현하지 않음.
-    console.log(error);
-  });
 }
 
 function modalSetting(clickedProject) {
@@ -390,11 +372,6 @@ function modalSetting(clickedProject) {
     // 이미지 radio 클릭 때마다 --slide index 변경
     imgInput.addEventListener('change', (event) => {
       document.documentElement.style.setProperty('--slide', index);
-      // radio 버튼 자체는 화면에 보이지 않으므로, check 처리해 줄 필요없어서 생략
-      // if (!event.target.checked) {        
-      //   radio = document.querySelectorAll('input[name=image]');
-      //   radio.checked=false;
-      // }
     });
     imgLabel.appendChild(imgInput);
     slideThumbnails.appendChild(imgLabel);
