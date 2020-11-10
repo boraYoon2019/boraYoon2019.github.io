@@ -529,7 +529,8 @@ article h5 {
 }
 
 .content__paragraph {
-	line-height: 1.5em;
+	font-size: 1.1rem;
+	line-height: 1.6rem;
 }
 
 .footer {

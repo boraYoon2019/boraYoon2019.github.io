@@ -10,15 +10,16 @@
         "duration": "2020.09 &mdash; 2020.10 / 2 months",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "img_src": [
-          "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502", 
-          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+          "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png", 
+          "https://user-images.githubusercontent.com/68500631/98608510-b65dcb00-232e-11eb-8f33-eeddc66bfc49.png",
+          "https://user-images.githubusercontent.com/68500631/98608649-0341a180-232f-11eb-8834-206f397ae685.png"
         ],
         "skills": {
           "front": ["JavascriptX", "ES2015(ES6)↑"],
           "server": "",
           "skill" : ["React","React-Redux","Redux-Saga","Styled-Components"]
         },
-        "description": "　프론트 전담. Python Django REST Framework를 이용한 서버 개발자와 작업하였습니다. 아토믹 디자인 패턴을 적용한 프로젝트입니다.",
+        "description": "　React를 이용한 반응형 Todolist 웹사이트입니다. 실제 확인이 가능하도록 서버에 nginx와 연동해두었습니다. 상단에 '#' 아이콘을 통해 실제 동작 확인 가능합니다. (카카오 로그인과 차트는 서버 내 로직 구현이 안되어 실제 서버와 연동하여 동작하지 않습니다. 일반 로그인으로 이용부탁드리며 차트는 사용해보았다 정도로 봐주세요 :) ) Python Django REST Framework를 이용한 서버를 담당하는 개발자와 함께 작업하였습니다. Redux를 통해 데이터와 관련된 상태값을 관리하였습니다. 아토믹 디자인 패턴을 적용하여 page, template, organism, molecules, atoms를 나누어 작업한 프로젝트입니다.",
         "video": ""
       },
       {
@@ -26,18 +27,18 @@
         "feature":"【개인 프로젝트】",
         "subhead":"반응형 이력서 웹사이트",
         "github": "https://github.com/boraYoon2019/boraYoon2019.github.io",
+        "link": "",
         "duration": "2020.10 &mdash; 2020.10 / 1 months",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "img_src": [
-          "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502", 
-          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
+          "https://user-images.githubusercontent.com/68500631/98608086-d5a82880-232d-11eb-9a85-c45979e5817a.png"
         ],
         "skills": {
           "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
           "server": "",
           "skill" : ""
         },
-        "description": "　현재 보시는 이력서 웹사이트 입니다. 개인 프로젝트입니다. :) 서버와 연동되어 있지는 않지만 axios를 통해 서버에서 데이터를 받아오는 것과 유사하게 구현하였습니다. 실제로는 json파일에서 데이터를 받아와 화면에 적용시키는 로직입니다.",
+        "description": "　현재 보시는 이력서 웹사이트 입니다. :) flex, grid, 미디어 쿼리등을 통해 반응형으로 제작하였습니다. axios를 통해 서버에서 데이터를 받아오는 것을 가정하여 구현하였습니다. 실제로는 json파일에서 데이터를 받아와 화면에 적용시키는 로직입니다.",
         "video": ""
       },
       {

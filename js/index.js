@@ -80,7 +80,34 @@ axios.get('../data/data.json')
 
     experienceList.appendChild(experienceItem);
   }
+  // 교육 섹션
+  const education = data.education;
+  const educationList = document.querySelector('.content__education ul');
 
+  for (const item of education) {
+    const educationItem = document.createElement('li');
+    educationItem.classList.add('base-spacing');
+    educationItem.classList.add('bottom-spacing');
+
+    const educationTitle = document.createElement('h2');
+    educationTitle.textContent=item.name;    
+    educationTitle.classList.add('inline');
+
+    educationItem.appendChild(educationTitle);
+    
+    const educationDuration = document.createElement('p');
+    educationDuration.textContent=item.duration;
+    educationDuration.classList.add('align-right');
+    educationDuration.classList.add('text-bolder');
+    educationItem.appendChild(educationDuration);
+
+    const educationContent = document.createElement('p');
+    educationContent.textContent=item.summary;
+    educationContent.classList.add('updown-double-spacing');
+    educationItem.appendChild(educationContent);
+
+    educationList.appendChild(educationItem);
+  }
 })
 .catch((error) => {
   console.log(error);

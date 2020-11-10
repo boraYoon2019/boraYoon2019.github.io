@@ -37,7 +37,7 @@
         "feature":"【팀 프로젝트 - 2명】",
         "subhead":"반응형 Todolist 웹사이트",
         "duration": "2020.09 — 2020.10 / 2 months",
-        "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "thumbnail": "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png",
         "skills": {
           "front": ["ES2015_ES6＋", "JSX"],
           "server": "",
@@ -49,7 +49,7 @@
         "feature":"【개인 프로젝트】",
         "subhead": "반응형 이력서 웹사이트",
         "duration": "2020.10 — 2020.10 / 1 month",
-        "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
+        "thumbnail": "https://user-images.githubusercontent.com/68500631/98608086-d5a82880-232d-11eb-9a85-c45979e5817a.png",
         "skills": {
           "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
           "server": "",
@@ -99,12 +99,12 @@
   "education": [
     {
       "name" : "팀노바",
-      "duration" : "2019.05 — 2020.06",
+      "duration" : "2019.05 — 2020.06 / 1 years 1 month",
       "summary" : "이전 직장에서 비전의 부재와 개인 성장의 한계를 느끼고 개발자로 전직을 결심하였고, 개발 뿐만 아니라 회사 구성원으로서도 부족하지 않은 개발자가 되고 싶어 약 1년간 팀노바에서 공부하였습니다. 정보의 홍수 속에서 개발에 필요한 만큼의 정보를 습득하고, 학습하여 빠르게 적용하는 방법을 배웠습니다. 또 학원내에서 다양한 활동을 통해 사람들과 어우러지며, 개발자로서 협업하는 법을 배웠습니다."
     },
     {
       "name" : "서일대학교 영어과",
-      "duration" : "2014 — 2016",
+      "duration" : "2014 — 2016 / 2 years",
       "summary" : ""
     }
   ]
