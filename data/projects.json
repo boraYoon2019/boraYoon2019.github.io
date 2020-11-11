@@ -19,7 +19,7 @@
           "server": "",
           "skill" : ["React","React-Redux","Redux-Saga","Styled-Components"]
         },
-        "description": "　React를 이용한 반응형 Todolist 웹사이트입니다. 실제 확인이 가능하도록 서버에 nginx와 연동해두었습니다. 상단에 '#' 아이콘을 통해 실제 동작 확인 가능합니다. (카카오 로그인과 차트는 서버 내 로직 구현이 안되어 실제 서버와 연동하여 동작하지 않습니다. 일반 로그인으로 이용부탁드리며 차트는 사용해보았다 정도로 봐주세요 :) ) Python Django REST Framework를 이용한 서버를 담당하는 개발자와 함께 작업하였습니다. Redux를 통해 데이터와 관련된 상태값을 관리하였습니다. 아토믹 디자인 패턴을 적용하여 page, template, organism, molecules, atoms를 나누어 작업한 프로젝트입니다.",
+        "description": "　React를 이용한 반응형 Todolist 웹사이트입니다. 실제 확인이 가능하도록 서버에 nginx와 연동해두었습니다. 상단에 '#' 아이콘을 통해 실제 동작 확인 가능합니다. (카카오 로그인과 차트는 서버 내 로직 구현이 안되어 실제 서버와 연동하여 동작하지 않습니다.) Python Django REST Framework를 이용한 서버를 담당하는 개발자와 함께 작업하였습니다. Redux를 통해 데이터와 관련된 상태값을 관리하였습니다. 아토믹 디자인 패턴을 적용하여 작업한 프로젝트입니다.",
         "video": ""
       },
       {
@@ -67,7 +67,7 @@
         ,"https://user-images.githubusercontent.com/68500631/89120807-063d2280-d4f4-11ea-89aa-ef86d4142498.jpg"
         ],
         "skills": {
-          "front": ["HTML/CSS/Javascript"],
+          "front": ["HTML5", "Javascript"],
           "server": ["PHP", "Linux","Ubuntu","Apache","MYSQL"],
           "skill" : ["Ajax","JQuery","BootStrap"]
         },

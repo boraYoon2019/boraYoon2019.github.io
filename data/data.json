@@ -4,9 +4,9 @@
     "content" : "　저는 주인의식과, 의사소통, 그리고 발전을 중요시 여기는 프론트엔드 신입개발자 윤보라입니다. 여러 번의 팀 프로젝트를 통해 정확한 의사소통과 주인의식을 가지고 각 개인이 맡은 바를 해내는 것이 중요하다고 느꼈습니다. 실제 서비스를 개발함에 있어 필요한 것이 무엇인지 끊임없이 고민하는 등 주도적으로 진행함은 물론, 협업에 있어 책임감을 가지고 일을 진행하며, 팀원들과의 정확하고 원활한 의사소통을 위해 노력합니다."
   },
   "skills": {
-    "front": ["HTML","CSS","Javascript","ES2015_ES6＋","JSX","ANDROID_JAVA"],
+    "front": ["HTML5","CSS3","Javascript","ES2015_ES6＋","JSX","ANDROID_JAVA"],
     "server": ["PHP","Linux","Ubuntu","Apache","MYSQL","AWS_EC2"],
-    "skill": ["React", "React-Redux","Redux-Saga","Styled-Components","Ajax","JQuery", "BootStrap"]
+    "skill": ["React", "React-Redux","Redux-Saga","Webpack","Styled-Components","Ajax","JQuery", "BootStrap"]
   },
   "experience": [
     {
@@ -41,7 +41,7 @@
         "skills": {
           "front": ["ES2015_ES6＋", "JSX"],
           "server": "",
-          "skill" : ["React","React-Redux","Redux-Saga","Styled-Components"]
+          "skill" : ["React", "React-Redux", "Redux-Saga", "Webpack", "Styled-Components"]
         }
       },
       {
@@ -63,7 +63,7 @@
         "duration": "2019.08 — 2019.09 / 6 weeks",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg",
         "skills": {
-          "front": ["HTML","CSS","Javascript"],
+          "front": ["HTML5","Javascript"],
           "server": ["PHP", "Linux","Ubuntu","Apache","MYSQL"],
           "skill" : ["Ajax","JQuery","BootStrap"]
         }

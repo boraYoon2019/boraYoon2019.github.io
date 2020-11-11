@@ -188,14 +188,20 @@ function create_projectItem(project, tagClass) {
   let skills = [];
 
   if (project.skills.front !== "") {
-    skills = [ ...project.skills.front];
+    skills = skills.concat(project.skills.front);
   }
+  
+  console.log(skills);
   if (project.skills.server !== "") {
-    skills = [ ...project.skills.server];
+    skills = skills.concat(project.skills.server);
   }
+  
+  console.log(skills);
   if (project.skills.skill !== "") {
-    skills = [ ...project.skills.skill];
+    skills = skills.concat(project.skills.skill);
   }
+  
+  console.log(skills);
 
   // text용
   const skills_text=skills.join(', ');
