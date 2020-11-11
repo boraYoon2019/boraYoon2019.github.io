@@ -120,6 +120,7 @@ a {
 
 p {
 	margin: 0.4em;
+	word-break: break-all;
 }
 
 ul, li {

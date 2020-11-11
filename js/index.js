@@ -17,9 +17,11 @@ axios.get('../data/data.json')
   const projects = data.projects;
   const projectSection = document.querySelector('#projects');
 
+  console.time('create_projectItem');
   const projectWeb = projects.web.map((project)=>create_projectItem(project, 'web')).join('');
   const projectApp = projects.app.map((project)=>create_projectItem(project, 'app')).join('');
-  projectSection.innerHTML = projectWeb+projectApp;
+  projectSection.innerHTML = projectWeb+projectApp;  
+  console.timeEnd('create_projectItem');
   
   const contentButton = document.querySelector('.content__button');
   contentButton.classList.add('content__button--active');
@@ -36,6 +38,7 @@ axios.get('../data/data.json')
   skillArticle.appendChild(create_skillContent(skills, true));
 
   // 경력 섹션
+  console.time('experience');
   const experience = data.experience;
   const experienceList = document.querySelector('.content__experience ul');
 
@@ -80,7 +83,10 @@ axios.get('../data/data.json')
 
     experienceList.appendChild(experienceItem);
   }
-  // 교육 섹션
+  console.timeEnd('experience');
+
+  // 교육 섹션  
+  console.time('교육 섹션');
   const education = data.education;
   const educationList = document.querySelector('.content__education ul');
 
@@ -106,8 +112,9 @@ axios.get('../data/data.json')
     educationContent.classList.add('updown-double-spacing');
     educationItem.appendChild(educationContent);
 
-    educationList.appendChild(educationItem);
+    educationList.appendChild(educationItem);    
   }
+  console.timeEnd('교육 섹션');
 })
 .catch((error) => {
   console.log(error);

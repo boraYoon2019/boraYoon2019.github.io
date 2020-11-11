@@ -184,7 +184,6 @@ function sortProject(eventOrFalse, option) {
 }
 
 function create_projectItem(project, tagClass) {
-  
   let skills = [];
 
   if (project.skills.front !== "") {
