@@ -191,18 +191,14 @@ function create_projectItem(project, tagClass) {
     skills = skills.concat(project.skills.front);
   }
   
-  console.log(skills);
   if (project.skills.server !== "") {
     skills = skills.concat(project.skills.server);
   }
   
-  console.log(skills);
   if (project.skills.skill !== "") {
     skills = skills.concat(project.skills.skill);
   }
   
-  console.log(skills);
-
   // text용
   const skills_text=skills.join(', ');
   // 클래스용
