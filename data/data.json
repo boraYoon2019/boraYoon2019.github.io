@@ -44,7 +44,7 @@
         "thumbnail": "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png",
         "skills": {
           "front": ["ES2015_ES6＋"],
-          "server": "",
+          "server": ["AWS_EC2", "Nginx"],
           "skill" : ["React", "React-Redux", "Redux-Saga", "Webpack", "Styled-Components"]
         }
       },
