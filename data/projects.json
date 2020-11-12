@@ -7,7 +7,7 @@
         "subhead":"반응형 Todolist 웹사이트",
         "github": "https://github.com/boraYoon2019/calendar_todolist",
         "link": "http://13.209.7.185/",
-        "duration": "2020.09 &mdash; 2020.10 / 2 months",
+        "duration": "2020.09 &mdash; NOW / 진행중",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "img_src": [
           "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png", 
@@ -19,7 +19,7 @@
           "server": "",
           "skill" : ["React","React-Redux","Redux-Saga","Webpack","Styled-Components"]
         },
-        "description": "　React를 이용한 반응형 Todolist 웹사이트 토이 프로젝트입니다. 상단에 '#' 아이콘을 클릭하시면 실제 프로젝트를 확인할 수 있습니다. Python Django REST Framework 서버를 담당하는 개발자와 함께 작업하였습니다. 클래스형/함수형 둘 다 사용한 프로젝트로, Redux를 통해 각 페이지 컴포넌트에 영향을 주는 상태값들을 관리하였고, 리덕스 사가를 통해 서버통신으로 다양한 결과가 반환되는 데이터(로그인/회원가입 등)를 처리하였습니다. 아토믹 디자인 패턴을 적용하여 작업한 프로젝트입니다.",
+        "description": "　React를 이용한 반응형 웹 토이 프로젝트입니다. 상단에 '#' 아이콘을 클릭하시면 실제 프로젝트를 확인할 수 있습니다. Django REST Framework 서버 개발자와 함께 작업하였습니다. 아토믹 디자인 패턴을 적용하여 pages 컴포넌트에서 리덕스와 연동된 상태값과 데이터 처리가 이루어지도록 구성한 프로젝트입니다. class/hooks 둘 다 사용하였으며, Redux를 통해 컴포넌트 UI에 영향을 주는 상태값들을 관리하였고, Redux-saga를 통해 서버통신으로 다양한 결과가 반환되는 로직(로그인/회원가입 등)을 처리하였습니다.",
         "video": ""
       },
       {
@@ -28,7 +28,7 @@
         "subhead":"반응형 이력서 웹사이트",
         "github": "https://github.com/boraYoon2019/boraYoon2019.github.io",
         "link": "",
-        "duration": "2020.10 &mdash; 2020.10 / 1 months",
+        "duration": "2020.10 &mdash; 2020.10 / 1 month",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "img_src": [
           "https://user-images.githubusercontent.com/68500631/98608086-d5a82880-232d-11eb-9a85-c45979e5817a.png"
@@ -38,7 +38,7 @@
           "server": "",
           "skill" : ["axios"]
         },
-        "description": "　현재 보시는 이력서 웹사이트 입니다. :) flex, grid, 미디어 쿼리등을 통해 반응형으로 제작하였습니다. axios를 통해 서버에서 데이터를 받아오는 것을 가정하여 구현하였습니다. 실제로는 json파일에서 데이터를 받아와 화면을 구성하는 로직입니다.",
+        "description": "　현재 보시는 이력서 웹사이트로, flex, grid, 미디어 쿼리 등을 통해 반응형으로 제작하였습니다. axios를 통해 서버에서 데이터를 받아오는 것을 가정하여 구현하였고, 실제로는 json파일에서 데이터를 받아와 화면을 구성하는 로직입니다.",
         "video": ""
       },
       {

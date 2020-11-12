@@ -615,7 +615,7 @@ article h5 {
 
 .projects__item {
   width: 100%;
-	/* border: 2px dotted #fff; */
+	border: 2px dotted #fff;
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 5px 5px 4px 2px #ccc;
@@ -631,7 +631,8 @@ article h5 {
   cursor:pointer;
 	background-color: var(--accent-color);
 	animation: shake 0.9s cubic-bezier(.36,.07,.19,.97) both;
-	perspective: 1000px;
+	perspective: 1000px;	
+	border: 2px dotted #111;
 }
 
 @keyframes shake {
