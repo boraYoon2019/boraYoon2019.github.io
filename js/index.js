@@ -7,11 +7,20 @@ axios.get('../data/data.json')
   // about 섹션
   const about = data.about;
   
-  const aboutSubhead = document.querySelector('.content__subhead');
-  const aboutContent = document.querySelector('.content__paragraph');
-
+  const aboutSubhead = document.querySelector('.content__subhead');  
   aboutSubhead.textContent = about.title;
-  aboutContent.textContent = about.content;
+
+  
+  const aboutContainer= document.querySelector('.container__about');
+  for (const paragraph of about.content) {
+    const aboutParagraph = document.createElement('p');
+    console.log(aboutParagraph);
+    
+    aboutParagraph.classList.add('content__paragraph');
+    aboutParagraph.textContent = paragraph;
+
+    aboutContainer.appendChild(aboutParagraph);
+  }
 
   // project 섹션
   const projects = data.projects;
