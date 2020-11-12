@@ -53,7 +53,7 @@
         "skills": {
           "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
           "server": "",
-          "skill" : ""
+          "skill" : ["axios"]
         }
       },
       {
