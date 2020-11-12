@@ -123,7 +123,7 @@ axios.get('../data/data.json')
 
 // contact me 버튼
 const contactMe_btn = document.querySelector('.contactMe');
-contactMe_btn.addEventListener('click', (event)=>{
+contactMe_btn.addEventListener('click', ()=>{
   location.href='mailto:yunbora504@gmail.com';
 });
 
