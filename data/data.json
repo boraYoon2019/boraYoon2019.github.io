@@ -39,7 +39,7 @@
         "duration": "2020.09 — 2020.10 / 2 months",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png",
         "skills": {
-          "front": ["ES2015_ES6＋", "JSX"],
+          "front": ["ES2015_ES6＋"],
           "server": "",
           "skill" : ["React", "React-Redux", "Redux-Saga", "Webpack", "Styled-Components"]
         }
