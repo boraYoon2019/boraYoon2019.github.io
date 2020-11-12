@@ -209,6 +209,7 @@ function create_projectItem(project, tagClass) {
     <div class="projects-caption" data-head="${project.head}" data-kind="${tagClass}">
       <h4 class="projects-head" data-head="${project.head}" data-kind="${tagClass}">${project.head}</h4>
       <p class="projects-feature" data-head="${project.head}" data-kind="${tagClass}">${project.feature}</p>
+      <p class="projects-feature" data-head="${project.head}" data-kind="${tagClass}"><b>${project.duration}</b></p>
       <p class="projects-subhead base-spacing" data-head="${project.head}" data-kind="${tagClass}">${project.subhead}</p>
       <p class="projects-skills" data-head="${project.head}" data-kind="${tagClass}">${skills_text}</p>
     </div>
@@ -297,6 +298,24 @@ function modalSetting(clickedProject) {
   head.textContent=clickedProject.head;
   modal__content.appendChild(head);
 
+  
+
+  const modalSubheadBox = document.createElement('div');
+  modalSubheadBox.classList.add('modal-subhead');
+
+  const feature = document.createElement('h3');
+  feature.classList.add('inline');
+  feature.textContent=clickedProject.feature;
+  modalSubheadBox.appendChild(feature);
+
+  const duration = document.createElement('h3');
+  duration.classList.add('inline');
+  duration.textContent=clickedProject.duration;
+  modalSubheadBox.appendChild(duration);
+
+  modal__content.appendChild(modalSubheadBox);
+
+
   // 깃헙, 사이트 링크 anchor
   const moreBox= document.createElement('div');
   moreBox.classList.add('link__item');
@@ -380,26 +399,16 @@ function modalSetting(clickedProject) {
 
   modal__content.appendChild(slideThumbnails);
 
-
-  const modalSubheadBox = document.createElement('div');
-  modalSubheadBox.classList.add('modal-subhead');
-
-  const feature = document.createElement('h3');
-  feature.classList.add('inline');
-  feature.textContent=clickedProject.feature;
-  modalSubheadBox.appendChild(feature);
-
-  const subhead = document.createElement('h2');
-  subhead.classList.add('inline');
-  subhead.textContent=clickedProject.subhead;
-  modalSubheadBox.appendChild(subhead);
-
   // skillList
   const skillsList = document.createElement('div');
   skillsList.classList.add('modal__skills-list');
   skillsList.classList.add('double-spacing');
   skillsList.appendChild(create_skillContent(clickedProject.skills));
   modal__content.appendChild(skillsList);
+  
+  const subhead = document.createElement('h2');
+  subhead.textContent=clickedProject.subhead;
+  modal__content.appendChild(subhead);
 
   const description = document.createElement('p');
   description.classList.add('modal__description');
