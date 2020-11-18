@@ -228,7 +228,11 @@ function highlight_navMenu() {
 }
 
 function scroll_IntoSectionFunction(event) {
-  event.preventDefault();
+  
+  if (event.target.className==='sidebar__menu') {
+    return;
+  }
+
   const target = event.target;
   const dataset = target.dataset;
 
