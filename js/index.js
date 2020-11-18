@@ -115,6 +115,20 @@ axios.get('../data/data.json')
   console.log(error);
 });
 
+// 브라우저 화면 사이즈 조정 시 사이드바 이벤트
+window.addEventListener('resize', () => {
+  if(window.screen.width>540) {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('close');
+    sidebar.classList.add('show');
+  } else if (window.screen.width<=540) {    
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('show');
+    sidebar.classList.add('close');
+  } else {
+    return;
+  }
+});
 
 // contact me 버튼
 const contactMe_btn = document.querySelector('.contactMe');

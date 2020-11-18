@@ -1,18 +1,4 @@
 // 전체 혹은 공유 function
-window.addEventListener('resize', () => {
-  if(window.screen.width>540) {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.remove('close');
-    sidebar.classList.add('show');
-  } else if (window.screen.width<=540) {    
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.remove('show');
-    sidebar.classList.add('close');
-  } else {
-    return;
-  }
-});
-
 function make_element_withClassesArray(elementName, classes) {
   
   const element = document.createElement(elementName);
