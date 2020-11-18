@@ -261,17 +261,18 @@ function showOrClose_Sidebar (hamberger_menu) {
 
 // 프로젝트 모달 관련
 function onProjectItemClick (event, projects_array) {
-
+  if(event.target.id ==='projects') {
+    return;
+  }
   const projectName= event.target.dataset.head;
   const projectClass= event.target.dataset.kind;
   const clickedProject = 
     projects_array[projectClass]
     .find((project)=>project.head === projectName);
 
-    modalSetting(clickedProject);
-
-    modal.style.display = "block";
-    body.classList.add('modal-active');
+  modalSetting(clickedProject);
+  modal.style.display = "block";
+  body.classList.add('modal-active');
 }
 
 function modalSetting(clickedProject) {

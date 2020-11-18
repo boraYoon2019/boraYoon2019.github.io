@@ -13,7 +13,7 @@
     const projects_array=response.data.projects;
 
     // 프로젝트 아이템에 이벤트 위임
-    let projects__items = document.querySelector('#projects');    
+    let projects__items = document.querySelector('#projects');
     projects__items.addEventListener('click', (event)=>onProjectItemClick(event, projects_array));
 
   })
