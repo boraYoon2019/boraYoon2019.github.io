@@ -51,13 +51,10 @@ axios.get('../data/data.json')
   const experienceList = document.querySelector('.content__experience ul');
 
   for (const exp of experience) {
-    const experienceItem = document.createElement('li');
-    experienceItem.classList.add('base-spacing');
-    experienceItem.classList.add('bottom-spacing');
+    const experienceItem = make_element_withClassesArray('li', ['base-spacing','bottom-spacing']);
 
-    const experienceTitle = document.createElement('h2');
-    experienceTitle.textContent=exp.company;    
-    experienceTitle.classList.add('inline');
+    const experienceTitle = make_element_withClassesArray('h2', ['inline']);
+    experienceTitle.textContent=exp.company;
 
     experienceItem.appendChild(experienceTitle);
 
@@ -68,21 +65,17 @@ axios.get('../data/data.json')
       experienceItem.appendChild(experienceLink);
     }
     
-    const experiencePosition = document.createElement('h4');
+    const experiencePosition = make_element_withClassesArray('h4', ['align-right']);
     experiencePosition.textContent=exp.position;
-    experiencePosition.classList.add('align-right');
     experiencePosition.style.color='#3f1fb0';
     experienceItem.appendChild(experiencePosition);
 
-    const experienceDuration = document.createElement('p');
+    const experienceDuration = make_element_withClassesArray('p', ['align-right','text-bolder']);
     experienceDuration.textContent=exp.duration;
-    experienceDuration.classList.add('align-right');
-    experienceDuration.classList.add('text-bolder');
     experienceItem.appendChild(experienceDuration);
 
-    const experienceContent = document.createElement('p');
+    const experienceContent = make_element_withClassesArray('p', ['updown-double-spacing']);
     experienceContent.textContent=exp.summary;
-    experienceContent.classList.add('updown-double-spacing');
     experienceItem.appendChild(experienceContent);
 
     if(exp.skills !== "") {
@@ -99,28 +92,22 @@ axios.get('../data/data.json')
   const educationList = document.querySelector('.content__education ul');
 
   for (const item of education) {
-    const educationItem = document.createElement('li');
-    educationItem.classList.add('base-spacing');
-    educationItem.classList.add('bottom-spacing');
+    const educationItem = make_element_withClassesArray('li', ['base-spacing','bottom-spacing']);
 
-    const educationTitle = document.createElement('h2');
-    educationTitle.textContent=item.name;    
-    educationTitle.classList.add('inline');
+    const educationTitle = make_element_withClassesArray('h2', ['inline']);
+    educationTitle.textContent=item.name;
 
     educationItem.appendChild(educationTitle);
     
-    const educationDuration = document.createElement('p');
+    const educationDuration = make_element_withClassesArray('p', ['align-right','text-bolder']);
     educationDuration.textContent=item.duration;
-    educationDuration.classList.add('align-right');
-    educationDuration.classList.add('text-bolder');
     educationItem.appendChild(educationDuration);
 
-    const educationContent = document.createElement('p');
+    const educationContent = make_element_withClassesArray('p', ['updown-double-spacing']);
     educationContent.textContent=item.summary;
-    educationContent.classList.add('updown-double-spacing');
     educationItem.appendChild(educationContent);
 
-    educationList.appendChild(educationItem);    
+    educationList.appendChild(educationItem);
   }
   // console.timeEnd('교육 섹션');
 })

@@ -13,6 +13,17 @@ window.addEventListener('resize', () => {
   }
 });
 
+function make_element_withClassesArray(elementName, classes) {
+  
+  const element = document.createElement(elementName);
+
+  for (i=0; i<classes.length; i++) {
+    element.classList.add(classes[i]);
+  }
+  
+  return element;
+}
+
 function create_skillContent(skills, isInSkillSection) {
 
   let skillContainer = document.createElement('div');
@@ -37,13 +48,12 @@ function create_skillContent(skills, isInSkillSection) {
 
 function append_skillList (skillContainer, skillArray, type) {
   const finalSkillContainer = skillContainer;
-  const flexContainer = document.createElement('div');
-  flexContainer.classList.add('row-flex');
+  const flexContainer = make_element_withClassesArray('div',['row-flex']);
 
   if(skillArray !== '') {
     const skillTitle = document.createElement('h5');
-    skillTitle.textContent=type+':　';
-    flexContainer.appendChild(skillTitle);  
+    skillTitle.textContent= type+':　';
+    flexContainer.appendChild(skillTitle);
   }
 
   const skillList = document.createElement('ul');
@@ -81,9 +91,7 @@ function append_skillList_inSection (skillContainer, skillArray, type) {
   skillTitle.textContent=type+':';  
   finalSkillContainer.appendChild(skillTitle);
 
-  const skillList = document.createElement('ul');
-  skillList.classList.add('content__description');
-  skillList.classList.add(type);
+  const skillList = make_element_withClassesArray('ul', ['content__description', type]);
 
   if(skillArray !=='') {
     finalSkillContainer.appendChild(append_skillItems_InSection(skillList, skillArray, type));
@@ -287,29 +295,21 @@ function modalSetting(clickedProject) {
   const modal__content__layout = document.querySelector('.modal__content__layout');
 
   // 모달 만들기 
-  const modal__content = document.createElement('div');
-  modal__content.classList.add('modal__content');
+  const modal__content = make_element_withClassesArray('div', ['modal__content']);
   modal__content__layout.appendChild(modal__content);
 
   // 제목
-  const head = document.createElement('h1');
-  head.classList.add('modal-head');
-  head.classList.add('base-spacing');  
+  const head = make_element_withClassesArray('h1', ['modal-head','base-spacing']);
   head.textContent=clickedProject.head;
   modal__content.appendChild(head);
 
+  const modalSubheadBox = make_element_withClassesArray('div', ['modal-subhead']);
   
-
-  const modalSubheadBox = document.createElement('div');
-  modalSubheadBox.classList.add('modal-subhead');
-
-  const feature = document.createElement('h3');
-  feature.classList.add('inline');
+  const feature = make_element_withClassesArray('h3', ['inline']);
   feature.textContent=clickedProject.feature;
   modalSubheadBox.appendChild(feature);
 
-  const duration = document.createElement('h3');
-  duration.classList.add('inline');
+  const duration = make_element_withClassesArray('h3', ['inline']);
   duration.textContent=clickedProject.duration;
   modalSubheadBox.appendChild(duration);
 
@@ -317,36 +317,29 @@ function modalSetting(clickedProject) {
 
 
   // 깃헙, 사이트 링크 anchor
-  const moreBox= document.createElement('div');
-  moreBox.classList.add('link__item');
-  moreBox.classList.add('row-flex');
+  const moreBox = make_element_withClassesArray('div', ['link__item','row-flex']);
 
-  if (clickedProject.link !== '') {
-    const pageAnchor = document.createElement('a');
+  if (clickedProject.link !== '') {    
+    const pageAnchor = make_element_withClassesArray('a', ['link__item']);
     pageAnchor.setAttribute('target', '_blank');
-    pageAnchor.classList.add('link__item');
     pageAnchor.setAttribute('href', clickedProject.link);
 
-    const pageIcon = document.createElement('i');
+    const pageIcon = make_element_withClassesArray('i', ['fas','fa-hashtag']);
     pageIcon.style.padding = '.2rem';
     pageIcon.style.margin = '.3rem';
-    pageIcon.classList.add('fas');
-    pageIcon.classList.add('fa-hashtag');    
     pageAnchor.appendChild(pageIcon);
+
     moreBox.appendChild(pageAnchor);
   }
 
   if (clickedProject.github !== '') {
-    const githubAnchor = document.createElement('a');
+    const githubAnchor = make_element_withClassesArray('a', ['link__item']);
     githubAnchor.setAttribute('target', '_blank');
-    githubAnchor.classList.add('link__item');
     githubAnchor.setAttribute('href', clickedProject.github);
 
-    const githubIcon = document.createElement('i');
+    const githubIcon = make_element_withClassesArray('i', ['fab','fa-github']);
     githubIcon.style.padding = '.2rem';
     githubIcon.style.margin = '.3rem';
-    githubIcon.classList.add('fab');
-    githubIcon.classList.add('fa-github');
     githubAnchor.appendChild(githubIcon);
 
     moreBox.appendChild(githubAnchor);
@@ -354,20 +347,17 @@ function modalSetting(clickedProject) {
   modal__content.appendChild(moreBox);
 
   // 메인 슬라이드 컨테이너 태그 생성
-  const slidesContainer = document.createElement('div');
-  slidesContainer.classList.add('slides__container');
+  const slidesContainer = make_element_withClassesArray('div', ['slides__container']);
 
   // 슬라이드 이미지 컨테이너 태그 생성
-  const slides = document.createElement('div');
-  slides.classList.add('slides');
+  const slides = make_element_withClassesArray('div', ['slides']);
 
   // 메인 슬라이드 이미지 src array
   const imgs = clickedProject.img_src;
 
   for (img of imgs) {    
   // 메인 슬라이드 이미지 태그 생성
-    const slideImg = document.createElement('img');
-    slideImg.classList.add('slide');
+    const slideImg = make_element_withClassesArray('img', ['slide']);
     slideImg.setAttribute('src', img);
     slides.appendChild(slideImg);
   }
@@ -400,9 +390,7 @@ function modalSetting(clickedProject) {
   modal__content.appendChild(slideThumbnails);
 
   // skillList
-  const skillsList = document.createElement('div');
-  skillsList.classList.add('modal__skills-list');
-  skillsList.classList.add('double-spacing');
+  const skillsList = make_element_withClassesArray('div', ['modal__skills-list','double-spacing']);
   skillsList.appendChild(create_skillContent(clickedProject.skills));
   modal__content.appendChild(skillsList);
   
@@ -410,9 +398,7 @@ function modalSetting(clickedProject) {
   subhead.textContent=clickedProject.subhead;
   modal__content.appendChild(subhead);
 
-  const description = document.createElement('p');
-  description.classList.add('modal__description');
-  description.classList.add('double-spacing');
+  const description = make_element_withClassesArray('p', ['modal__description','double-spacing']);
   modal__content.appendChild(description);
   description.textContent=clickedProject.description;
 
