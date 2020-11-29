@@ -262,8 +262,7 @@ h2, h3, h4, p {
   border: 1px solid var(--text-color);   
   outline: 0;
 	background-color: var(--text-color);
-	box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
-	
+	box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);	
 }
 
 li.language:hover, li.skills:hover {
@@ -465,13 +464,11 @@ li.language:hover, li.skills:hover {
 h1.introduction__job {
 	margin: 0 0 0.5em 0;
 	font-size: 3.5em;
-	text-shadow: 3px 3px var(--hover-color);
 }
 h2.introduction__name {
 	margin: 0 0 0.5em 0;
 	font-size: 2em;
 	text-align: right;
-	text-shadow: 2px 2px var(--hover-color);
 }
 a {
 	color: 	rgba(147, 147, 147, 1);
@@ -483,14 +480,7 @@ article h1 {
 	padding: 0.35em;
 	margin: calc(var(--base-spacing)*4) 0 var(--base-spacing) 0;
 	background: rgb(241, 241, 241);
-	background: linear-gradient(
-		90deg,
-		rgba(241, 241, 241, 1) 0%,
-		rgba(147, 147, 147, 1) 75%,
-		rgba(98, 97, 97, 1) 100%
-	);
-	border-radius: 10px;
-  /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+  border-radius: 10px;
 }
 
 article h5 {
