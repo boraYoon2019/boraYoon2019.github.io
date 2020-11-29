@@ -164,7 +164,7 @@ function sortProject(eventOrFalse, option) {
     projects.forEach((project)=> {
       project.classList.contains('app') ?
        project.classList.remove('invisible') : project.classList.add('invisible');
-     });
+    });
     
     const web_tab = document.querySelector('#web_tab');
     web_tab.classList.remove('content__button--active');
