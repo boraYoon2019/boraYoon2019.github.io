@@ -963,12 +963,10 @@ footer {
 
 	h1.introduction__job {
 		font-size: 3em;
-		text-shadow: 3px 3px var(--accent-color);
 	}
 	h2.introduction__name {
 		font-size: 1.5em;
 		text-align: right;
-		text-shadow: 1.5px 1.5px var(--accent-color);
 	}
   
   .footer__licenses {

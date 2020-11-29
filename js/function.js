@@ -306,37 +306,6 @@ function modalSetting(clickedProject) {
 
   modal__content.appendChild(modalSubheadBox);
 
-
-  // 깃헙, 사이트 링크 anchor
-  const moreBox = make_element_withClassesArray('div', ['link__item','row-flex']);
-
-  if (clickedProject.link !== '') {    
-    const pageAnchor = make_element_withClassesArray('a', ['link__item']);
-    pageAnchor.setAttribute('target', '_blank');
-    pageAnchor.setAttribute('href', clickedProject.link);
-
-    const pageIcon = make_element_withClassesArray('i', ['fas','fa-hashtag']);
-    pageIcon.style.padding = '.2rem';
-    pageIcon.style.margin = '.3rem';
-    pageAnchor.appendChild(pageIcon);
-
-    moreBox.appendChild(pageAnchor);
-  }
-
-  if (clickedProject.github !== '') {
-    const githubAnchor = make_element_withClassesArray('a', ['link__item']);
-    githubAnchor.setAttribute('target', '_blank');
-    githubAnchor.setAttribute('href', clickedProject.github);
-
-    const githubIcon = make_element_withClassesArray('i', ['fab','fa-github']);
-    githubIcon.style.padding = '.2rem';
-    githubIcon.style.margin = '.3rem';
-    githubAnchor.appendChild(githubIcon);
-
-    moreBox.appendChild(githubAnchor);
-  }
-  modal__content.appendChild(moreBox);
-
   // 메인 슬라이드 컨테이너 태그 생성
   const slidesContainer = make_element_withClassesArray('div', ['slides__container']);
 
@@ -386,10 +355,41 @@ function modalSetting(clickedProject) {
   modal__content.appendChild(skillsList);
   
   const subhead = document.createElement('h2');
+  subhead.style.marginBottom = '0em';
   subhead.textContent=clickedProject.subhead;
   modal__content.appendChild(subhead);
+  
+  // 깃헙, 사이트 링크 anchor
+  const moreBox = make_element_withClassesArray('div', ['link__item','row-flex']);
+
+  if (clickedProject.link !== '') {    
+    const pageAnchor = make_element_withClassesArray('a', ['link__item']);
+    pageAnchor.setAttribute('target', '_blank');
+    pageAnchor.setAttribute('href', clickedProject.link);
+
+    const pageIcon = make_element_withClassesArray('i', ['fas','fa-hashtag']);
+    pageIcon.style.padding = '.2rem';
+    pageAnchor.appendChild(pageIcon);
+
+    moreBox.appendChild(pageAnchor);
+  }
+
+  if (clickedProject.github !== '') {
+    const githubAnchor = make_element_withClassesArray('a', ['link__item']);
+    githubAnchor.setAttribute('target', '_blank');
+    githubAnchor.setAttribute('href', clickedProject.github);
+
+    const githubIcon = make_element_withClassesArray('i', ['fab','fa-github']);
+    githubIcon.style.padding = '.2rem';
+    githubAnchor.appendChild(githubIcon);
+
+    moreBox.appendChild(githubAnchor);
+  }
+  modal__content.appendChild(moreBox);
 
   const description = make_element_withClassesArray('p', ['modal__description','double-spacing']);
+  description.style.marginTop = '0em';
+  description.style.paddingTop = '.2em';
   modal__content.appendChild(description);
   description.textContent=clickedProject.description;
 
