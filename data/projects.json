@@ -2,30 +2,62 @@
   "projects": {
     "web": [
       {
+        "head": "SOOGONG",
+        "feature": "【서비스】",
+        "subhead": "수리 서비스 플랫폼 (반응형 웹사이트)",
+        "github": "https://github.com/dev-soogong",
+        "link": "https://soogong.co.kr",
+        "duration": "2021.10 - 재직중 / 5 months -ing",
+        "thumbnail": "./메인화면.gif",
+        "img_src": ["./메인화면.gif", "./문의내역.gif"],
+        "skills": {
+          "front": ["ES2015(ES6)↑"],
+          "server": [],
+          "skill": [
+            "React",
+            "Nextjs",
+            "React-Redux",
+            "Redux-toolkit",
+            "Webpack",
+            "Styled-Components",
+            "Material-UI",
+            "axios"
+          ]
+        },
+        "description": "　어드민을 주로 담당하였으며, 어드민에서는 아토믹 시스템을 도입하여 자주 사용되는 컴포넌트들을 재활용성 높게 구성하여 개발 속도 증진에 기여하였으며 JSON 데이터를 필요한 형식으로 커스텀하여 CSV EXPORT 기능을 구현하였습니다. 또한 프로덕트와 어드민 내 상위 버전의 toast ui editor을 도압하였고 에디터 내에서 필요한 기능을 이용할 수 있도록 커스텀하여 추가하였습니다. 메인 서비스 내에서는 메인 화면(탭), 서비스 소개 페이지, 마스터 사진 메뉴, 고객 문의 내역을 구현하였고 서비스를 유지보수하며 핫픽스를 진행해왔습니다. Git 브랜치 전략으로는 git flow 방식을 진행하였습니다.",
+        "video": ""
+      },
+      {
         "head": "Calendar-TodoList",
-        "feature":"【팀 프로젝트 - 2명】",
-        "subhead":"반응형 Todolist 웹사이트",
+        "feature": "【팀 프로젝트 - 2명】",
+        "subhead": "반응형 Todolist 웹사이트",
         "github": "https://github.com/boraYoon2019/calendar_todolist",
         "link": "http://13.209.7.185/",
-        "duration": "2020.09 - NOW / 진행중",
+        "duration": "2020.09 - 2020.11 / 1.5 months",
         "thumbnail": "https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502",
         "img_src": [
-          "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png", 
+          "https://user-images.githubusercontent.com/68500631/98608458-93331b80-232e-11eb-8a9c-0e2983bb4655.png",
           "https://user-images.githubusercontent.com/68500631/98608510-b65dcb00-232e-11eb-8f33-eeddc66bfc49.png",
           "https://user-images.githubusercontent.com/68500631/98608649-0341a180-232f-11eb-8834-206f397ae685.png"
         ],
         "skills": {
           "front": ["ES2015(ES6)↑"],
           "server": ["AWS_EC2", "Nginx"],
-          "skill" : ["React","React-Redux","Redux-Saga","Webpack","Styled-Components"]
+          "skill": [
+            "React",
+            "React-Redux",
+            "Redux-Saga",
+            "Webpack",
+            "Styled-Components"
+          ]
         },
         "description": "　React를 이용한 반응형 웹 토이 프로젝트입니다. 상단에 '#' 아이콘을 클릭하시면 실제 프로젝트를 확인할 수 있습니다. Django REST Framework 서버 개발자와 함께 작업하였습니다. 아토믹 디자인 패턴을 적용하여 pages 컴포넌트에서 리덕스와 연동된 상태값과 데이터 처리가 이루어지도록 구성한 프로젝트입니다. class/hooks 둘 다 사용하였으며, Redux를 통해 컴포넌트 UI에 영향을 주는 상태값들을 관리하였고, Redux-saga를 통해 서버통신으로 다양한 결과가 반환되는 로직(로그인/회원가입 등)을 처리하였습니다.",
         "video": ""
       },
       {
         "head": "Resume Template",
-        "feature":"【개인 프로젝트】",
-        "subhead":"반응형 이력서 웹사이트",
+        "feature": "【개인 프로젝트】",
+        "subhead": "반응형 이력서 웹사이트",
         "github": "https://github.com/boraYoon2019/boraYoon2019.github.io",
         "link": "",
         "duration": "2020.10 - 2020.10 / 1 month",
@@ -36,92 +68,92 @@
         "skills": {
           "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
           "server": "",
-          "skill" : ["axios"]
+          "skill": ["axios"]
         },
         "description": "　현재 보시는 이력서 웹사이트로, flex, grid, 미디어 쿼리 등을 통해 반응형으로 제작하였습니다. axios를 통해 서버에서 데이터를 받아오는 것을 가정하여 구현하였고, 실제로는 json파일에서 데이터를 받아와 화면을 구성하는 로직입니다.",
         "video": ""
       },
       {
         "head": "Oh! happy PENSION",
-        "feature":"【개인 프로젝트】",
-        "subhead":"펜션 예약 웹사이트",
+        "feature": "【개인 프로젝트】",
+        "subhead": "펜션 예약 웹사이트",
         "github": "https://github.com/boraYoon2019/project_summary/tree/main/ohhappypension",
         "link": "",
         "duration": "2019.08 - 2019.09 / 6 weeks",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg",
         "img_src": [
-        "https://j.gifs.com/YWg9Gn.gif"
-        ,"https://user-images.githubusercontent.com/68500631/89120791-fd4c5100-d4f3-11ea-9156-583da50237e2.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120793-00dfd800-d4f4-11ea-81f8-99f9a73d1210.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120794-01786e80-d4f4-11ea-94a3-28765ee5329c.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120797-02110500-d4f4-11ea-9402-2f51a6b6a3c5.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120798-02110500-d4f4-11ea-8e84-d3ec3dd83261.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120800-02a99b80-d4f4-11ea-9681-12409bb82125.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120801-03423200-d4f4-11ea-9f11-006d171dcd72.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120802-03dac880-d4f4-11ea-9fa8-6457743dd73d.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120803-04735f00-d4f4-11ea-9b3a-bf0823af66d4.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120804-05a48c00-d4f4-11ea-9753-66f4c8f17ad7.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120805-05a48c00-d4f4-11ea-9320-f92ed94e328c.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120806-063d2280-d4f4-11ea-9554-86df2c6405b8.jpg"
-        ,"https://user-images.githubusercontent.com/68500631/89120807-063d2280-d4f4-11ea-89aa-ef86d4142498.jpg"
+          "https://j.gifs.com/YWg9Gn.gif",
+          "https://user-images.githubusercontent.com/68500631/89120791-fd4c5100-d4f3-11ea-9156-583da50237e2.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120792-fe7d7e00-d4f3-11ea-9925-133027065227.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120793-00dfd800-d4f4-11ea-81f8-99f9a73d1210.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120794-01786e80-d4f4-11ea-94a3-28765ee5329c.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120797-02110500-d4f4-11ea-9402-2f51a6b6a3c5.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120798-02110500-d4f4-11ea-8e84-d3ec3dd83261.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120800-02a99b80-d4f4-11ea-9681-12409bb82125.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120801-03423200-d4f4-11ea-9f11-006d171dcd72.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120802-03dac880-d4f4-11ea-9fa8-6457743dd73d.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120803-04735f00-d4f4-11ea-9b3a-bf0823af66d4.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120804-05a48c00-d4f4-11ea-9753-66f4c8f17ad7.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120805-05a48c00-d4f4-11ea-9320-f92ed94e328c.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120806-063d2280-d4f4-11ea-9554-86df2c6405b8.jpg",
+          "https://user-images.githubusercontent.com/68500631/89120807-063d2280-d4f4-11ea-89aa-ef86d4142498.jpg"
         ],
         "skills": {
           "front": ["HTML5", "Javascript"],
-          "server": ["PHP", "Linux","Ubuntu","Apache","MYSQL"],
-          "skill" : ["Ajax","JQuery","BootStrap"]
+          "server": ["PHP", "Linux", "Ubuntu", "Apache", "MYSQL"],
+          "skill": ["Ajax", "JQuery", "BootStrap"]
         },
-        "description": "　GoogleChart, ImportAPI 등을 사용하여 숙박 날짜와 인원 등의 조건 지정을 통한 예약 가능 방 조회 기능이 있는 개인 펜션 웹사이트입니다. 메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다."
-        ,"video": "https://www.youtube.com/embed/KayJHQ4l4yk"
+        "description": "　GoogleChart, ImportAPI 등을 사용하여 숙박 날짜와 인원 등의 조건 지정을 통한 예약 가능 방 조회 기능이 있는 개인 펜션 웹사이트입니다. 메인 기능으로는 조건 지정을 통한 검색 예약 기능과 달력을 통한 예약 기능, 예약 결제, 예약 관리(수정/취소), 게시판(글 등록/수정/삭제), 통계 기능 등이 있습니다.",
+        "video": "https://www.youtube.com/embed/KayJHQ4l4yk"
       }
     ],
-    "app":[
+    "app": [
       {
         "head": "NOVA TRIP",
-        "feature":"【팀 프로젝트 - 7명】",
-        "subhead":" 일본 '다국어 번역 대회' 본선 진출작 - 여행 관련 앱",
+        "feature": "【팀 프로젝트 - 7명】",
+        "subhead": " 일본 '다국어 번역 대회' 본선 진출작 - 여행 관련 앱",
         "github": "https://github.com/boraYoon2019/project_summary/tree/main/novartrip",
         "link": "",
         "duration": "2019.02 — 2019.03 / 3 주",
         "thumbnail": "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg",
         "img_src": [
           "https://j.gifs.com/K14VnY.gif",
-          "https://user-images.githubusercontent.com/68500631/98469291-ee2b1c80-2221-11eb-8f57-9df97d424f88.jpg", 
+          "https://user-images.githubusercontent.com/68500631/98469291-ee2b1c80-2221-11eb-8f57-9df97d424f88.jpg",
           "https://user-images.githubusercontent.com/68500631/89737475-349a9f00-daac-11ea-9cd5-79353560785a.jpg"
         ],
         "skills": {
           "front": ["ANDROID_JAVA"],
-          "server": ["AWS_EC2", "Apache","MYSQL"],
-          "skill" : ""
+          "server": ["AWS_EC2", "Apache", "MYSQL"],
+          "skill": ""
         },
-        "description": "　일본 총무성이 주최한 '다국어 번역 대회' 본선 진출작으로, 통역ㆍ번역 기능과 사용자의 실시간 상황(날씨,위치 기반)을 고려한 AI 챗봇 및 위치 서비스를 제공하는 여행 어플입니다. 해당 프로젝트에서 Google Dialog Flow API를 이용하여 챗봇 내 준비물 체크리스트, 상황별 표현, 지역 특산품 정보, 올림픽 경기 정보 및 등록한 여행 일정 보기 기능을 개발하였습니다."
-        ,"video": "https://www.youtube.com/embed/BL-2bjUxtMo"  
+        "description": "　일본 총무성이 주최한 '다국어 번역 대회' 본선 진출작으로, 통역ㆍ번역 기능과 사용자의 실시간 상황(날씨,위치 기반)을 고려한 AI 챗봇 및 위치 서비스를 제공하는 여행 어플입니다. 해당 프로젝트에서 Google Dialog Flow API를 이용하여 챗봇 내 준비물 체크리스트, 상황별 표현, 지역 특산품 정보, 올림픽 경기 정보 및 등록한 여행 일정 보기 기능을 개발하였습니다.",
+        "video": "https://www.youtube.com/embed/BL-2bjUxtMo"
       },
-           
+
       {
         "head": "AIRA BOOK",
-        "feature":"【개인 프로젝트】",
-        "subhead":"독서 서평 및 모임 등록·공유가 가능한 독서 관리 앱",
+        "feature": "【개인 프로젝트】",
+        "subhead": "독서 서평 및 모임 등록·공유가 가능한 독서 관리 앱",
         "github": "https://github.com/boraYoon2019/project_summary/tree/main/airabook",
         "link": "",
         "duration": "2019.06 — 2019.08 / 6 weeks",
         "img_src": [
-          "https://j.gifs.com/3QWxAx.gif"
-          ,"https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg"
-          ,"https://user-images.githubusercontent.com/68500631/89119275-00414480-d4e8-11ea-9ad0-d885995c01be.jpg"
-          ,"https://user-images.githubusercontent.com/68500631/89119276-01727180-d4e8-11ea-9719-584b1664c6ec.jpg"
-          ,"https://user-images.githubusercontent.com/68500631/89119277-01727180-d4e8-11ea-98ac-6a4cfef2e96b.jpg"
-          ,"https://user-images.githubusercontent.com/68500631/89119278-020b0800-d4e8-11ea-867c-da3a90396783.jpg"
-          ,"https://user-images.githubusercontent.com/68500631/89119279-020b0800-d4e8-11ea-865b-1c1fab2ace78.jpg"
-          ,"https://user-images.githubusercontent.com/68500631/89119280-02a39e80-d4e8-11ea-8a5b-c05f8009a36e.jpg"
+          "https://j.gifs.com/3QWxAx.gif",
+          "https://user-images.githubusercontent.com/68500631/89119281-033c3500-d4e8-11ea-8870-132a4a86a098.jpg",
+          "https://user-images.githubusercontent.com/68500631/89119275-00414480-d4e8-11ea-9ad0-d885995c01be.jpg",
+          "https://user-images.githubusercontent.com/68500631/89119276-01727180-d4e8-11ea-9719-584b1664c6ec.jpg",
+          "https://user-images.githubusercontent.com/68500631/89119277-01727180-d4e8-11ea-98ac-6a4cfef2e96b.jpg",
+          "https://user-images.githubusercontent.com/68500631/89119278-020b0800-d4e8-11ea-867c-da3a90396783.jpg",
+          "https://user-images.githubusercontent.com/68500631/89119279-020b0800-d4e8-11ea-865b-1c1fab2ace78.jpg",
+          "https://user-images.githubusercontent.com/68500631/89119280-02a39e80-d4e8-11ea-8a5b-c05f8009a36e.jpg"
         ],
         "skills": {
           "front": ["ANDROID_JAVA"],
           "server": "",
-          "skill" : ["Kakao API","Google MAP API", "Aladin API"]
+          "skill": ["Kakao API", "Google MAP API", "Aladin API"]
         },
-        "description": "　카카오 API(로그인, 링크 공유), Google MAP API(지도), 알라딘 API(베스트 셀러) 를 사용하여 베스트 셀러 배너, 독서 시간 기록 및 ASMR 재생 기능, 나의 서재, 한 줄 서평·모임 게시판 등을 개발하였습니다."
-        ,"video": "https://www.youtube.com/embed/h7jmYZg3Aow"  
+        "description": "　카카오 API(로그인, 링크 공유), Google MAP API(지도), 알라딘 API(베스트 셀러) 를 사용하여 베스트 셀러 배너, 독서 시간 기록 및 ASMR 재생 기능, 나의 서재, 한 줄 서평·모임 게시판 등을 개발하였습니다.",
+        "video": "https://www.youtube.com/embed/h7jmYZg3Aow"
       }
     ]
   }
