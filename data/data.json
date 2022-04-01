@@ -4,14 +4,13 @@
     "content": [
       "　저는 주인의식과, 의사소통, 그리고 발전을 중요시 여기는 프론트엔드 개발자 윤보라입니다.",
       "　약 6개월 동안 학원 전산 사이트 개발 경험이 있으며, React, Nextjs, Material-ui, Redux, Redux-toolkit, ES6+, PHP, Python, Android-Java 등을 공부하며 개인/팀 프로젝트 및 실서비스를 관리하였습니다.",
-      "　저의 가장 큰 장점은 유저가 사용하는 일반적인 서비스 구현(플랫폼 내에서 필요한 기능 선)을 주로 담당해왔다는 점 그리고 그에 특화되어 있다는 것입니다. 또한 유저의 입장에서 한번 더 생각하며, UX 개선에 적극적입니다.",
-      "　또한 스타트업에서의 협업을 통해 정확한 의사소통과 주인의식을 가지고 각 개인이 맡은 바를 해내는 것이 중요하다고 느꼈습니다. 실제 서비스를 개발함에 있어 필요한 것이 무엇인지 끊임없이 고민하는 등 주도적으로 진행함은 물론, 협업에 있어 책임감을 가지고 일을 진행하며, 팀원들과의 정확하고 원활한 의사소통을 위해 노력합니다.",
+      "　스타트업에서의 협업을 통해 정확한 의사소통과 주인의식을 가지고 각 개인이 맡은 바를 해내는 것이 중요하다고 느꼈습니다. 실제 서비스를 개발함에 있어 필요한 것이 무엇인지 끊임없이 고민하는 등 주도적으로 진행함은 물론, 협업에 있어 책임감을 가지고 일을 진행하며, 팀원들과의 정확하고 원활한 의사소통을 위해 노력합니다.",
       " 뿐만 아니라 한 명의 사회 구성원으로서 주변 사람들의 피드백 내용을 적극적으로 수용할 뿐만 아니라, 개인과 구성원 모두 함께 발전하기 위한 피드백에도 적극적입니다."
     ]
   },
   "skills": {
-    "front": ["HTML5", "CSS3", "Javascript", "ES2015_ES6＋", "ANDROID_JAVA"],
-    "server": ["PHP", "Linux", "Ubuntu", "Apache", "MYSQL", "AWS_EC2"],
+    "front": ["HTML5", "CSS3", "Javascript", "ES2015_ES6＋"],
+    "server": ["Linux", "MYSQL", "AWS_EC2", "S3"],
     "skill": [
       "React",
       "Next.js",
@@ -19,6 +18,7 @@
       "Redux-Saga",
       "Webpack",
       "Styled-components",
+      "material-ui",
       "Ajax",
       "JQuery",
       "BootStrap"
@@ -94,13 +94,9 @@
         "github": "https://github.com/dev-soogong",
         "link": "https://soogong.co.kr",
         "duration": "2021.10 - 재직중 / 5 months -ing",
-        "thumbnail": "./드래그드랍.gif",
+        "thumbnail": "https://user-images.githubusercontent.com/68500631/160745960-c5bbb1ec-164e-4b7b-b9ae-c61b6c2611cd.gif",
         "img_src": [
-          "./드래그드랍.gif",
-          "./csv다운.gif",
-          "./중앙정렬.gif",
-          "./다른-테이블-끼리-드래그드랍.gif",
-          "./보증서발급.gif"
+          "https://user-images.githubusercontent.com/68500631/160745960-c5bbb1ec-164e-4b7b-b9ae-c61b6c2611cd.gif"
         ],
         "skills": {
           "front": ["Javscript", "Typescript"],
