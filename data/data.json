@@ -94,10 +94,8 @@
         "github": "https://github.com/dev-soogong",
         "link": "https://soogong.co.kr",
         "duration": "2021.10 - 재직중 / 5 months -ing",
-        "thumbnail": "https://user-images.githubusercontent.com/68500631/160745960-c5bbb1ec-164e-4b7b-b9ae-c61b6c2611cd.gif",
-        "img_src": [
-          "https://user-images.githubusercontent.com/68500631/160745960-c5bbb1ec-164e-4b7b-b9ae-c61b6c2611cd.gif"
-        ],
+        "thumbnail": "",
+        "img_src": [""],
         "skills": {
           "front": ["Javscript", "Typescript"],
           "server": [],
