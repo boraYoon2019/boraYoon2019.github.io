@@ -15,7 +15,7 @@
         "skills": {
           "front": ["Javscript", "Typescript"],
           "server": [],
-          "skill": ["React", "Styled-Components", "Material-UI", "axios"]
+          "skill": ["React", "Styled-components", "Material-UI", "axios"]
         },
         "description": [
           "　아토믹 시스템을 도입하여 자주 사용되는 컴포넌트들을 재활용성 높게 구성하여 개발 속도 증진에 기여한 프로젝트 입니다. 어드민에 상위 버전의 toast ui editor을 도압하였고 에디터 내에서 필요한 기능을 이용할 수 있도록 커스텀하여 추가하였습니다(중앙정렬, 유투브 삽입).",
@@ -41,7 +41,7 @@
         "skills": {
           "front": ["Javscript", "Typescript"],
           "server": [],
-          "skill": ["React", "Styled-Components", "Material-UI", "axios"]
+          "skill": ["React", "Styled-components", "Material-UI", "axios"]
         },
         "description": [
           "　아토믹 시스템을 도입하여 자주 사용되는 컴포넌트들을 재활용성 높게 구성하여 개발 속도 증진에 기여한 프로젝트 입니다. 어드민에 상위 버전의 toast ui editor을 도압하였고 에디터 내에서 필요한 기능을 이용할 수 있도록 커스텀하여 추가하였습니다(중앙정렬, 유투브 삽입).",
@@ -71,9 +71,8 @@
             "React",
             "Nextjs",
             "React-Redux",
-            "Redux-toolkit",
             "Webpack",
-            "Styled-Components",
+            "Styled-components",
             "Material-UI",
             "axios"
           ]
@@ -102,7 +101,7 @@
             "React-Redux",
             "Redux-Saga",
             "Webpack",
-            "Styled-Components"
+            "Styled-components"
           ]
         },
         "description": "　React를 이용한 반응형 웹 토이 프로젝트입니다. 상단에 '#' 아이콘을 클릭하시면 실제 프로젝트를 확인할 수 있습니다. Django REST Framework 서버 개발자와 함께 작업하였습니다. 아토믹 디자인 패턴을 적용하여 pages 컴포넌트에서 리덕스와 연동된 상태값과 데이터 처리가 이루어지도록 구성한 프로젝트입니다. class/hooks 둘 다 사용하였으며, Redux를 통해 컴포넌트 UI에 영향을 주는 상태값들을 관리하였고, Redux-saga를 통해 서버통신으로 다양한 결과가 반환되는 로직(로그인/회원가입 등)을 처리하였습니다.",

@@ -13,7 +13,7 @@
     "server": ["Linux", "MYSQL", "AWS_EC2", "S3"],
     "skill": [
       "React",
-      "Next.js",
+      "Nextjs",
       "React-Redux",
       "Redux-Saga",
       "Webpack",
@@ -36,7 +36,7 @@
         "server": [],
         "skill": [
           "React",
-          "Next.js",
+          "Nextjs",
           "Styled-components",
           "material-ui",
           "Webpack",
@@ -99,7 +99,7 @@
         "skills": {
           "front": ["Javscript", "Typescript"],
           "server": [],
-          "skill": ["React", "Styled-Components", "Material-UI", "axios"]
+          "skill": ["React", "Styled-components", "Material-UI", "axios"]
         },
         "description": [
           "　아토믹 시스템을 도입하여 자주 사용되는 컴포넌트들을 재활용성 높게 구성하여 개발 속도 증진에 기여한 프로젝트 입니다. 어드민에 상위 버전의 toast ui editor을 도압하였고 에디터 내에서 필요한 기능을 이용할 수 있도록 커스텀하여 추가하였습니다(중앙정렬, 유투브 삽입).",
@@ -131,7 +131,7 @@
             "React-Redux",
             "Redux-toolkit",
             "Webpack",
-            "Styled-Components",
+            "Styled-components",
             "Material-UI",
             "axios"
           ]
@@ -153,7 +153,7 @@
             "React-Redux",
             "Redux-Saga",
             "Webpack",
-            "Styled-Components"
+            "Styled-components"
           ]
         }
       },
