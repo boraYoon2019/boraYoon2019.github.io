@@ -2,9 +2,30 @@
   "projects": {
     "web": [
       {
+        "head": "CAMFIT",
+        "feature": "【서비스】",
+        "subhead": "캠핑 예약 웹 사이트",
+        "github": "https://camfit.co.kr",
+        "link": "https://camfit.co.kr",
+        "duration": "2022.03 - 재직중 / 6 months -ing",
+        "thumbnail": "https://user-images.githubusercontent.com/68500631/190851886-e006719f-3a27-4867-9096-65fab18b213c.png",
+        "img_src": [
+          "https://user-images.githubusercontent.com/68500631/190851886-e006719f-3a27-4867-9096-65fab18b213c.png"
+        ],
+        "skills": {
+          "front": ["Javscript", "Typescript"],
+          "server": [],
+          "skill": ["React", "Styled-components", "Material-UI", "axios"]
+        },
+        "description": [
+          "디자인 개편 진행 (메인 홈, 캠핑장 검색 홈, 장비위키 홈 등), 마이페이지 찜목록, 디자인 시스템 적용한 아토믹 패턴 컴포넌트 구성"
+        ],
+        "video": ""
+      },
+      {
         "head": "Oh!happy Pension",
         "feature": "【서비스】",
-        "subhead": "펜션 소개 사이트",
+        "subhead": "펜션 소개 웹 사이트",
         "github": "https://ohhappy.co.kr",
         "link": "https://ohhappy.co.kr",
         "duration": "2022.02 - 2022.03 / 1 month",
@@ -17,22 +38,13 @@
           "server": [],
           "skill": ["React", "Styled-components", "Material-UI", "axios"]
         },
-        "description": [
-          "　아토믹 시스템을 도입하여 자주 사용되는 컴포넌트들을 재활용성 높게 구성하여 개발 속도 증진에 기여한 프로젝트 입니다. 어드민에 상위 버전의 toast ui editor을 도압하였고 에디터 내에서 필요한 기능을 이용할 수 있도록 커스텀하여 추가하였습니다(중앙정렬, 유투브 삽입).",
-          "1. 드래그 드랍 및 모달창을 통한 업종 프로젝트 수정 기능",
-          "2. csv 다운",
-          "테이블 데이터 및 JSON 데이터를 필요한 형식으로 커스텀하여 CSV EXPORT 기능을 구현하였습니다.",
-          "3. 에디터 중앙 정렬(기본이 마크다운 에디터라 중앙 정렬 기능이 없음)",
-          "4. 다른 테이블 간 드래그 드랍",
-          "5. 보증서 발급",
-          "Git 브랜치 전략으로는 git flow 방식을 진행하였습니다."
-        ],
+        "description": ["원 페이지 펜션 소개 페이지"],
         "video": ""
       },
       {
         "head": "SOOGONG ADMIN",
         "feature": "【서비스 - 어드민】",
-        "subhead": "수리 서비스 플랫폼 어드민",
+        "subhead": "어드민 웹 사이트",
         "github": "https://github.com/dev-soogong",
         "link": "https://soogong.co.kr",
         "duration": "2021.10 - 2022.04 / 6 months",
@@ -44,7 +56,6 @@
           "skill": ["React", "Styled-components", "Material-UI", "axios"]
         },
         "description": [
-          "　아토믹 시스템을 도입하여 자주 사용되는 컴포넌트들을 재활용성 높게 구성하여 개발 속도 증진에 기여한 프로젝트 입니다. 어드민에 상위 버전의 toast ui editor을 도압하였고 에디터 내에서 필요한 기능을 이용할 수 있도록 커스텀하여 추가하였습니다(중앙정렬, 유투브 삽입).",
           "1. 드래그 드랍 및 모달창을 통한 업종 프로젝트 수정 기능",
           "2. csv 다운",
           "테이블 데이터 및 JSON 데이터를 필요한 형식으로 커스텀하여 CSV EXPORT 기능을 구현하였습니다.",
@@ -58,10 +69,10 @@
       {
         "head": "SOOGONG",
         "feature": "【서비스】",
-        "subhead": "수리 서비스 플랫폼 (반응형 웹사이트)",
+        "subhead": "수리 서비스 웹 사이트",
         "github": "https://github.com/dev-soogong",
         "link": "https://soogong.co.kr",
-        "duration": "2021.10 - 재직중 / 5 months -ing",
+        "duration": "2021.10 - 2022.04 / 6 months",
         "thumbnail": "./메인화면.gif",
         "img_src": ["./메인화면.gif", "./문의내역.gif"],
         "skills": {
@@ -77,7 +88,7 @@
             "axios"
           ]
         },
-        "description": "　프로덕트에 상위 버전의 toast ui editor와 viewer를 도압하였습니다. 메인 서비스 내에서는 메인 화면(탭), 서비스 소개 페이지, 마스터 사진 메뉴, 고객 문의 내역을 구현하였고 서비스를 유지보수하며 핫픽스를 진행해왔습니다. Git 브랜치 전략으로서 git flow 방식을 진행하였습니다.",
+        "description": "　프로덕트에 toast ui editor와 viewer 업그레이드 진행. 메인 서비스 내에서는 메인 화면(탭), 서비스 소개 페이지, 마스터 사진 메뉴, 고객 문의 내역을 구현 및 버그 픽시와 서비스 유지 보수. Git 브랜치 전략으로서 git flow 방식을 진행하였습니다.",
         "video": ""
       },
       {
@@ -119,7 +130,7 @@
           "https://user-images.githubusercontent.com/68500631/98608086-d5a82880-232d-11eb-9a85-c45979e5817a.png"
         ],
         "skills": {
-          "front": ["ES2015_ES6＋", "HTML5", "CSS3"],
+          "front": ["Javascript", "HTML", "CSS"],
           "server": "",
           "skill": ["axios"]
         },
@@ -152,7 +163,7 @@
           "https://user-images.githubusercontent.com/68500631/89120807-063d2280-d4f4-11ea-89aa-ef86d4142498.jpg"
         ],
         "skills": {
-          "front": ["HTML5", "Javascript"],
+          "front": ["HTML", "Javascript"],
           "server": ["PHP", "Linux", "Ubuntu", "Apache", "MYSQL"],
           "skill": ["Ajax", "JQuery", "BootStrap"]
         },
